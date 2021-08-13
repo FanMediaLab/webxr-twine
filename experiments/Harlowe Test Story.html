@@ -12,6 +12,10 @@
 <tw-storydata name="Harlowe Test Story" startnode="1" creator="Twine" creator-version="2.3.14" ifid="13490E96-D1A7-4828-A0FD-06813E471F7F" zoom="1" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage img {
 	display: block;
 	margin: 0 auto;
+}
+
+tw-icon[alt] {
+	opacity: 0.75;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Harlowe Macro Framework, by Chapel; version 1.0.2
 !(function () {
     "use strict";
@@ -215,6 +219,13 @@
         function a() {
             return t.passage;
         }
+				// Store voices globally
+				window.speechSynthesis.onvoiceschanged = function() {
+					window.custom_store = window.custom_store || {};
+					Object.assign(window.custom_store, {
+						'voices': window.speechSynthesis.getVoices()
+					});
+				}
         window.Harlowe = Object.assign(window.Harlowe || {}, {
             passage: a,
             tags: function (r) {
@@ -352,10 +363,16 @@
         var r = p(e);
         return (i ? r.charAt(0).toUpperCase() + r.substring(1) : r) + " " + e;
     }
-	function textToAudio(msg) {
+	function textToAudio(msg, voice_choice) {
 		let speech = new SpeechSynthesisUtterance();
+		
+		var voices = window.speechSynthesis.getVoices()
+		
+		if ('custom_store' in window) {
+			speech.voice = window.custom_store.voices[voice_choice]
+		}
+		
 		speech.lang = "en-US";
-
 		speech.text = msg;
 		speech.volume = 1;
 		speech.rate = 1;
@@ -365,10 +382,10 @@
 	}
     (window.setup = window.setup || {}),
         Object.assign(window.setup, { find: p, output: d, override: h }),
-      Harlowe.macro("speech-text", function (text) {
-    	textToAudio(text);	
-			return
-			}),  
+      Harlowe.macro("speech-text", function (text, voice_choice) {
+    		textToAudio(text, voice_choice);	
+				return
+			}),
 			Harlowe.macro("article", function (e, i) {
             var r = this.typeCheck(["string", "boolean|undefined"]);
             if (r) throw r;
@@ -384,7 +401,7 @@
 // end articles.min.js
 </script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="620,199" size="100,100">[[Begin]]
 
-(set: $var to (speech-text: &quot;Welcome&quot;))
+(set: $var to (speech-text: &quot;Welcome&quot;, 4))
 $var</tw-passagedata><tw-passagedata pid="2" name="Question 1" tags="" position="472,411" size="100,100">What should Sayed do next?  
 
 (link-repeat: &quot;Select an OTC product for Bob&#39;s cold symptoms&quot;)[(alert:&quot;This is not the correct option. Try Again.&quot;)]
@@ -418,8 +435,8 @@ This case will highlight Pharmacy Technicians’ (RPhT) and Pharmacists’
 
 [[Dialogue 1]]</tw-passagedata><tw-passagedata pid="8" name="Dialogue 1" tags="" position="640,530" size="100,100">&lt;img src=&quot;https://image.shutterstock.com/image-vector/two-man-meet-greeting-each-260nw-1449684482.jpg&quot;&gt;
 
-(set: $sayed to (speech-text: &quot; Hi  Bob, can I help you look for something? &quot;))
-(set: $bob to (speech-text: &quot; Hi Sayed. I am looking for something to help with this cold I have. I’ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription? &quot;))
+(set: $sayed to (speech-text: &quot; Hi  Bob, can I help you look for something? &quot;, 1))
+(set: $bob to (speech-text: &quot; Hi Sayed. I am looking for something to help with this cold I have. I’ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription? &quot;, 3))
 
 |output&gt;[]
 {(set: $count to 0)
