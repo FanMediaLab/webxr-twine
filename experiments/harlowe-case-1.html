@@ -286,7 +286,7 @@ button.selected{
 (if: _q2A is not _optionC)[(set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q2A), &quot;Wrong&quot;)))(alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)]
 }]]
 }
-|continue)[(button:)[[Go to Quiz|Quiz 3]]]</tw-passagedata><tw-passagedata pid="10" name="Quiz 3" tags="" position="1199,498" size="100,100">Which of the following fall(s) within a pharmacy technician’s scope of practice? Select all that apply. 
+|continue)[(button:)[[Go to Next Dialog|Dialog 6]]]</tw-passagedata><tw-passagedata pid="10" name="Quiz 3" tags="" position="1301,399" size="100,100">Which of the following fall(s) within a pharmacy technician’s scope of practice? Select all that apply. 
 {
 (set: _q3A to false, _q3B to false, _q3C to false, _q3D to false)
 }
@@ -319,8 +319,8 @@ button.selected{
 }]]
 }
 |continue)[
-(button:)[[View Results|Quiz Results]]
-]</tw-passagedata><tw-passagedata pid="11" name="Quiz Results" tags="" position="1402,499" size="100,100">(set: _counter to 1)
+(button:)[[View Result|Quiz Results]]
+]</tw-passagedata><tw-passagedata pid="11" name="Quiz Results" tags="" position="1498,400" size="100,100">(set: _counter to 1)
 (for: each _qAttempts, ...$attempts)[
 	&lt;button type=&quot;button&quot; class=&quot;accordion&quot;&gt;Quiz _counter Attempts&lt;/button&gt;
 	(set: _counter2 to 0)
@@ -589,7 +589,54 @@ button.selected{
 
 
 
-(button:)[[Go to Quiz|Quiz 2]]</tw-passagedata></tw-storydata>
+(button:)[[Go to Quiz|Quiz 2]]</tw-passagedata><tw-passagedata pid="17" name="Dialog 6" tags="" position="1403,702.5" size="100,100">&lt;a-scene device-orientation-permission-ui=&quot;enabled: false&quot; embedded&gt;
+      &lt;a-entity environment=&quot;preset:forest;&quot;&gt;&lt;/a-entity&gt;
+      &lt;a-plane id=&quot;floor&quot; static-body height=&quot;1000&quot; width=&quot;1000&quot; position=&quot;0 -0.02 0&quot; color=&quot;black&quot; rotation=&quot;-90 0 0&quot;&gt;&lt;/a-plane&gt;
+      &lt;a-camera id=&quot;myCamera&quot; position=&quot;0 1 0&quot;&gt;
+        &lt;a-cursor intersection-spawn=&quot;event: click; mixin: voxel&quot;&gt;&lt;/a-cursor&gt;
+      &lt;/a-camera&gt;
+      &lt;a-icosahedron staic-body class=&quot;target&quot; color=&quot;white&quot; radius=&quot;1&quot; position=&quot;0 3 -5&quot;&gt;&lt;/a-icosahedron&gt;
+    &lt;/a-scene&gt;
+	
+&lt;div class=&quot;mb-5 audio-controls&quot;&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;img src onerror=&quot;return main()&quot;&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+	var paused = false;
+	function main() {
+		$(&#39;button&#39;).on(&#39;click&#39;, function(){
+    		$(&#39;button&#39;).removeClass(&#39;selected&#39;);
+    		$(this).addClass(&#39;selected&#39;);
+		});
+		window.speechSynthesis.cancel();
+		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
+			dialog = [{&quot;person&quot;:3,&quot;text&quot;:&quot;Hi Bob. Sayed filled me in on your symptoms and current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit now.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Ya, it&#39;s been about 3 weeks now.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;From your medication profile it looks like your nurse practitioner added a new medication, Ramipril, a week before your cough started.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Ya. My blood pressure went up, so my nurse practitioner decided to start me on another medication.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;That makes sense; however, I think your cough may actually be a side effect from the Ramipril rather than part of your cold&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;To help with this, I can fax your nurse practitioner to recommend switching to another blood pressure medication, Telmisartan, that works similarly to Ramipril but doesn&#39;t have coughing as a side effect&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;That would be great. Come to think of it, the cough started quite a bit before this cold. Is there anything I can take for the congestion and pain then?&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Yes&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;For your congestion I recommend a nasal saline spray with sodium chloride 0.9%&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Use 1 to 2 sprays per nostril 1 to 3 times daily as needed for a week&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Blow your nose before using the spray, tilt your head to the side and gently insert the tip into the upper nostril and press down briefly&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Bring your head back to an upright position and allow mucus to flow out before wiping any remaining mucus and carefully blowing your nose&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Repeat with the other nostril&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Remember to wash the tip of the bottle with hot soapy water after each use and wipe it dry&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;The most common side effect would potentially be some irritation of the nose, coughing or sneezing&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Great! I can do that.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;For the sinus pain, I&#39;d recommend acetaminophen 500 mg 1-2 tablets by mouth every 4-6 hours as needed for 1 week. Be careful to avoid taking more than 3 grams of acetaminophen in 24 hours to avoid impacting your liver.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Excellent. I&#39;m hopeful that these will help.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Do you have any questions about the information and guidance provided?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I don&#39;t think so but I&#39;ll call the pharmacy if anything comes up.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Perfect&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;One last point&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;In addition to it being a good idea to monitor your blood pressure regularly, it&#39;s especially important to monitor it if there&#39;s a change from your Ramipril to Telmisartan&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Do you have a blood pressure monitor at home you can use to monitor for this?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;My partner, Jesse, has one. I talked to the pharmacist about measuring my blood pressure weekly when diagnosed but I never ended up doing it and can&#39;t remember how to exactly.&quot;}]
+		  	event.stopImmediatePropagation();
+  			play(dialog);
+		});
+	}
+&lt;/script&gt;
+
+{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Hi Bob. Sayed filled me in on your symptoms and current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit now.}
+{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Ya, it&#39;s been about 3 weeks now.}
+{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: From your medication profile it looks like your nurse practitioner added a new medication, Ramipril, a week before your cough started.}
+{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Ya. My blood pressure went up, so my nurse practitioner decided to start me on another medication.}
+{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: That makes sense; however, I think your cough may actually be a side effect from the Ramipril rather than part of your cold. To help with this, I can fax your nurse practitioner to recommend switching to another blood pressure medication, Telmisartan, that works similarly to Ramipril but doesn&#39;t have coughing as a side effect.}
+{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: That would be great. Come to think of it, the cough started quite a bit before this cold. Is there anything I can take for the congestion and pain then?}
+{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Yes. For your congestion I recommend a nasal saline spray with sodium chloride 0.9%. Use 1 to 2 sprays per nostril 1 to 3 times daily as needed for a week. Blow your nose before using the spray, tilt your head to the side and gently insert the tip into the upper nostril and press down briefly. Bring your head back to an upright position and allow mucus to flow out before wiping any remaining mucus and carefully blowing your nose. Repeat with the other nostril. Remember to wash the tip of the bottle with hot soapy water after each use and wipe it dry. The most common side effect would potentially be some irritation of the nose, coughing or sneezing.}
+{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Great! I can do that.}
+{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: For the sinus pain, I&#39;d recommend acetaminophen 500 mg 1-2 tablets by mouth every 4-6 hours as needed for 1 week. Be careful to avoid taking more than 3 grams of acetaminophen in 24 hours to avoid impacting your liver.}
+{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Excellent. I&#39;m hopeful that these will help.}
+{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Do you have any questions about the information and guidance provided?}
+{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I don&#39;t think so but I&#39;ll call the pharmacy if anything comes up.}
+{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Perfect. One last point. In addition to it being a good idea to monitor your blood pressure regularly, it&#39;s especially important to monitor it if there&#39;s a change from your Ramipril to Telmisartan. Do you have a blood pressure monitor at home you can use to monitor for this?}
+{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: My partner, Jesse, has one. I talked to the pharmacist about measuring my blood pressure weekly when diagnosed but I never ended up doing it and can&#39;t remember how to exactly.}
+
+(button:)[[Go to Quiz|Quiz 3]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
