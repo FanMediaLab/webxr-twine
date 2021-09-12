@@ -144,6 +144,7 @@ button.selected{
 (if: _option is _optionB)[(output-data: &quot;B&quot;)]
 (if: _option is _optionC)[(output-data: &quot;C&quot;)]
 (if: _option is _optionD)[(output-data: &quot;D&quot;)]
+(else:)[(output-data: &quot;&quot;)]
 ]))
 
 (set: _canContinue to false)
@@ -273,6 +274,7 @@ button.selected{
 (if: _option is _optionB)[(output-data: &quot;B&quot;)]
 (if: _option is _optionC)[(output-data: &quot;C&quot;)]
 (if: _option is _optionD)[(output-data: &quot;D&quot;)]
+(else:)[(output-data: &quot;&quot;)]
 ]))
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
