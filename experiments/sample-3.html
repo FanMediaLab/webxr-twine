@@ -167,18 +167,17 @@ button.selected{
 	  (link: &quot;Restart&quot;)[(reload:)]
 	]
 ]</tw-passagedata><tw-passagedata pid="4" name="Dialog 1" tags="" position="1000,301" size="100,100">    &lt;a-scene device-orientation-permission-ui=&quot;enabled: false&quot; embedded id=&quot;#scene&quot;&gt;
-        &lt;a-assets&gt;
-            &lt;a-asset-item id=&quot;pharmacy-obj&quot; src=&quot;./models/untitled.obj&quot;&gt;&lt;/a-asset-item&gt;
-            &lt;a-asset-item id=&quot;pharmacy-mtl&quot; src=&quot;./models/untitled.mtl&quot;&gt;&lt;/a-asset-item&gt;
-        &lt;/a-assets&gt;
-        &lt;a-entity obj-model=&quot;obj: #pharmacy-obj; mtl: #pharmacy-mtl&quot;&gt;&lt;/a-entity&gt;
-		&lt;a-sky color=&quot;#FFFFFF&quot;&gt;&lt;/a-sky&gt;
+	&lt;a-assets&gt;
+			&lt;a-asset-item id=&quot;pharmacy-obj&quot; src=&quot;./models/untitled.glb&quot;&gt;&lt;/a-asset-item&gt;
+	&lt;/a-assets&gt;
+	&lt;a-entity gltf-model=&quot;#pharmacy-obj&quot;&gt;&lt;/a-entity&gt;
+&lt;a-sky color=&quot;#FFFFFF&quot;&gt;&lt;/a-sky&gt;
 
-        &lt;a-entity id=&quot;camera&quot; camera look-controls wasd-controls position=&quot;3 2 -3&quot;&gt;
-            &lt;a-entity cursor=&quot;fuse: true; timeout: 500&quot; raycaster=&quot;far: 20; interval: 1000; objects: .clickable&quot; position=&quot;0 0 -1.8&quot; scale=&quot;0.1 0.1 0.1&quot;&gt;&lt;/a-entity&gt;
-        &lt;/a-entity&gt;
+	&lt;a-entity id=&quot;camera&quot; camera look-controls wasd-controls position=&quot;3 2 -3&quot;&gt;
+			&lt;a-entity cursor=&quot;fuse: true; timeout: 500&quot; raycaster=&quot;far: 20; interval: 1000; objects: .clickable&quot; position=&quot;0 0 -1.8&quot; scale=&quot;0.1 0.1 0.1&quot;&gt;&lt;/a-entity&gt;
+	&lt;/a-entity&gt;
 
-    &lt;/a-scene&gt;
+&lt;/a-scene&gt;
 
 &lt;div class=&quot;mb-5 audio-controls&quot;&gt;
   &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play&lt;/button&gt;
