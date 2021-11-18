@@ -852,7 +852,7 @@ RPh documents the interaction in the notes section of the patient’s profile in
 {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Thanks, I&#39;ll speak to Mr. Patel and find out some more information regarding the indication and extent of the affected area to determine the amount needed.}
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPh approaches the patient&#39;s father&quot;, &quot;C2Dialog2&quot;)]
-</tw-passagedata><tw-passagedata pid="23" name="Untitled Passage" tags="" position="199,425" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="C2Dialog2" tags="" position="14,299" size="100,100">&lt;div class=&quot;mb-5 audio-controls&quot;&gt;
+</tw-passagedata><tw-passagedata pid="23" name="C2Dialog5" tags="" position="199,425" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="C2Dialog2" tags="" position="14,299" size="100,100">&lt;div class=&quot;mb-5 audio-controls&quot;&gt;
   &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play&lt;/button&gt;
   &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
   &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
@@ -911,24 +911,56 @@ During the assessment of the compounding area, the RPhT notices a coffee cup on 
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
-			dialog = [{&quot;person&quot;: 3, &quot;text&quot;: &quot;Hi Mr&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Patel&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;I&#39;m Sara Rodriguez(insert a name), the pharmacist&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;I need to ask you a few questions to determine the amount of medicine we need to dispense for Nikhil&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;May I ask for what reason has this medicine been prescribed for Nikhil?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;He has a rash on his stomach.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Ok, can you tell me approximately how large is the rash/ affected area? Also, did the doctor say for how long he&#39;d need to use the cream?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;I&#39;d say the rash covers an area about 8 cm square. I don&#39;t remember the doctor mentioning how long to keep applying it, sorry&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;From what you describe, I believe a quantity of 50 gm is reasonable, as you will be applying it sparingly twice a day, and a 7 to 10 day course should be a sufficient duration to see positive results.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;That sounds reasonable to me.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;With your permission then, I can adapt the prescription with this quantity, and inform the prescriber that I have discussed it with you.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Yes please do! I really don&#39;t want to wait until the doctor&#39;s back in the office.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Mr. Patel, please have a seat. we&#39;ll need to compound the prescription. This may take a bit longer than usual.&quot;}]
-
+			dialog = [{&quot;person&quot;: 1, &quot;text&quot;: &quot;Whose coffee cup is this?&quot;}, {&quot;person&quot;: 4, &quot;text&quot;: &quot;looks confused.&quot;}, {&quot;person&quot;: 4, &quot;text&quot;: &quot;That&#39;s mine. Sorry, I didn&#39;t know where else to put my cup? This is the only clear counter.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;I understand the confusion if this is your first shift with us. We have this area for our non-sterile compounding, and need to keep it clear at all times.&quot;}, {&quot;person&quot;: 4, &quot;text&quot;: &quot;Totally understood   my apologies!&quot;}]
 		  	event.stopImmediatePropagation();
   			play(dialog);
 		});
 	}
 &lt;/script&gt;
 
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Hi Mr. Patel. I&#39;m Sara Rodriguez, the pharmacist. I need to ask you a few questions to determine the amount of medicine we need to dispense for Nikhil. May I ask for what reason has this medicine been prescribed for Nikhil?}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: He has a rash on his stomach.}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Ok, can you tell me approximately how large is the rash/ affected area? Also, did the doctor say for how long he&#39;d need to use the cream?}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: I&#39;d say the rash covers an area about 8 cm square. I don&#39;t remember the doctor mentioning how long to keep applying it, sorry}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: From what you describe, I believe a quantity of 50 gm is reasonable, as you will be applying it sparingly twice a day, and a 7 to 10 day course should be a sufficient duration to see positive results.}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: That sounds reasonable to me.}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: With your permission then, I can adapt the prescription with this quantity, and inform the prescriber that I have discussed it with you.}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Yes please do! I really don&#39;t want to wait until the doctor&#39;s back in the office.}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Mr. Patel, please have a seat. we&#39;ll need to compound the prescription. This may take a bit longer than usual.}
-</tw-passagedata><tw-passagedata pid="26" name="Untitled Passage 3" tags="" position="78,425" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+{(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Whose coffee cup is this?}
+{(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: looks confused.}
+{(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: That&#39;s mine. Sorry, I didn&#39;t know where else to put my cup? This is the only clear counter.}
+{(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: I understand the confusion if this is your first shift with us. We have this area for our non-sterile compounding, and need to keep it clear at all times.}
+{(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: Totally understood my apologies!}
+
+&lt;div class=&quot;active-panel&quot;&gt;
+  RPh (relief pharmacist) picks up the coffee cup.
+  Counter is cleaned and sanitized before starting to work on the mixture.
+&lt;/div&gt;
+
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT interacts with RPh (incoming relief pharmacist)&quot;, &quot;C2Dialog4&quot;)]
+
+</tw-passagedata><tw-passagedata pid="26" name="C2Dialog4" tags="" position="78,425" size="100,100">&lt;div class=active-panel&gt;
+  RPhT assigns an assistant to prepare the product while supervising her/him closely.
+  All ingredient weights, as well as the compounding procedure, are checked by the RPhT  and documented on the compounding log sheet, along with the storage and stability requirements.
+  The RPhT carefully checks the calculations on the master formulation (MF) sheet. As the mixture is being prepared, the RPhT is checking and documenting the weight of the component ingredients and the technique used by the assistant.  
+  RPh is notified that the Rx is ready for Patient Medication Education/ Counselling.
+  RPh proceeds to counsel the father about his son&#39;s prescription.
+  As she is doing the counselling, she notices that the Beyond-Use-Date (BUD) sticker on the product is not affixed.
+&lt;/div&gt;
+
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[RPh interacts with RPhT]
+&lt;div class=&quot;active-panel&quot;&gt;
+RPh calls the RPhT and notifies him of the missed info. The RPhT affixes the required information on the product. Documentation in the Medical Safety System for a &quot;near miss&quot; is initiated.
+&lt;/div&gt;
+
+&lt;div class=&quot;active-panel&quot;&gt;
+The father picks up the product and before he leaves the store he comes back with some questions to the RPhT
+&lt;/div&gt;
+
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[RPhT interacts with caregiver]
+{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Will this cream still be okay if we travel to a hot country? Also do I apply sunscreen on Nikhil before or after applying the cream?}
+
+The RPhT checks the storage temperature information for clotrimazole cream and the medication safety data sheet for hydrocortisone , then accordingly he answers the mfather’s questions.
+
+{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: The cream should be okay at room temperature. If the room temperature where you are traveling is hotter than 20-25 degrees Celsius, do your best to keep the medicine away from direct heat/sunlight and store the cream in a cooler area}
+{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Please hold on, I have to refer your second question to the pharmacist.}
+
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[RPhT refers second question to RPh]
+The RPhT reaches out to the pharmacist and relays the father&#39;s second question.
+RPh comes and counsels the father accordingly.
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
