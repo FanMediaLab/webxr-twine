@@ -53,6 +53,11 @@ a-scene {
   margin: 0 auto;
 }
 
+.center-img {
+	display: block;
+ 	margin: 0 auto;
+}
+
 .audio-controls {
   display: flex;
   align-self: center;
@@ -133,12 +138,13 @@ button.selected{
      the width in UserMessage if needed */
   width: 2.5rem;
   height: 2.5rem;
+  margin: 0.3em;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Welcome" tags="" position="797,101" size="100,100">(text-style: &quot;bold&quot;)[Welcome]
 
 &lt;div class=&quot;row row-cols-1 row-cols-md-3 g-4&quot;&gt;
   &lt;div class=&quot;col&quot;&gt;
     &lt;div class=&quot;card border-primary rounded h-100&quot;&gt;
-	&lt;img style=&quot;height:auto;width:80%&quot; class=&quot;rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.png&quot;&gt;
+	&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.svg&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
         &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
         (button:)[[Case 1]]
@@ -147,7 +153,7 @@ button.selected{
   &lt;/div&gt;
   &lt;div class=&quot;col&quot;&gt;
     &lt;div class=&quot;card border-primary rounded h-100&quot;&gt;
-	&lt;img style=&quot;height:auto;width:80%&quot; class=&quot;rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case2-tile.svg&quot;&gt;
+	&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case2-tile.svg&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
         &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
         (button:)[[Case 2]]
@@ -157,7 +163,7 @@ button.selected{
   &lt;div class=&quot;col&quot;&gt;
     &lt;div class=&quot;card border-primary h-100&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
-		&lt;img style=&quot;height:auto;width:80%&quot; class=&quot;img-thumbnail&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.png&quot;&gt;
+		&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img img-thumbnail&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.svg&quot;&gt;
         &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
         (button:)[[Case 3]]
       &lt;/div&gt;
@@ -220,7 +226,7 @@ button.selected{
 	]
 ]</tw-passagedata><tw-passagedata pid="4" name="Dialog 1" tags="" position="1153,98" size="100,100">&lt;div&gt;
  &lt;p&gt;Mr. Stonechild  visits the pharmacy and is scanning the over-the-counter product shelves. He is greeted by the Pharmacy Technician on duty as he seemed to be having difficulties finding an appropriate product.&lt;/p&gt;
-  &lt;img style=&quot;height:auto;width:70%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sayed+bob.png&quot;&gt;
+  &lt;img style=&quot;height:auto;width:70%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sayed+bob.png&quot;&gt;
 &lt;/div&gt;
 
 &lt;mark&gt;Before starting, you are encouraged to reflect on your current community pharmacy practice setting and how, if applicable, you collaborate with your pharmacy technician or pharmacist colleagues. Ask yourself, could you incorporate each other’s skills even more?&lt;/mark&gt;
@@ -528,15 +534,13 @@ button.selected{
 {(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Thanks. Sounds good!}
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT - Sayed walks over to behind the pharmacy counter and starts a conversation with the RPh. &quot;, &quot;Dialog 3&quot;)]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="1065,347" size="100,100">&lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
-  &lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+sayed.png&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="1065,347" size="100,100">  &lt;img style=&quot;height:auto;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+sayed.png&quot;&gt;
 
   &lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
 	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
 	&lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
 	&lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
   &lt;/div&gt;
-&lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
