@@ -13,12 +13,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play sample-7.</tw-noscript></noscript></tw-story>
-<tw-storydata name="sample-7" startnode="1" creator="Twine" creator-version="2.3.14" ifid="D92AED9F-40E0-4E08-8F1D-ECF659833DBF" zoom="1" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage img {
-	display: block;
-	margin: 0 auto;
-}
-
-tw-passage {
+<tw-storydata name="sample-7" startnode="1" creator="Twine" creator-version="2.3.14" ifid="D92AED9F-40E0-4E08-8F1D-ECF659833DBF" zoom="1" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans';
@@ -115,13 +110,36 @@ button.selected{
 
 .card-title {
   font-weight: bold;
+}
+
+.avatar {
+  overflow: hidden;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+
+  border-radius: 50%;
+
+  /* prevent the avatar from shrinking if the contents next to it is large */
+  flex-shrink: 0;
+  /* Align to the start (top in this case) but because we use align-items: center
+     on the parent the message will be vertically centered, unless it is taller 
+     than this Avatar */
+  align-self: flex-start;
+
+  /* Avatar width is also used when sizing message bubbles, be sure to update
+     the width in UserMessage if needed */
+  width: 2.5rem;
+  height: 2.5rem;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Welcome" tags="" position="797,101" size="100,100">(text-style: &quot;bold&quot;)[Welcome]
 
 &lt;div class=&quot;row row-cols-1 row-cols-md-3 g-4&quot;&gt;
   &lt;div class=&quot;col&quot;&gt;
     &lt;div class=&quot;card border-primary rounded h-100&quot;&gt;
+	&lt;img style=&quot;height:auto;width:80%&quot; class=&quot;rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.png&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
-			&lt;img style=&quot;height:auto;width:100%&quot; class=&quot;rounded-circle&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.png&quot;&gt;
         &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
         (button:)[[Case 1]]
       &lt;/div&gt;
@@ -129,8 +147,8 @@ button.selected{
   &lt;/div&gt;
   &lt;div class=&quot;col&quot;&gt;
     &lt;div class=&quot;card border-primary rounded h-100&quot;&gt;
+	&lt;img style=&quot;height:auto;width:80%&quot; class=&quot;rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case2-tile.svg&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
-		&lt;img style=&quot;height:auto;width:100%&quot; class=&quot;rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case2-tile.png&quot;&gt;
         &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
         (button:)[[Case 2]]
       &lt;/div&gt;
@@ -139,7 +157,7 @@ button.selected{
   &lt;div class=&quot;col&quot;&gt;
     &lt;div class=&quot;card border-primary h-100&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
-		&lt;img style=&quot;height:auto;width:100%&quot; class=&quot;img-thumbnail&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.png&quot;&gt;
+		&lt;img style=&quot;height:auto;width:80%&quot; class=&quot;img-thumbnail&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.png&quot;&gt;
         &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
         (button:)[[Case 3]]
       &lt;/div&gt;
@@ -244,7 +262,7 @@ button.selected{
   &lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
 
   &lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play&lt;/button&gt;
+	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
 	&lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
 	&lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
   &lt;/div&gt;
@@ -271,10 +289,22 @@ button.selected{
 	}
 &lt;/script&gt;
 
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Hello, I need to have a prescription filled for my son.}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Hello, my name is Anson and I am a registered pharmacy technician,  I can help you with that. Is this the first time that Jordan&#39;s had a prescription filled at this pharmacy?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Yes}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: May I ask a few questions?}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+    {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Hello, I need to have a prescription filled for my son.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Hello, my name is Anson and I am a registered pharmacy technician,  I can help you with that. Is this the first time that Jordan&#39;s had a prescription filled at this pharmacy?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+    {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Yes}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: May I ask a few questions?}
+&lt;/div&gt;
 
 &lt;div class=&quot;active-panel&quot;&gt;
 	* patient’s name
@@ -289,7 +319,7 @@ button.selected{
 &lt;div class=&quot;active-panel&quot;&gt;
 	Rx:
 	The prescription reads as follows: 1% hydrocortisone powder/ clotrimazole cream
-    Apply a thin layer to AA bid
+    Apply a thin layer to aa bid
 &lt;/div&gt;
 
 (button:)[[Next|Case 2 - Dialog 1]]</tw-passagedata><tw-passagedata pid="6" name="Case 3" tags="" position="550,224" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="265,19" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Quiz 2" tags="" position="1204,234" size="100,100">How should RPh - Damilola proceed?
@@ -349,12 +379,12 @@ button.selected{
 (set: $random to ($attemptString: _q3A, _q3B, _q3C, _q3D))
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q3A is true and _q3B is true and _q3D is true and _q3C is not true)[
+(if: _q3A is true and _q3C is true and _q3D is true and _q3B is not true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _q3A, _q3B, _q3C, _q3D), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Correct! According to the scope of practice, RPhT can perform tasks relating to information gathering and triaging, providing non-pharmacological recommendations, and educating patients on proper medical device use. RPhT can only perform technical verifications on prescriptions, while the RPh can perform both the technical and clinical verifications.&quot;)
 ]
-(if: _q3A is false or _q3B is false or _q3D is false or _q3C is true)[
+(if: _q3A is false or _q3C is false or _q3D is false or _q3B is true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _q3A, _q3B, _q3C, _q3D), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)]
 }]]
@@ -749,7 +779,7 @@ RPh documents the interaction in the notes section of the patient’s profile in
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [
-			{&quot;person&quot;: 1, &quot;text&quot;: &quot;It looks like this Rx is missing the quantity to be dispensed. I will contact your physician&#39;s office to get the amount prescribed.&quot;}, 
+			{&quot;person&quot;: 1, &quot;text&quot;: &quot;It looks like this prescription is missing the quantity to be dispensed. I will contact your physician&#39;s office to get the amount prescribed.&quot;}, 
 			{&quot;person&quot;: 1, &quot;text&quot;: &quot;Unfortunately the doctor s office is closed. Excuse me for a moment while I consult with the pharmacist about what we can do to ensure your prescription is filled as soon as possible&quot;}, 
 			{&quot;person&quot;: 2, &quot;text&quot;: &quot;Sure!&quot;},
 			{&quot;person&quot;: 1, &quot;text&quot;: &quot;I&#39;m just entering this prescription into the computer, and I see that no quantity has been provided&quot;}, 		
@@ -763,7 +793,10 @@ RPh documents the interaction in the notes section of the patient’s profile in
 	}
 &lt;/script&gt;
 
-{(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: It looks like this Rx is missing the quantity to be dispensed. I will contact your physician&#39;s office to get the amount prescribed.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: It looks like this Rx is missing the quantity to be dispensed. I will contact your physician&#39;s office to get the amount prescribed.}
+&lt;/div&gt;
 
 In the scenario, both the pharmacist and the registered pharmacy technician are qualified to contact the prescriber to obtain the missing information on the prescription.
 {
@@ -808,12 +841,24 @@ Key Learning: Interprofessional collaboration/scopes of practice
 (text-style: &quot;italic&quot;)[The RPhT phones the prescriber&#39;s office.]
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[RPhT to Mr. Patel]
-{(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Unfortunately the doctor s office is closed. Excuse me for a moment while I consult with the pharmacist about what we can do to ensure your prescription is filled as soon as possible}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Sure!}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Unfortunately the doctor s office is closed. Excuse me for a moment while I consult with the pharmacist about what we can do to ensure your prescription is filled as soon as possible}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Sure!}
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[RPhT to Pharmacist]
-{(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: I&#39;m just entering this prescription into the computer, and I see that no quantity has been provided. I tried the doctor&#39;s office, but they&#39;re already closed. As it&#39;s a compound that we need to prepare, we will need an accurate quantity}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Thanks, I&#39;ll speak to Mr. Patel and find out some more information regarding the indication and extent of the affected area to determine the amount needed.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: I&#39;m just entering this prescription into the computer, and I see that no quantity has been provided. I tried the doctor&#39;s office, but they&#39;re already closed. As it&#39;s a compound that we need to prepare, we will need an accurate quantity}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+    {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Thanks, I&#39;ll speak to Mr. Patel and find out some more information regarding the indication and extent of the affected area to determine the amount needed.}
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[RPh approaches the patient&#39;s father]
 
@@ -849,15 +894,42 @@ Key Learning: Interprofessional collaboration/scopes of practice
 	}
 &lt;/script&gt;
 
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Hi Mr. Patel. I&#39;m Sara Rodriguez, the pharmacist. I need to ask you a few questions to determine the amount of medicine we need to dispense for Nikhil. May I ask for what reason has this medicine been prescribed for Nikhil?}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: He has a rash on his stomach.}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Ok, can you tell me approximately how large is the rash/ affected area? Also, did the doctor say for how long he&#39;d need to use the cream?}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: I&#39;d say the rash covers an area about 8 cm square. I don&#39;t remember the doctor mentioning how long to keep applying it, sorry}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: From what you describe, I believe a quantity of 50 gm is reasonable, as you will be applying it sparingly twice a day, and a 7 to 10 day course should be a sufficient duration to see positive results.}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: That sounds reasonable to me.}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: With your permission then, I can adapt the prescription with this quantity, and inform the prescriber that I have discussed it with you.}
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Yes please do! I really don&#39;t want to wait until the doctor&#39;s back in the office.}
-{(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Mr. Patel, please have a seat. we&#39;ll need to compound the prescription. This may take a bit longer than usual.}
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+	  {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Hi Mr. Patel. I&#39;m Sara Rodriguez, the pharmacist. I need to ask you a few questions to determine the amount of medicine we need to dispense for Nikhil. May I ask for what reason has this medicine been prescribed for Nikhil?}
+  &lt;/div&gt;
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+	 {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: He has a rash on his stomach.}
+  &lt;/div&gt;
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+	  {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Ok, can you tell me approximately how large is the rash/ affected area? Also, did the doctor say for how long he&#39;d need to use the cream?}
+  &lt;/div&gt;
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+	 {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: I&#39;d say the rash covers an area about 8 cm square. I don&#39;t remember the doctor mentioning how long to keep applying it, sorry}
+  &lt;/div&gt;
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+	  {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: From what you describe, I believe a quantity of 50 gm is reasonable, as you will be applying it sparingly twice a day, and a 7 to 10 day course should be a sufficient duration to see positive results.}
+  &lt;/div&gt;
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+	 {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: That sounds reasonable to me.}
+  &lt;/div&gt;
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+	  {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: With your permission then, I can adapt the prescription with this quantity, and inform the prescriber that I have discussed it with you.}
+  &lt;/div&gt;
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+	 {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Yes please do! I really don&#39;t want to wait until the doctor&#39;s back in the office.}
+  &lt;/div&gt;
+  &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	  &lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+	  {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Mr. Patel, please have a seat. we&#39;ll need to compound the prescription. This may take a bit longer than usual.}
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;active-panel&quot;&gt;
@@ -938,11 +1010,16 @@ During the assessment of the compounding area, the RPhT notices a coffee cup on 
 		});
 	}
 &lt;/script&gt;
-
-{(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Whose coffee cup is this?}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Whose coffee cup is this?}
+&lt;/div&gt;
 {(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: looks confused.}
 {(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: That&#39;s mine. Sorry, I didn&#39;t know where else to put my cup? This is the only clear counter.}
-{(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: I understand the confusion if this is your first shift with us. We have this area for our non-sterile compounding, and need to keep it clear at all times.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: I understand the confusion if this is your first shift with us. We have this area for our non-sterile compounding, and need to keep it clear at all times.}
+&lt;/div&gt;
 {(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: Totally understood my apologies!}
 
 &lt;div class=&quot;active-panel&quot;&gt;
@@ -1058,7 +1135,10 @@ The objective of documenting errors and near misses in a medical safety system i
 The father picks up the product and before he leaves the store he comes back with some questions to the RPhT
 &lt;/div&gt;
 
-{(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Will this cream still be okay if we travel to a hot country? Also do I apply sunscreen on Nikhil before or after applying the cream?}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Will this cream still be okay if we travel to a hot country? Also do I apply sunscreen on Nikhil before or after applying the cream?}
+&lt;/div&gt;
 
 Scenario: The father comes back and asks the following questions: 
 1) What is the stability of the product as we are planning to travel? 
@@ -1105,8 +1185,14 @@ Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 
 The RPhT checks the storage temperature information for clotrimazole cream and the medication safety data sheet for hydrocortisone , then accordingly he answers the mfather’s questions.
 
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: The cream should be okay at room temperature. If the room temperature where you are traveling is hotter than 20-25 degrees Celsius, do your best to keep the medicine away from direct heat/sunlight and store the cream in a cooler area}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Please hold on, I have to refer your second question to the pharmacist.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: The cream should be okay at room temperature. If the room temperature where you are traveling is hotter than 20-25 degrees Celsius, do your best to keep the medicine away from direct heat/sunlight and store the cream in a cooler area}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Please hold on, I have to refer your second question to the pharmacist.}
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[RPhT refers second question to RPh]
 The RPhT reaches out to the pharmacist and relays the father&#39;s second question.
@@ -1161,7 +1247,10 @@ D- Describe how this scenario relates to your current studies and/or professiona
  
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link: &quot;Feedback to Case 2&quot;)[(gotoURL: &quot;https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEHlTJjtUW1NNj7947Z9dizJUOVZIMldSNUdWNkxPOEREN0FFVjlWUE1MUC4u&quot;)]]
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="26" name="Untitled Passage" tags="" position="668,277.5" size="100,100">&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot;&gt;
+    {(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Hello, my name is Anson and I am a registered pharmacy technician,  I can help you with that. Is this the first time that Jordan&#39;s had a prescription filled at this pharmacy?}
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
