@@ -13,7 +13,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play sample-7.</tw-noscript></noscript></tw-story>
-<tw-storydata name="sample-7" startnode="1" creator="Twine" creator-version="2.3.14" ifid="D92AED9F-40E0-4E08-8F1D-ECF659833DBF" zoom="1" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
+<tw-storydata name="sample-7" startnode="1" creator="Twine" creator-version="2.3.14" ifid="D92AED9F-40E0-4E08-8F1D-ECF659833DBF" zoom="0.6" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans';
@@ -143,7 +143,7 @@ button.selected{
 
 &lt;div class=&quot;row row-cols-1 row-cols-md-3 g-4&quot;&gt;
   &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card border-primary rounded h-100&quot;&gt;
+    &lt;div class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
 	&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.svg&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
         &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
@@ -152,7 +152,7 @@ button.selected{
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card border-primary rounded h-100&quot;&gt;
+    &lt;div class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
 	&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case2-tile.svg&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
         &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
@@ -240,8 +240,14 @@ button.selected{
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
 
-{(text-color: &quot;purple&quot;)[&lt;b&gt;Registered Pharmacy Technician (RPhT)- Sayed&lt;/b&gt;]: Hi  Bob, can I help you look for something? }
-{(text-color: &quot;orange&quot;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Hi Sayed. I am looking for something to help with this cold I have. I’ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription? }
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT)- Sayed&lt;/b&gt;]: Hi  Bob, can I help you look for something? }
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color: orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Hi Sayed. I am looking for something to help with this cold I have. I’ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription? }
+&lt;/div&gt;
 
 (button:)[[Next|Quiz 1]]
 
@@ -522,19 +528,49 @@ button.selected{
 	}
 &lt;/script&gt;
 
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Well Bob, although there are some over-the-counter products that may help you feel better, I will need to gather some information from you to help the pharmacist make a recommendation. Is this ok with you?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Sure.}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: How long have you been experiencing these symptoms?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I&#39;ve actually had the cough for about 3 weeks now. I didn&#39;t get a chance to come by to the pharmacy or contact the nurse practitioner. Three days ago, I started getting a sore throat that&#39;s now gone away but turned into congestion. Yesterday some mild sinus pain started so I decided to come in.}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Do you have any other symptoms like a runny nose, nasal discharge, watery eyes, or sneezing?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: No}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Do you have a fever?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: No. I took my temperature this morning and it was 37 degrees Celsius.}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Okay. Thank you for the information. I&#39;ll update the pharmacist with the information you have provided me and then she will come over to assess your symptoms and make a recommendation.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Thanks. Sounds good!}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Well Bob, although there are some over-the-counter products that may help you feel better, I will need to gather some information from you to help the pharmacist make a recommendation. Is this ok with you?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Sure.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: How long have you been experiencing these symptoms?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I&#39;ve actually had the cough for about 3 weeks now. I didn&#39;t get a chance to come by to the pharmacy or contact the nurse practitioner. Three days ago, I started getting a sore throat that&#39;s now gone away but turned into congestion. Yesterday some mild sinus pain started so I decided to come in.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Do you have any other symptoms like a runny nose, nasal discharge, watery eyes, or sneezing?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: No}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Do you have a fever?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: No. I took my temperature this morning and it was 37 degrees Celsius.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Okay. Thank you for the information. I&#39;ll update the pharmacist with the information you have provided me and then she will come over to assess your symptoms and make a recommendation.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Thanks. Sounds good!}
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT - Sayed walks over to behind the pharmacy counter and starts a conversation with the RPh. &quot;, &quot;Dialog 3&quot;)]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="1065,347" size="100,100">  &lt;img style=&quot;height:auto;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+sayed.png&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="1065,347" size="100,100">  &lt;img style=&quot;height:25em;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+sayed.svg&quot;&gt;
 
   &lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
 	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
@@ -559,8 +595,14 @@ button.selected{
 	}
 &lt;/script&gt;
 
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Hi Damilola. Mr. Stonechild is here looking for help finding an OTC product for a cough he&#39;s had for 3 weeks, congestion he&#39;s had for 2 days, and sinus pain that started yesterday. He checked this morning and he does not have a fever. I&#39;ve pulled up his profile here on our pharmacy management software.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Thanks for the gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Hi Damilola. Mr. Stonechild is here looking for help finding an OTC product for a cough he&#39;s had for 3 weeks, congestion he&#39;s had for 2 days, and sinus pain that started yesterday. He checked this morning and he does not have a fever. I&#39;ve pulled up his profile here on our pharmacy management software.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+   {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Thanks for the gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.}
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPh walks over to Bob in the over-the-counter aisle. &quot;, &quot;Dialog 4&quot;)]</tw-passagedata><tw-passagedata pid="14" name="Dialog 4" tags="" position="1198,374" size="100,100">&lt;div class=&quot;clearfix&quot;&gt;  
   &lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
@@ -591,23 +633,74 @@ button.selected{
 	}
 &lt;/script&gt;
 
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Hi Bob. Sayed filled me in on some of your symptoms and your current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit of time now.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Yes, it&#39;s been about 3 weeks now.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Bob, will you tell me more about the cough. Is it dry or do you cough up phlegm or mucus?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: It&#39;s a dry cough.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Are you experiencing any trouble breathing or any shortness of breath?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Not beyond my congestion.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Any chest pain at all?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: No.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Have you had any medical procedures or accidents in the past 3 weeks?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: None.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Have you noticed anything that makes your symptoms worse or better?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: My congestion and sinus pain seem to be a bit worse at night and improve with rest. I haven&#39;t noticed any patterns with my cough.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Thank you for this information. I have one last question. Do you know what your blood pressure is today or has been in the last few days?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I&#39;m sorry. I don&#39;t.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Not a problem. We actually have a blood pressure monitor in the pharmacy. If you&#39;re comfortable, you can check your own blood pressure or Sayed or I can help you to take a current blood pressure reading to help me with making a recommendation for you to treat the symptoms you describe.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Sounds good!}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Your blood pressure reading is 118/75 mmHg. I&#39;ll update the pharmacist with this information and then she will come over with a recommendation.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Hi Bob. Sayed filled me in on some of your symptoms and your current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit of time now.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Yes, it&#39;s been about 3 weeks now.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Bob, will you tell me more about the cough. Is it dry or do you cough up phlegm or mucus?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: It&#39;s a dry cough.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Are you experiencing any trouble breathing or any shortness of breath?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Not beyond my congestion.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Any chest pain at all?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: No.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Have you had any medical procedures or accidents in the past 3 weeks?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+  {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: None.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Have you noticed anything that makes your symptoms worse or better?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+  {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: My congestion and sinus pain seem to be a bit worse at night and improve with rest. I haven&#39;t noticed any patterns with my cough.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Thank you for this information. I have one last question. Do you know what your blood pressure is today or has been in the last few days?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+  {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I&#39;m sorry. I don&#39;t.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Not a problem. We actually have a blood pressure monitor in the pharmacy. If you&#39;re comfortable, you can check your own blood pressure or Sayed or I can help you to take a current blood pressure reading to help me with making a recommendation for you to treat the symptoms you describe.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+  {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Sounds good!}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Your blood pressure reading is 118/75 mmHg. I&#39;ll update the pharmacist with this information and then she will come over with a recommendation.}
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT - Sayed  walks over to behind the pharmacy counter and starts a conversation with the Registered Pharmacist (RPh).  &quot;, &quot;Dialog 5&quot;)]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Dialog 5" tags="" position="1324,374" size="100,100">&lt;div class=&quot;clearfix&quot;&gt; 
@@ -640,11 +733,26 @@ button.selected{
 	}
 &lt;/script&gt;
 
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Hi Damilola. Mr. Stonechild&#39;s current blood pressure is 118/75 mmHg.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: It looks like Bob started Ramipril a week before his dry cough started and almost three weeks before his nasal congestion with associated pain started. Given the timelines, this appears to be a cold on top of an ACE inhibitor induced cough. Bob doesn&#39;t have any red flags present related to his cough or suspected upper respiratory tract infection that would prompt me to refer him to his nurse practitioner or urgent care.}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: What will you recommend?}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: For the cough, I will contact the prescriber and recommend that they change his ACE inhibitor to another class of medications, Angiotensin II receptor blocker (ARB). For the congestion I&#39;d recommend a nasal saline spray since oral decongestants can increase one s blood pressure and topical decongestants can cause rebound congestion. For the mild sinus pain, I&#39;d recommend acetaminophen since it doesn&#39;t increase blood pressure like NSAIDs can.}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Sounds good. Thanks. I can take over the prescription technical checking while you help Bob pick an appropriate product.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Hi Damilola. Mr. Stonechild&#39;s current blood pressure is 118/75 mmHg.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: It looks like Bob started Ramipril a week before his dry cough started and almost three weeks before his nasal congestion with associated pain started. Given the timelines, this appears to be a cold on top of an ACE inhibitor induced cough. Bob doesn&#39;t have any red flags present related to his cough or suspected upper respiratory tract infection that would prompt me to refer him to his nurse practitioner or urgent care.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: What will you recommend?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: For the cough, I will contact the prescriber and recommend that they change his ACE inhibitor to another class of medications, Angiotensin II receptor blocker (ARB). For the congestion I&#39;d recommend a nasal saline spray since oral decongestants can increase one s blood pressure and topical decongestants can cause rebound congestion. For the mild sinus pain, I&#39;d recommend acetaminophen since it doesn&#39;t increase blood pressure like NSAIDs can.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Sounds good. Thanks. I can take over the prescription technical checking while you help Bob pick an appropriate product.}
+&lt;/div&gt;
 
 &lt;/div&gt;
 
@@ -676,21 +784,62 @@ button.selected{
 	}
 &lt;/script&gt;
 
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Hi Bob. Sayed filled me in on your symptoms and current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit now.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Ya, it&#39;s been about 3 weeks now.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: From your medication profile it looks like your nurse practitioner added a new medication, Ramipril, a week before your cough started.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Ya. My blood pressure went up, so my nurse practitioner decided to start me on another medication.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: That makes sense; however, I think your cough may actually be a side effect from the Ramipril rather than part of your cold. To help with this, I can fax your nurse practitioner to recommend switching to another blood pressure medication, Telmisartan, that works similarly to Ramipril but doesn&#39;t have coughing as a side effect.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: That would be great. Come to think of it, the cough started quite a bit before this cold. Is there anything I can take for the congestion and pain then?}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Yes. For your congestion I recommend a nasal saline spray with sodium chloride 0.9%. Use 1 to 2 sprays per nostril 1 to 3 times daily as needed for a week. Blow your nose before using the spray, tilt your head to the side and gently insert the tip into the upper nostril and press down briefly. Bring your head back to an upright position and allow mucus to flow out before wiping any remaining mucus and carefully blowing your nose. Repeat with the other nostril. Remember to wash the tip of the bottle with hot soapy water after each use and wipe it dry. The most common side effect would potentially be some irritation of the nose, coughing or sneezing.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Great! I can do that.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: For the sinus pain, I&#39;d recommend acetaminophen 500 mg 1-2 tablets by mouth every 4-6 hours as needed for 1 week. Be careful to avoid taking more than 3 grams of acetaminophen in 24 hours to avoid impacting your liver.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Excellent. I&#39;m hopeful that these will help.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Do you have any questions about the information and guidance provided?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I don&#39;t think so but I&#39;ll call the pharmacy if anything comes up.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Perfect. One last point. In addition to it being a good idea to monitor your blood pressure regularly, it&#39;s especially important to monitor it if there&#39;s a change from your Ramipril to Telmisartan. Do you have a blood pressure monitor at home you can use to monitor for this?}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: My partner, Jesse, has one. I talked to the pharmacist about measuring my blood pressure weekly when diagnosed but I never ended up doing it and can&#39;t remember how to exactly.}
-
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Hi Bob. Sayed filled me in on your symptoms and current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit now.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Ya, it&#39;s been about 3 weeks now.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: From your medication profile it looks like your nurse practitioner added a new medication, Ramipril, a week before your cough started.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+  {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Ya. My blood pressure went up, so my nurse practitioner decided to start me on another medication.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: That makes sense; however, I think your cough may actually be a side effect from the Ramipril rather than part of your cold. To help with this, I can fax your nurse practitioner to recommend switching to another blood pressure medication, Telmisartan, that works similarly to Ramipril but doesn&#39;t have coughing as a side effect.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: That would be great. Come to think of it, the cough started quite a bit before this cold. Is there anything I can take for the congestion and pain then?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Yes. For your congestion I recommend a nasal saline spray with sodium chloride 0.9%. Use 1 to 2 sprays per nostril 1 to 3 times daily as needed for a week. Blow your nose before using the spray, tilt your head to the side and gently insert the tip into the upper nostril and press down briefly. Bring your head back to an upright position and allow mucus to flow out before wiping any remaining mucus and carefully blowing your nose. Repeat with the other nostril. Remember to wash the tip of the bottle with hot soapy water after each use and wipe it dry. The most common side effect would potentially be some irritation of the nose, coughing or sneezing.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Great! I can do that.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: For the sinus pain, I&#39;d recommend acetaminophen 500 mg 1-2 tablets by mouth every 4-6 hours as needed for 1 week. Be careful to avoid taking more than 3 grams of acetaminophen in 24 hours to avoid impacting your liver.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+	{(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Excellent. I&#39;m hopeful that these will help.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Do you have any questions about the information and guidance provided?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+	{(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I don&#39;t think so but I&#39;ll call the pharmacy if anything comes up.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Perfect. One last point. In addition to it being a good idea to monitor your blood pressure regularly, it&#39;s especially important to monitor it if there&#39;s a change from your Ramipril to Telmisartan. Do you have a blood pressure monitor at home you can use to monitor for this?}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+	{(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: My partner, Jesse, has one. I talked to the pharmacist about measuring my blood pressure weekly when diagnosed but I never ended up doing it and can&#39;t remember how to exactly.}
+&lt;/div&gt;
 &lt;/div&gt;
 
 (button:)[[Next|Quiz 3]]</tw-passagedata><tw-passagedata pid="17" name="Dialog 7" tags="" position="1398,226" size="100,100">  &lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
@@ -720,8 +869,12 @@ button.selected{
 	}
 &lt;/script&gt;
 
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Well you can bring it in and Sayed can show you how to use it. Remember, that your target blood pressure, given your age and health conditions, is a systolic blood pressure of &lt; 120 mmHg.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Will do. For now, I ll pay for these [Nasal Saline Spray 0.9% Sodium Chloride + Acetaminophen 500 mg].}
+{(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Well you can bring it in and Sayed can show you how to use it. Remember, that your target blood pressure, given your age and health conditions, is a systolic blood pressure of &lt; 120 mmHg.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Will do. For now, I ll pay for these [Nasal Saline Spray 0.9% Sodium Chloride + Acetaminophen 500 mg].}
+&lt;/div&gt;
+
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Bob walks over to the cash at the end of the pharmacy dispensary. RPhT is waiting for Bob at the cash. &quot;, &quot;Dialog 8&quot;)]</tw-passagedata><tw-passagedata pid="18" name="Dialog 8" tags="" position="1514,229" size="100,100">  &lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
 	&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+bob+sayed.png&quot;&gt;
@@ -750,13 +903,27 @@ button.selected{
 	}
 &lt;/script&gt;
 
-
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Hi Bob. I m happy to see Damilola was able to help you find something for your cold. I ll give you a call when we hear back from your nurse practitioner about the blood pressure medication switch.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: That s great. In the meantime, I ll go home and get some rest.}
-{(text-color:&#39;purple&#39;)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Rest is important. Drinking water is also important to help with staying hydrated. If you have a humidifier at home, that may be helpful as well but make sure you clean it regularly. Lastly, remember to practice hand hygiene by washing your hands with soap and water for at least 20 seconds to lower your risk of spreading and getting colds.}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Thank you.}
-{(text-color:&#39;green&#39;)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: We ll follow-up with you in 3-4 days to make sure your symptoms are improving and you re not experiencing any intolerable side effects from the product we recommended today. Call us sooner if your symptoms get worse or you have any questions!}
-{(text-color:&#39;orange&#39;)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Much appreciated.}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Hi Bob. I m happy to see Damilola was able to help you find something for your cold. I ll give you a call when we hear back from your nurse practitioner about the blood pressure medication switch.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: That s great. In the meantime, I ll go home and get some rest.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Rest is important. Drinking water is also important to help with staying hydrated. If you have a humidifier at home, that may be helpful as well but make sure you clean it regularly. Lastly, remember to practice hand hygiene by washing your hands with soap and water for at least 20 seconds to lower your risk of spreading and getting colds.}
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Thank you.}
+&lt;/div&gt;
+{(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: We ll follow-up with you in 3-4 days to make sure your symptoms are improving and you re not experiencing any intolerable side effects from the product we recommended today. Call us sooner if your symptoms get worse or you have any questions!}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Much appreciated.}
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;)[(link-goto: &quot;RPhT and RPh wave goodbye to Bob from behind the cash and counter, respectively. Bob leaves the pharmacy.&quot;, &quot;Dialog 10&quot;)]
 </tw-passagedata><tw-passagedata pid="19" name="Dialog 10" tags="" position="1630,228" size="100,100">
@@ -766,7 +933,7 @@ RPh completed a pharmaceutical opinion to inform the nurse practitioner of the p
 RPh documents the interaction in the notes section of the patient’s profile in the pharmacy dispensing software as below. 
 </tw-passagedata><tw-passagedata pid="20" name="Case 2 - Dialog 1" tags="" position="219,191" size="100,100">&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
 &lt;div class=&quot;mb-5 audio-controls&quot;&gt;
-  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play&lt;/button&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
   &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
   &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
@@ -799,7 +966,7 @@ RPh documents the interaction in the notes section of the patient’s profile in
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
-    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: It looks like this Rx is missing the quantity to be dispensed. I will contact your physician&#39;s office to get the amount prescribed.}
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: It looks like this prescription is missing the quantity to be dispensed. I will contact your physician&#39;s office to get the amount prescribed.}
 &lt;/div&gt;
 
 In the scenario, both the pharmacist and the registered pharmacy technician are qualified to contact the prescriber to obtain the missing information on the prescription.
@@ -841,6 +1008,7 @@ Key Learning: Interprofessional collaboration/scopes of practice
 ]
 }]]
 }
+
 
 (text-style: &quot;italic&quot;)[The RPhT phones the prescriber&#39;s office.]
 
@@ -939,6 +1107,7 @@ Key Learning: Interprofessional collaboration/scopes of practice
 &lt;div class=&quot;active-panel&quot;&gt;
 The pharmacist proceeds to document the adaptation on the prescription as well as on the form which will be faxed to the prescriber&#39;s office.
 
+&lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
 The pharmacist may adapt a prescription for all the following EXCEPT: 
 {
 (set: _q1A to &quot;&quot;)
@@ -952,6 +1121,7 @@ The pharmacist may adapt a prescription for all the following EXCEPT:
 (radio: 2bind _q1A, &quot;q2&quot;, _optionB)
 (radio: 2bind _q1A, &quot;q2&quot;, _optionC)
 (radio: 2bind _q1A, &quot;q2&quot;, _optionD)
+&lt;/div&gt;
 {
 (set: _selected to &quot;&quot;)
 (if: _q1A is _optionA)[(set: _selected to &quot;A&quot;)]
@@ -987,6 +1157,7 @@ The pharmacist may adapt a prescription for all the following EXCEPT:
 }
 
 
+
 The RPhT documents all the calculations &amp; necessary info in the Master formula, processes the Rx in the system, and generates the label. 
 During the assessment of the compounding area, the RPhT notices a coffee cup on the counter. 
 &lt;/div&gt;
@@ -1018,13 +1189,20 @@ During the assessment of the compounding area, the RPhT notices a coffee cup on 
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
     {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Whose coffee cup is this?}
 &lt;/div&gt;
-{(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: looks confused.}
-{(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: That&#39;s mine. Sorry, I didn&#39;t know where else to put my cup? This is the only clear counter.}
+
+(text-style: &quot;italic&quot;)[Sara looks confused.]
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+    {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: That&#39;s mine. Sorry, I didn&#39;t know where else to put my cup? This is the only clear counter.}
+&lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
     {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: I understand the confusion if this is your first shift with us. We have this area for our non-sterile compounding, and need to keep it clear at all times.}
 &lt;/div&gt;
-{(text-color: blue)[&lt;b&gt;Registered Pharmacist (RPh) - Relief Pharmacist&lt;/b&gt;]: Totally understood my apologies!}
+&lt;div style=&quot;display:flex;align-items:center&quot;&gt;
+	&lt;img src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
+    {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Totally understood my apologies!}
+&lt;/div&gt;
 
 &lt;div class=&quot;active-panel&quot;&gt;
   RPh (relief pharmacist) picks up the coffee cup.
@@ -1062,12 +1240,12 @@ What is the most appropriate course of action regarding the presence of the coff
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q1A is _optionC)[
+(if: _q1A is _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Correct! RPhT has responsibility to educate team members regarding compounding standards&quot;)
 ]
-(if: _q1A is not _optionC)[
+(if: _q1A is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
 ]
@@ -1145,9 +1323,8 @@ The father picks up the product and before he leaves the store he comes back wit
 &lt;/div&gt;
 
 Scenario: The father comes back and asks the following questions: 
-1) What is the stability of the product as we are planning to travel? 
-2) Should sunscreen be applied to the affected areas before application of the prescription cream or after? 
-It is within the regulated technician’s scope of practice to respond to both questions
+1) What is the stability of the product as we are planning to travel?
+2) Should sunscreen be applied to the affected areas before application of the prescription cream or after?
 {
 (set: _q1A to &quot;&quot;)
 
@@ -1182,6 +1359,45 @@ Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 ]
 (if: _q1A is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Wrong&quot;)))
+(alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
+]
+}]]
+}
+It is within the regulated technician’s scope of practice to respond to both questions
+{
+(set: _q2A to &quot;&quot;)
+
+(set: _optionA to &quot;True&quot;)
+(set: _optionB to &quot;False &quot;)
+}
+(radio: 2bind _q2A, &quot;q2&quot;, _optionA)
+(radio: 2bind _q2A, &quot;q2&quot;, _optionB)
+{
+(set: _selected to &quot;&quot;)
+(if: _q2A is _optionA)[(set: _selected to &quot;A&quot;)]
+(if: _q2A is _optionB)[(set: _selected to &quot;B&quot;)]
+
+(set: _getSelected to (macro: str-type _option, [
+(set: _optionA to &quot;True&quot;)
+(set: _optionB to &quot;False&quot;)
+
+(if: _option is _optionA)[(output-data: &quot;A&quot;)]
+(if: _option is _optionB)[(output-data: &quot;B&quot;)]
+(else:)[(output-data: &quot;&quot;)]
+]))
+
+(set: _canContinue to false)
+
+[(link-repeat: &quot;Submit&quot;, (button:))[{
+(if: _q2A is _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2A), &quot;Correct&quot;)))
+(show: ?continue)
+(dialog: &quot;Therapeutic information is part of pharmacist&#39;s scope of practice. Technical information, as in the question regarding product stability, is part of the registered pharmacy technician&#39;s scope of practice.
+Suggested pre-reading: NAPRA Professional Competencies for Canadian Pharmacy Technicians at Entry to Practice; NAPRA Professional Competencies for Canadian Pharmacists at Entry to Practice 
+Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
+]
+(if: _q2A is not _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2A), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
 ]
 }]]
