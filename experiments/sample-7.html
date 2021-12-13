@@ -164,7 +164,7 @@ button.selected{
     &lt;div class=&quot;card border-primary h-100&quot;&gt;
       &lt;div class=&quot;card-body&quot;&gt;
 		&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img img-thumbnail&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.svg&quot;&gt;
-        &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+        &lt;p class=&quot;card-text&quot;This is a placeholder for case 3 description. We will decide it later.&lt;/p&gt;
         (button:)[[Case 3]]
       &lt;/div&gt;
     &lt;/div&gt;
@@ -965,19 +965,20 @@ RPh documents the interaction in the notes section of the patient’s profile in
     {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: It looks like this prescription is missing the quantity to be dispensed. I will contact your physician&#39;s office to get the amount prescribed.}
 &lt;/div&gt;
 
+&lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
 In the scenario, both the pharmacist and the registered pharmacy technician are qualified to contact the prescriber to obtain the missing information on the prescription.
 {
-(set: _q1A to &quot;&quot;)
+(set: _q2A to &quot;&quot;)
 
 (set: _optionA to &quot;True&quot;)
 (set: _optionB to &quot;False &quot;)
 }
-(radio: 2bind _q1A, &quot;q2&quot;, _optionA)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionB)
+(radio: 2bind _q2A, &quot;c2q1&quot;, _optionA)
+(radio: 2bind _q2A, &quot;c2q1&quot;, _optionB)
 {
 (set: _selected to &quot;&quot;)
-(if: _q1A is _optionA)[(set: _selected to &quot;A&quot;)]
-(if: _q1A is _optionB)[(set: _selected to &quot;B&quot;)]
+(if: _q2A is _optionA)[(set: _selected to &quot;A&quot;)]
+(if: _q2A is _optionB)[(set: _selected to &quot;B&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
 (set: _optionA to &quot;True&quot;)
@@ -991,20 +992,20 @@ In the scenario, both the pharmacist and the registered pharmacy technician are 
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q1A is _optionA)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Correct&quot;)))
+(if: _q2A is _optionA)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2A), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Suggested pre-reading: NAPRA Model Standards of Practice for Regulated Technicians/ Model Standards of Practice for Pharmacists 
 Key Learning: Interprofessional collaboration/scopes of practice 
 &quot;)
 ]
-(if: _q1A is not _optionA)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Wrong&quot;)))
+(if: _q2A is not _optionA)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2A), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
 ]
 }]]
 }
-
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;)[The RPhT phones the prescriber&#39;s office.]
 
@@ -1106,24 +1107,24 @@ The pharmacist proceeds to document the adaptation on the prescription as well a
 &lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
 The pharmacist may adapt a prescription for all the following EXCEPT: 
 {
-(set: _q1A to &quot;&quot;)
+(set: _q2B to &quot;&quot;)
 
 (set: _optionA to &quot;Dose&quot;)
 (set: _optionB to &quot;Therapeutic equivalent &quot;)
 (set: _optionC to &quot;Route of administration&quot;)
 (set: _optionD to &quot;Regimen &quot;)
 }
-(radio: 2bind _q1A, &quot;q2&quot;, _optionA)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionB)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionC)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionD)
+(radio: 2bind _q2B, &quot;c2q2&quot;, _optionA)
+(radio: 2bind _q2B, &quot;c2q2&quot;, _optionB)
+(radio: 2bind _q2B, &quot;c2q2&quot;, _optionC)
+(radio: 2bind _q2B, &quot;c2q2&quot;, _optionD)
 &lt;/div&gt;
 {
 (set: _selected to &quot;&quot;)
-(if: _q1A is _optionA)[(set: _selected to &quot;A&quot;)]
-(if: _q1A is _optionB)[(set: _selected to &quot;B&quot;)]
-(if: _q1A is _optionC)[(set: _selected to &quot;C&quot;)]
-(if: _q1A is _optionD)[(set: _selected to &quot;D&quot;)]
+(if: _q2B is _optionA)[(set: _selected to &quot;A&quot;)]
+(if: _q2B is _optionB)[(set: _selected to &quot;B&quot;)]
+(if: _q2B is _optionC)[(set: _selected to &quot;C&quot;)]
+(if: _q2B is _optionD)[(set: _selected to &quot;D&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
 (set: _optionA to &quot;Dose&quot;)
@@ -1140,18 +1141,18 @@ The pharmacist may adapt a prescription for all the following EXCEPT:
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q1A is _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Correct&quot;)))
+(if: _q2B is _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2B), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Correct! According to the scope of practice, RPhT can perform tasks relating to information gathering and triaging, providing non-pharmacological recommendations, and educating patients on proper medical device use. RPhT can only perform technical verifications on prescriptions, while the RPh can perform both the technical and clinical verifications.&quot;)
 ]
-(if: _q1A is not _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Wrong&quot;)))
+(if: _q2B is not _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2B), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
 ]
 }]]
 }
-
+&lt;/div&gt;
 
 
 The RPhT documents all the calculations &amp; necessary info in the Master formula, processes the Rx in the system, and generates the label. 
@@ -1205,23 +1206,24 @@ During the assessment of the compounding area, the RPhT notices a coffee cup on 
   Counter is cleaned and sanitized before starting to work on the mixture.
 &lt;/div&gt;
 
+&lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
 What is the most appropriate course of action regarding the presence of the coffee cup on the designated compounding counter?  
 {
-(set: _q1A to &quot;&quot;)
+(set: _q2C to &quot;&quot;)
 
 (set: _optionA to &quot;The RPhT should say nothing and discard the cup and its contents.&quot;)
 (set: _optionB to &quot;The RPhT should ask the pharmacy manager to speak to the relief pharmacist about leaving coffee cups lying around the pharmacy.&quot;)
 (set: _optionC to &quot;The RPhT should inform the relief pharmacist that no food or drink is allowed in the compounding area.&quot;)
 }
-(radio: 2bind _q1A, &quot;q2&quot;, _optionA)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionB)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionC)
+(radio: 2bind _q2C, &quot;c2q3&quot;, _optionA)
+(radio: 2bind _q2C, &quot;c2q3&quot;, _optionB)
+(radio: 2bind _q2C, &quot;c2q3&quot;, _optionC)
 
 {
 (set: _selected to &quot;&quot;)
-(if: _q1A is _optionA)[(set: _selected to &quot;A&quot;)]
-(if: _q1A is _optionB)[(set: _selected to &quot;B&quot;)]
-(if: _q1A is _optionC)[(set: _selected to &quot;C&quot;)]
+(if: _q2C is _optionA)[(set: _selected to &quot;A&quot;)]
+(if: _q2C is _optionB)[(set: _selected to &quot;B&quot;)]
+(if: _q2C is _optionC)[(set: _selected to &quot;C&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
 (set: _optionA to &quot;The RPhT should say nothing and discard the cup and its contents.&quot;)
@@ -1236,17 +1238,18 @@ What is the most appropriate course of action regarding the presence of the coff
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q1A is _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Correct&quot;)))
+(if: _q2C is _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2C), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Correct! RPhT has responsibility to educate team members regarding compounding standards&quot;)
 ]
-(if: _q1A is not _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Wrong&quot;)))
+(if: _q2C is not _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2C), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
 ]
 }]]
 }
+&lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT interacts with Pharmacy Assistant&quot;, &quot;C2Dialog4&quot;)]
 
@@ -1265,48 +1268,49 @@ What is the most appropriate course of action regarding the presence of the coff
 RPh calls the RPhT and notifies him of the missed info. The RPhT affixes the required information on the product. Documentation in the Medical Safety System for a &quot;near miss&quot; is initiated.
 &lt;/div&gt;
 
+&lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
 The objective of documenting errors and near misses in a medical safety system is to: 
 {
-(set: _q1A to &quot;&quot;)
+(set: _q2D to &quot;&quot;)
 
-(set: _optionA to &quot;Identify and keep a record of pharmacy staff who have made errors. &quot;)
-(set: _optionB to &quot;Share information and create action plans to improve medication safety.&quot;)
-(set: _optionC to &quot; Ensure there is pharmacy documentation in case of future litigation by patients.&quot;)
+(set: _optA to &quot;Identify and keep a record of pharmacy staff who have made errors. &quot;)
+(set: _optB to &quot;Share information and create action plans to improve medication safety.&quot;)
+(set: _optC to &quot; Ensure there is pharmacy documentation in case of future litigation by patients.&quot;)
 }
-(radio: 2bind _q1A, &quot;q2&quot;, _optionA)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionB)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionC)
+(radio: 2bind _q2D, &quot;c2q4&quot;, _optA)
+(radio: 2bind _q2D, &quot;c2q4&quot;, _optB)
+(radio: 2bind _q2D, &quot;c2q4&quot;, _optC)
 {
 (set: _selected to &quot;&quot;)
-(if: _q1A is _optionA)[(set: _selected to &quot;A&quot;)]
-(if: _q1A is _optionB)[(set: _selected to &quot;B&quot;)]
-(if: _q1A is _optionC)[(set: _selected to &quot;C&quot;)]
+(if: _q2D is _optA)[(set: _selected to &quot;A&quot;)]
+(if: _q2D is _optB)[(set: _selected to &quot;B&quot;)]
+(if: _q2D is _optC)[(set: _selected to &quot;C&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
-(set: _optionA to &quot;Dose&quot;)
-(set: _optionB to &quot;Therapeutic equivalent &quot;)
-(set: _optionC to &quot;Route of administration &quot;)
-(if: _option is _optionA)[(output-data: &quot;A&quot;)]
-(if: _option is _optionB)[(output-data: &quot;B&quot;)]
-(if: _option is _optionC)[(output-data: &quot;C&quot;)]
-(if: _option is _optionD)[(output-data: &quot;D&quot;)]
+(set: _optA to &quot;Identify and keep a record of pharmacy staff who have made errors. &quot;)
+(set: _optB to &quot;Share information and create action plans to improve medication safety.&quot;)
+(set: _optC to &quot; Ensure there is pharmacy documentation in case of future litigation by patients.&quot;)
+(if: _option is _optA)[(output-data: &quot;A&quot;)]
+(if: _option is _optB)[(output-data: &quot;B&quot;)]
+(if: _option is _optC)[(output-data: &quot;C&quot;)]
+(if: _option is _optD)[(output-data: &quot;D&quot;)]
 (else:)[(output-data: &quot;&quot;)]
 ]))
 
 (set: _canContinue to false)
-
+}
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q1A is _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Correct&quot;)))
-(show: ?continue)
+(if: _q2D is _optB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2D), &quot;Correct&quot;)))
 (dialog: &quot;Correct! According to the scope of practice, RPhT can perform tasks relating to information gathering and triaging, providing non-pharmacological recommendations, and educating patients on proper medical device use. RPhT can only perform technical verifications on prescriptions, while the RPh can perform both the technical and clinical verifications.&quot;)
 ]
-(if: _q1A is not _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Wrong&quot;)))
+(if: _q2D is not _optB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2D), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
 ]
 }]]
-}
+
+&lt;/div&gt;
 
 &lt;div class=&quot;active-panel&quot;&gt;
 &lt;img style=&quot;height:auto;width:70%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
@@ -1320,19 +1324,20 @@ The father picks up the product and before he leaves the store he comes back wit
 
 Scenario: The father comes back and asks the following questions: 
 1) What is the stability of the product as we are planning to travel?
-It is within the regulated technician’s scope of practice to respond to this question
+&lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
+Is it within the regulated technician’s scope of practice to respond to this question?
 {
-(set: _q1A to &quot;&quot;)
+(set: _q2E to &quot;&quot;)
 
 (set: _optionA to &quot;True&quot;)
 (set: _optionB to &quot;False &quot;)
 }
-(radio: 2bind _q1A, &quot;q2&quot;, _optionA)
-(radio: 2bind _q1A, &quot;q2&quot;, _optionB)
+(radio: 2bind _q2E, &quot;c2q5&quot;, _optionA)
+(radio: 2bind _q2E, &quot;c2q5&quot;, _optionB)
 {
 (set: _selected to &quot;&quot;)
-(if: _q1A is _optionA)[(set: _selected to &quot;A&quot;)]
-(if: _q1A is _optionB)[(set: _selected to &quot;B&quot;)]
+(if: _q2E is _optionA)[(set: _selected to &quot;A&quot;)]
+(if: _q2E is _optionB)[(set: _selected to &quot;B&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
 (set: _optionA to &quot;True&quot;)
@@ -1346,33 +1351,35 @@ It is within the regulated technician’s scope of practice to respond to this q
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q1A is _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Correct&quot;)))
+(if: _q2E is _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2E), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Therapeutic information is part of pharmacist&#39;s scope of practice. Technical information, as in the question regarding product stability, is part of the registered pharmacy technician&#39;s scope of practice.
 Suggested pre-reading: NAPRA Professional Competencies for Canadian Pharmacy Technicians at Entry to Practice; NAPRA Professional Competencies for Canadian Pharmacists at Entry to Practice 
 Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 ]
-(if: _q1A is not _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Wrong&quot;)))
+(if: _q2E is not _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2E), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
 ]
 }]]
 }
+&lt;/div&gt;
 2) Should sunscreen be applied to the affected areas before application of the prescription cream or after?
-It is within the regulated technician’s scope of practice to respond to this question
+&lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
+Is it within the regulated technician’s scope of practice to respond to this question?
 {
-(set: _q2A to &quot;&quot;)
+(set: _q2F to &quot;&quot;)
 
 (set: _optionA to &quot;True&quot;)
 (set: _optionB to &quot;False &quot;)
 }
-(radio: 2bind _q2A, &quot;q2&quot;, _optionA)
-(radio: 2bind _q2A, &quot;q2&quot;, _optionB)
+(radio: 2bind _q2F, &quot;c2q6&quot;, _optionA)
+(radio: 2bind _q2F, &quot;c2q6&quot;, _optionB)
 {
 (set: _selected to &quot;&quot;)
-(if: _q2A is _optionA)[(set: _selected to &quot;A&quot;)]
-(if: _q2A is _optionB)[(set: _selected to &quot;B&quot;)]
+(if: _q2F is _optionA)[(set: _selected to &quot;A&quot;)]
+(if: _q2F is _optionB)[(set: _selected to &quot;B&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
 (set: _optionA to &quot;True&quot;)
@@ -1386,19 +1393,20 @@ It is within the regulated technician’s scope of practice to respond to this q
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q2A is _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2A), &quot;Correct&quot;)))
+(if: _q2F is _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2F), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Therapeutic information is part of pharmacist&#39;s scope of practice. Technical information, as in the question regarding product stability, is part of the registered pharmacy technician&#39;s scope of practice.
 Suggested pre-reading: NAPRA Professional Competencies for Canadian Pharmacy Technicians at Entry to Practice; NAPRA Professional Competencies for Canadian Pharmacists at Entry to Practice 
 Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 ]
-(if: _q2A is not _optionB)[
-(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2A), &quot;Wrong&quot;)))
+(if: _q2F is not _optionB)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2F), &quot;Wrong&quot;)))
 (alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)
 ]
 }]]
 }
+&lt;/div&gt;
 
 The RPhT checks the storage temperature information for clotrimazole cream and the medication safety data sheet for hydrocortisone , then accordingly he answers the mfather’s questions.
 
