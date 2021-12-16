@@ -11,6 +11,7 @@
    sodipodi:docname="sayed.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -23,11 +24,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="5.3593715"
-     inkscape:cx="0.55976713"
-     inkscape:cy="29.107891"
+     inkscape:zoom="42.874973"
+     inkscape:cx="16.081643"
+     inkscape:cy="43.813439"
      inkscape:window-width="1920"
-     inkscape:window-height="1013"
+     inkscape:window-height="1017"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
@@ -1887,6 +1888,18 @@
          d="m 11440.7,8073.4 c 0,0 -0.5,-204.23 43.7,-272.98 39.9,-62.04 166.1,-185.47 183,-201.15 0,0 -4.5,71.62 -50.2,119.73 -45.7,48.08 -159.4,106.55 -176.5,354.4 z"
          id="path12642-6-2" />
     </clipPath>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#radialGradient12452-1-4"
+       id="radialGradient15157"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(113.163,-6.92163,-6.52071,-120.014,12143.6,8153.11)"
+       cx="0"
+       cy="0"
+       fx="0"
+       fy="0"
+       r="1"
+       spreadMethod="pad" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -2271,28 +2284,6 @@
       </g>
     </g>
     <g
-       id="g12346"
-       transform="matrix(0.01584432,0,0,-0.01584432,-104.23254,246.18173)"
-       inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
-       inkscape:export-xdpi="98.489998"
-       inkscape:export-ydpi="98.489998">
-      <g
-         id="g12348"
-         clip-path="url(#clipPath12352-7-7)">
-        <path
-           d="m 11681.8,8224.14 c 22.1,0.43 40.4,-17.47 40.7,-39.99 0.3,-22.51 -17.4,-41.05 -39.5,-41.51 -22.2,-0.37 -40.5,17.57 -40.9,40.06 -0.3,22.52 17.4,41.08 39.7,41.44"
-           style="fill:url(#radialGradient12360-84-4);fill-opacity:1;fill-rule:nonzero;stroke:none"
-           id="path12362" />
-      </g>
-    </g>
-    <path
-       d="m 82.442018,117.62985 c -0.0634,-0.13151 -0.005,-0.29661 0.13309,-0.36791 0.13785,-0.0705 0.30104,-0.0208 0.36442,0.1117 0.065,0.13262 0.005,0.29661 -0.13151,0.36759 -0.13784,0.0711 -0.30104,0.0212 -0.366,-0.11138"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0158444"
-       id="path12364"
-       inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
-       inkscape:export-xdpi="98.489998"
-       inkscape:export-ydpi="98.489998" />
-    <g
        id="g12366"
        transform="matrix(0.01584432,0,0,-0.01584432,-102.92855,246.97981)"
        inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
@@ -2411,34 +2402,12 @@
       </g>
     </g>
     <path
-       d="m 80.597738,116.49143 c -0.0507,-0.10394 -0.005,-0.23354 0.10457,-0.28853 0.10774,-0.0555 0.23766,-0.0163 0.28837,0.0879 0.0507,0.10394 0.005,0.23339 -0.10299,0.28853 -0.10933,0.0554 -0.23925,0.0162 -0.28995,-0.0879"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0158444"
-       id="path12478"
-       inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
-       inkscape:export-xdpi="98.489998"
-       inkscape:export-ydpi="98.489998" />
-    <path
        d="m 83.787198,117.73141 c 0,0 -0.0142,-0.76814 -0.58466,-1.18833 -0.59733,-0.44095 -1.76347,-0.4335 -2.37506,-0.0762 -0.36917,0.21485 -0.49117,0.90804 -0.49117,0.90804 0,0 0.37868,-0.25304 0.77954,-0.43556 0.50543,-0.22959 0.70666,-0.20931 1.02037,-0.20614 0.45315,0.005 0.62268,0.0835 0.82391,0.13959 0.52761,0.14735 0.82707,0.85861 0.82707,0.85861"
        style="fill:#323639;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0158444"
        id="path12480"
        inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
        inkscape:export-xdpi="98.489998"
        inkscape:export-ydpi="98.489998" />
-    <g
-       id="g12482"
-       transform="matrix(0.01584432,0,0,-0.01584432,-104.23254,246.18173)"
-       inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
-       inkscape:export-xdpi="98.489998"
-       inkscape:export-ydpi="98.489998">
-      <g
-         id="g12484"
-         clip-path="url(#clipPath12488-3-2)">
-        <path
-           d="m 11566.7,8179.72 c 0,0 20.6,-27.66 49.3,-34.96 17.9,-4.55 44.4,-11.86 84.4,-9.46 0,0 -31.5,-11.37 -89.4,4.19 -31.2,8.37 -44.3,40.23 -44.3,40.23"
-           style="fill:url(#linearGradient12494);fill-opacity:1;fill-rule:nonzero;stroke:none"
-           id="path12496" />
-      </g>
-    </g>
     <g
        id="g12498"
        transform="matrix(0.01584432,0,0,-0.01584432,-102.92855,246.97981)"
@@ -2783,5 +2752,34 @@
            id="path12894" />
       </g>
     </g>
+    <g
+       id="g15153"
+       transform="matrix(0.01584432,0,0,-0.01584432,-109.80776,246.97981)"
+       inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
+       inkscape:export-xdpi="98.489998"
+       inkscape:export-ydpi="98.489998">
+      <g
+         id="g15151"
+         clip-path="url(#clipPath12444-7-5)">
+        <path
+           d="m 12110.4,8221.56 c -22.1,0.7 -40.6,-17 -41.2,-39.5 -0.6,-22.5 16.8,-41.26 39,-41.97 22.2,-0.64 40.7,17.07 41.3,39.56 0.6,22.5 -16.9,41.27 -39.1,41.91"
+           style="fill:url(#radialGradient15157);fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path15149" />
+      </g>
+    </g>
+    <path
+       d="m 82.173097,117.29188 c 0.0523,-0.10346 0.008,-0.23338 -0.0998,-0.28979 -0.10775,-0.0566 -0.23767,-0.0193 -0.28996,0.0846 -0.0523,0.10315 -0.008,0.23323 0.0998,0.28964 0.10775,0.0567 0.23767,0.019 0.28996,-0.0844"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0158444"
+       id="path15155"
+       inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
+       inkscape:export-xdpi="98.489998"
+       inkscape:export-ydpi="98.489998" />
+    <path
+       d="m 82.442018,117.62985 c -0.0634,-0.13151 -0.005,-0.29661 0.13309,-0.36791 0.13785,-0.0705 0.30104,-0.0208 0.36442,0.1117 0.065,0.13262 0.005,0.29661 -0.13151,0.36759 -0.13784,0.0711 -0.30104,0.0212 -0.366,-0.11138"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0158444"
+       id="path12364"
+       inkscape:export-filename="/home/bolarinwa/Downloads/case1-title.png"
+       inkscape:export-xdpi="98.489998"
+       inkscape:export-ydpi="98.489998" />
   </g>
 </svg>
