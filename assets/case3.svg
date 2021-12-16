@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="43.955757mm"
-   height="43.947857mm"
-   viewBox="0 0 43.955757 43.947857"
+   width="43.800617mm"
+   height="38.110741mm"
+   viewBox="0 0 43.800617 38.110741"
    version="1.1"
    id="svg87321"
    inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
@@ -29,7 +29,7 @@
      fit-margin-bottom="0"
      inkscape:zoom="1.569781"
      inkscape:cx="98.421371"
-     inkscape:cy="186.96875"
+     inkscape:cy="186.33172"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="0"
@@ -49,15 +49,26 @@
          x="26.111216"
          y="25.973635" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath88049">
+      <rect
+         style="fill:#f1f0f5;stroke-width:0.264583"
+         id="rect88051"
+         width="43.800617"
+         height="38.110741"
+         x="37.28841"
+         y="30.717995" />
+    </clipPath>
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-77.657755,-73.371176)">
+     transform="translate(-77.669601,-73.547127)">
     <g
        id="g87096"
-       clip-path="url(#clipPath87202)"
+       clip-path="url(#clipPath88049)"
        transform="translate(40.381191,42.829132)">
       <path
          d="m 61.581284,67.045607 c 1.075385,-1.468663 0.981576,-16.813348 3.518222,-14.793638 1.698871,5.113346 0.04016,15.488055 -0.736555,18.195197 -1.312377,4.573296 -3.790361,10.804812 -4.010404,11.797613 l -2.700142,-0.974805 c 0.955319,-1.195683 2.192728,-10.395032 3.928879,-14.224367"
