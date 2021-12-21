@@ -226,7 +226,7 @@ button.selected{
 	&lt;div class=&quot;card mb-4 shadow rounded&quot;&gt;
 	  &lt;div class=&quot;card-body d-flex flex-column&quot;&gt;
 		&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.svg&quot;&gt;
-		&lt;p class=&quot;card-text&quot;&gt;Bob Stonechild goes to his community pharmacy for help for his cold symptoms&lt;/p&gt;
+		&lt;p class=&quot;card-text&quot;&gt;Bob Stonechild goes to his local community pharmacy for help with his cold symptoms&lt;/p&gt;
 		&lt;button type=&quot;button&quot; style=&quot;border:none;color:transparent;&quot; class=&quot;mt-auto btn-primary-outline&quot;&gt;(button:)[[Case 1]]&lt;/button&gt;
 	  &lt;/div&gt;
 	&lt;/div&gt;
@@ -236,7 +236,7 @@ button.selected{
 	&lt;div class=&quot;card mb-4 shadow rounded&quot;&gt;
 	  &lt;div class=&quot;card-body d-flex flex-column&quot;&gt;
 		&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case2-tile.svg&quot;&gt;
-		&lt;p class=&quot;card-text&quot;&gt;Samir Patel goes to his community pharmacy to get his prescription filled for his son&lt;/p&gt;
+		&lt;p class=&quot;card-text&quot;&gt;Samir Patel goes to his local community pharmacy to get a prescription filled for his son&lt;/p&gt;
 		&lt;button type=&quot;button&quot; style=&quot;border: none;&quot; class=&quot;mt-auto btn-primary-outline&quot;&gt;(button:)[[Case 2]]&lt;/button&gt;
 	  &lt;/div&gt;
 	&lt;/div&gt;
@@ -244,7 +244,7 @@ button.selected{
 	&lt;div class=&quot;card mb-4 shadow rounded&quot;&gt;
 	  &lt;div class=&quot;card-body d-flex flex-column&quot;&gt;
 		&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case3.svg&quot;&gt;
-		&lt;p class=&quot;card-text&quot;&gt;Maryam Khan goes to her community pharmacy to get her vaccine&lt;/p&gt;
+		&lt;p class=&quot;card-text&quot;&gt;Maryam Khan goes to her local community pharmacy to ask about getting the COVID-19 vaccine&lt;/p&gt;
 		&lt;button type=&quot;button&quot; style=&quot;border: none;&quot; class=&quot;mt-auto btn-primary-outline&quot;&gt;(button:)[[Case 3]]&lt;/button&gt;
 	  &lt;/div&gt;
 	&lt;/div&gt;
@@ -350,9 +350,9 @@ button.selected{
   &lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
 
   &lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
-	&lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-	&lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
   &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -372,7 +372,7 @@ button.selected{
 			{&quot;person&quot;: 1, &quot;text&quot;: &quot;May I ask a few questions?&quot;}
 			]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -413,9 +413,9 @@ button.selected{
 (button:)[[Next|Case 2 - Dialog 1]]</tw-passagedata><tw-passagedata pid="6" name="Case 3" tags="" position="698.6666666666666,604.0000000000001" size="100,100">&lt;img style=&quot;height:55vh;width:100%&quot; class=&quot;img-fluid rounded mx-auto d-block&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+maryam.svg&quot;&gt;
 
 &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
-  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mr-3&quot;&gt;Play Dialog&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mr-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mr-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -451,7 +451,7 @@ button.selected{
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [{&quot;person&quot;: 1, &quot;text&quot;: &quot;Hi, my name is Anson. How may I help you?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;I am interested in getting the COVID-19 vaccine today.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;I can help you with this. Do you mind if I ask you some routine screening questions and then I will have you speak with the pharmacist?&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="258.6666666666667,46.66666666666667" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Quiz 2" tags="" position="1144,230.33333333333334" size="100,100">How should RPh - Damilola proceed?
@@ -571,8 +571,8 @@ button.selected{
 
   &lt;div class=&quot;d-flex justify-content-center align-items-md-center&quot;&gt;
   	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
-  	&lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  	&lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -586,16 +586,16 @@ button.selected{
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
-			dialog = [{&quot;person&quot;:1,&quot;text&quot;:&quot;Well Bob, although there are some over-the-counter products that may help you feel better, I will need to gather some information from you to help the pharmacist make a recommendation. Is this ok with you?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Sure.&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;How long have you been experiencing these symptoms?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I&#39;ve actually had the cough for about 3 weeks now&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I didn&#39;t get a chance to come by to the pharmacy or contact the nurse practitioner&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Three days ago, I started getting a sore throat that&#39;s now gone away but turned into congestion&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Yesterday some mild sinus pain started so I decided to come in&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Do you have any other symptoms like a runny nose, nasal discharge, watery eyes, or sneezing?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;No&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Do you have a fever?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;No. I took my temperature this morning and it was 37 degrees Celsius.&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Okay. Thank you for the information. I&#39;ll update the pharmacist with the information you have provided me and then she will come over to assess your symptoms and make a recommendation.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Thanks. Sounds good!&quot;}]
+			dialog = [{&quot;person&quot;:1,&quot;text&quot;:&quot;Well Bob, although there are some over-the-counter products that may help you feel better, I will need to gather some information from you about your symptoms to help the pharmacist make a recommendation. Do you have a few minutes?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Sure.&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;How long have you been experiencing these symptoms?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I&#39;ve had the cough for about 3 weeks now&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I didn&#39;t get a chance to come by to the pharmacy or contact the nurse practitioner&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Three days ago, I started getting a sore throat that&#39;s now gone away but turned into congestion&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Yesterday some mild sinus pain started so I decided to come in&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Do you have any other symptoms like a runny nose, nasal discharge, watery eyes, or sneezing?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;No&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Do you have a fever?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;No. I took my temperature this morning and it was 37 degrees Celsius.&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Okay. Thank you for the information. I&#39;ll update the pharmacist with the information you have provided me and then she will come over to assess your symptoms and make a recommendation.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Thanks. Sounds good!&quot;}]
 			event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
-   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Well Bob, although there are some over-the-counter products that may help you feel better, I will need to gather some information from you to help the pharmacist make a recommendation. Is this ok with you?}
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Well Bob, although there are some over-the-counter products that may help you feel better, I will need to gather some information from you about your symptoms to help the pharmacist make a recommendation. Do you have a few minutes?}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
@@ -607,7 +607,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I&#39;ve actually had the cough for about 3 weeks now. I didn&#39;t get a chance to come by to the pharmacy or contact the nurse practitioner. Three days ago, I started getting a sore throat that&#39;s now gone away but turned into congestion. Yesterday some mild sinus pain started so I decided to come in.}
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I&#39;ve had the cough for about 3 weeks now. I didn&#39;t get a chance to come by to the pharmacy or contact the nurse practitioner. Three days ago, I started getting a sore throat that&#39;s now gone away but turned into congestion. Yesterday some mild sinus pain started so I decided to come in.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
@@ -638,9 +638,9 @@ button.selected{
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="1065,347" size="100,100">  &lt;img style=&quot;height:25em;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+sayed.svg&quot;&gt;
 
   &lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
-	&lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-	&lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
   &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -655,7 +655,7 @@ button.selected{
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
 			dialog = [{&quot;person&quot;:1,&quot;text&quot;:&quot;Hi Damilola&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Mr. Stonechild is here looking for help finding an OTC product for a cough he&#39;s had for 3 weeks, congestion he&#39;s had for 2 days, and sinus pain that started yesterday&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;He checked this morning and he does not have a fever&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;I&#39;ve pulled up his profile here on our pharmacy management software&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Thanks for the gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -674,9 +674,9 @@ button.selected{
 	&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola-bob.png&quot;&gt;
 
 	&lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
-	  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-	  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 	&lt;/div&gt;
   &lt;/div&gt;
 
@@ -693,7 +693,7 @@ button.selected{
 			dialog = [
 			{&quot;person&quot;:3,&quot;text&quot;:&quot;Hi Bob. Sayed filled me in on some of your symptoms and your current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit of time now.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Yes, it&#39;s been about 3 weeks now.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Bob, will you tell me more about the cough. Is it dry or do you cough up phlegm or mucus?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;It&#39;s a dry cough.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Are you experiencing any trouble breathing or any shortness of breath?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Not beyond my congestion.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Any chest pain at all?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;No.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Have you had any medical procedures or accidents in the past 3 weeks?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;None.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Have you noticed anything that makes your symptoms worse or better?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;My congestion and sinus pain seem to be a bit worse at night and improve with rest. I haven&#39;t noticed any patterns with my cough.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Thank you for this information. I have one last question. Do you know what your blood pressure is today or has been in the last few days?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I m sorry. I don&#39;t.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Not a problem&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;We actually have a blood pressure monitor in the pharmacy&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;If you&#39;re comfortable, you can check your own blood pressure or Sayed or I can help you to take a current blood pressure reading to help me with making a recommendation for you to treat the symptoms you describe&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Sounds good!&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Your blood pressure reading is 118/75 mmHg. I&#39;ll update the pharmacist with this information and then she will come over with a recommendation.&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -762,6 +762,9 @@ button.selected{
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Sounds good!}
 &lt;/div&gt;
+
+(text-style: &quot;italic&quot;)[RPhT – Sayed and Pt – Bob walk to the blood pressure monitor and Bob sits down to take a reading. It shows 118/75 mmHg.]
+
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
    {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Your blood pressure reading is 118/75 mmHg. I&#39;ll update the pharmacist with this information and then she will come over with a recommendation.}
@@ -773,9 +776,9 @@ button.selected{
 		&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola-sayed-counter.svg&quot;&gt;
 
 	&lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play&lt;/button&gt;
-	  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-	  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 	&lt;/div&gt;
   &lt;/div&gt;
 
@@ -793,7 +796,7 @@ button.selected{
 			{&quot;person&quot;:1,&quot;text&quot;:&quot;Hi Damilola. Mr. Stonechild s current blood pressure is 118/75 mmHg.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;It looks like Bob started Ramipril a week before his dry cough started and almost three weeks before his nasal congestion with associated pain started&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Given the timelines, this appears to be a cold on top of an ACE inhibitor induced cough&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Bob doesn&#39;t have any red flags present related to his cough or suspected upper respiratory tract infection that would prompt me to refer him to his nurse practitioner or urgent care&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;What will you recommend?&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;For the cough, I will contact the prescriber and recommend that they change his ACE inhibitor to another class of medications, Angiotensin II receptor blocker (ARB)&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;For the congestion I&#39;d recommend a nasal saline spray since oral decongestants can increase one&#39;s blood pressure and topical decongestants can cause rebound congestion&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;For the mild sinus pain, I&#39;d recommend acetaminophen since it doesn&#39;t increase blood pressure like NSAIDs can&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Sounds good. Thanks. I can take over the prescription technical checking while you help Bob pick an appropriate product.&quot;}
 		  ]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -826,9 +829,9 @@ button.selected{
 	&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola-bob.png&quot;&gt;
 
 	&lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play&lt;/button&gt;
-	  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-	  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 	&lt;/div&gt;
   &lt;/div&gt;
 
@@ -844,7 +847,7 @@ button.selected{
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
 			dialog = [{&quot;person&quot;:3,&quot;text&quot;:&quot;Hi Bob. Sayed filled me in on your symptoms and current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit now.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Ya, it&#39;s been about 3 weeks now.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;From your medication profile it looks like your nurse practitioner added a new medication, Ramipril, a week before your cough started.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Ya. My blood pressure went up, so my nurse practitioner decided to start me on another medication.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;That makes sense; however, I think your cough may actually be a side effect from the Ramipril rather than part of your cold&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;To help with this, I can fax your nurse practitioner to recommend switching to another blood pressure medication, Telmisartan, that works similarly to Ramipril but doesn&#39;t have coughing as a side effect&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;That would be great. Come to think of it, the cough started quite a bit before this cold. Is there anything I can take for the congestion and pain then?&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Yes&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;For your congestion I recommend a nasal saline spray with sodium chloride 0.9%&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Use 1 to 2 sprays per nostril 1 to 3 times daily as needed for a week&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Blow your nose before using the spray, tilt your head to the side and gently insert the tip into the upper nostril and press down briefly&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Bring your head back to an upright position and allow mucus to flow out before wiping any remaining mucus and carefully blowing your nose&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Repeat with the other nostril&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Remember to wash the tip of the bottle with hot soapy water after each use and wipe it dry&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;The most common side effect would potentially be some irritation of the nose, coughing or sneezing&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Great! I can do that.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;For the sinus pain, I&#39;d recommend acetaminophen 500 mg 1-2 tablets by mouth every 4-6 hours as needed for 1 week. Be careful to avoid taking more than 3 grams of acetaminophen in 24 hours to avoid impacting your liver.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Excellent. I&#39;m hopeful that these will help.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Do you have any questions about the information and guidance provided?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I don&#39;t think so but I&#39;ll call the pharmacy if anything comes up.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Perfect&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;One last point&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;In addition to it being a good idea to monitor your blood pressure regularly, it&#39;s especially important to monitor it if there&#39;s a change from your Ramipril to Telmisartan&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Do you have a blood pressure monitor at home you can use to monitor for this?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;My partner, Jesse, has one. I talked to the pharmacist about measuring my blood pressure weekly when diagnosed but I never ended up doing it and can&#39;t remember how to exactly.&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -911,9 +914,9 @@ button.selected{
 	&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola-bob.png&quot;&gt;
 
 	&lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
-	  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-	  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 	&lt;/div&gt;
   &lt;/div&gt;
 
@@ -929,7 +932,7 @@ button.selected{
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
 			dialog = [{&quot;person&quot;:3,&quot;text&quot;:&quot;Well you can bring it in and Sayed can show you how to use it. Remember, that your target blood pressure, given your age and health conditions, is a systolic blood pressure of &lt; 120 mmHg.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Will do. For now, I&#39;ll pay for these [Nasal Saline Spray 0.9% Sodium Chloride + Acetaminophen 500 mg].&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -944,13 +947,13 @@ button.selected{
 &lt;/div&gt;
 
 
-(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Bob walks over to the cash at the end of the pharmacy dispensary. RPhT is waiting for Bob at the cash. &quot;, &quot;Dialog 8&quot;)]</tw-passagedata><tw-passagedata pid="18" name="Dialog 8" tags="" position="1514,229" size="100,100">  &lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Bob walks over to the cash at the end of the pharmacy dispensary. RPhT is waiting for Bob at the cash. &quot;, &quot;Dialog 8&quot;)]</tw-passagedata><tw-passagedata pid="18" name="Dialog 8" tags="" position="1602.3333333333333,200.66666666666666" size="100,100">  &lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
 	&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+bob+sayed.png&quot;&gt;
 
 	&lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
-	  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-	  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+	  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 	&lt;/div&gt;
   &lt;/div&gt;
 
@@ -966,7 +969,7 @@ button.selected{
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
 			dialog = [{&quot;person&quot;:1,&quot;text&quot;:&quot;Hi Bob. I&#39;m happy to see Damilola was able to help you find something for your cold. I&#39;ll give you a call when we hear back from your nurse practitioner about the blood pressure medication switch.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;That&#39;s great. In the meantime, I&#39;ll go home and get some rest.&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Rest is important&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Drinking water is also important to help with staying hydrated&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;If you have a humidifier at home, that may be helpful as well but make sure you clean it regularly&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Lastly, remember to practice hand hygiene by washing your hands with soap and water for at least 20 seconds to lower your risk of spreading and getting colds&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Thank you.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;We&#39;ll follow-up with you in 3-4 days to make sure your symptoms are improving and you&#39;re not experiencing any intolerable side effects from the product we recommended today&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Call us sooner if your symptoms get worse or you have any questions!&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Much appreciated.&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -997,16 +1000,36 @@ button.selected{
 &lt;/div&gt;
 
 (text-style: &quot;italic&quot;)[(link-goto: &quot;RPhT and RPh wave goodbye to Bob from behind the cash and counter, respectively. Bob leaves the pharmacy.&quot;, &quot;Dialog 10&quot;)]
-</tw-passagedata><tw-passagedata pid="19" name="Dialog 10" tags="" position="1626.6666666666667,201.33333333333334" size="100,100">
-
-RPh completed a pharmaceutical opinion to inform the nurse practitioner of the patient’s ACE inhibitor induced cough, secondary to Ramipril, and recommend changing the Ramipril to Telmisartan. The RPhT then faxes the pharmaceutical opinion to the nurse practitioner and can bill for it once a response is received. 
+</tw-passagedata><tw-passagedata pid="19" name="Dialog 10" tags="" position="1796.6666666666667,201.33333333333337" size="100,100">RPh completed a pharmaceutical opinion to inform the nurse practitioner of the patient’s ACE inhibitor induced cough, secondary to Ramipril, and recommend changing the Ramipril to Telmisartan. The RPhT then faxes the pharmaceutical opinion to the nurse practitioner and can bill for it once a response is received. 
  
 RPh documents the interaction in the notes section of the patient’s profile in the pharmacy dispensing software as below. 
-</tw-passagedata><tw-passagedata pid="20" name="Case 2 - Dialog 1" tags="" position="219,191" size="100,100">&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
+
+&lt;div style=&quot;padding: 0 0.5rem;&quot; class=&quot;border border-info&quot;&gt;
+&#39;&#39;Notes:&#39;&#39;
+
+COUGH - (date, RPh - Damilola)
+
+* Bob presented with unproductive cough x 3 weeks following ACEi initiation 4 weeks ago
+* No SOB, chest pain, extreme fatigue, confusion, recent trauma/surgery, or fever
+* BP in pharmacy: 118/75 mmHg
+* Bob may be experiencing ACEi-induced cough, secondary to Ramipril 2.5 mg daily, and would benefit from alternative therapy with ARB Telmisartan 40 mg daily
+* Completed pharmaceutical opinion and faxed to Bob’s nurse practitioner
+* Recommended Bob measure his BP regularly and bring in home monitor for RPhT to provide training
+
+CONGESTION + SINUS PAIN (date, RPh – Damilola)
+* Bob presented with nasal congestion x 2 days and mild sinus pain x 1 day
+* Previously experienced mild sore throat 3 days ago which has since resolved
+* No drooling, dehydration, severe pain, respiratory comorbidities, or fever
+* For congestion: recommended nasal saline spray 0.9% sodium chloride 1-2 sprays in each nostril 1-3 times daily as needed for 1 week. Provided counselling on administration technique and potential side effects of nasal irritation, cough, sneezing
+* For sinus pain: recommended acetaminophen 500 mg 1-2 tablets every 4-6 hours as needed for 1 week. Provided counselling on max daily dose of 3 grams.
+* RPh to call patient in 3-4 days to assess symptom response and evaluate any side effects. Patient to call pharmacy if any questions or worsening of symptoms arise.
+&lt;/div&gt;
+
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Summative Questions&quot;, &quot;C1-S1&quot;)]</tw-passagedata><tw-passagedata pid="20" name="Case 2 - Dialog 1" tags="" position="219,191" size="100,100">&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
 &lt;div class=&quot;mb-5 audio-controls&quot;&gt;
-  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -1030,7 +1053,7 @@ RPh documents the interaction in the notes section of the patient’s profile in
 			{&quot;person&quot;: 3, &quot;text&quot;: &quot;Thanks, I&#39;ll speak to Mr. Patel and find out some more information regarding the indication and extent of the affected area to determine the amount needed.&quot;}
 			]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -1113,9 +1136,9 @@ Key Learning: Interprofessional collaboration/scopes of practice
   &lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara+dad.png&quot;&gt;
 
   &lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play Dialog&lt;/button&gt;
-	&lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-	&lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1133,7 +1156,7 @@ Key Learning: Interprofessional collaboration/scopes of practice
 			dialog = [{&quot;person&quot;: 3, &quot;text&quot;: &quot;Hi Mr&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Patel&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;I&#39;m Sara Rodriguez(insert a name), the pharmacist&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;I need to ask you a few questions to determine the amount of medicine we need to dispense for Nikhil&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;May I ask for what reason has this medicine been prescribed for Nikhil?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;He has a rash on his stomach.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Ok, can you tell me approximately how large is the rash/ affected area? Also, did the doctor say for how long he&#39;d need to use the cream?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;I&#39;d say the rash covers an area about 8 cm square. I don&#39;t remember the doctor mentioning how long to keep applying it, sorry&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;From what you describe, I believe a quantity of 50 gm is reasonable, as you will be applying it sparingly twice a day, and a 7 to 10 day course should be a sufficient duration to see positive results.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;That sounds reasonable to me.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;With your permission then, I can adapt the prescription with this quantity, and inform the prescriber that I have discussed it with you.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Yes please do! I really don&#39;t want to wait until the doctor&#39;s back in the office.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Mr. Patel, please have a seat. we&#39;ll need to compound the prescription. This may take a bit longer than usual.&quot;}]
 
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -1235,9 +1258,9 @@ During the assessment of the compounding area, the RPhT notices a coffee cup on 
 &lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT interacts with RPh (incoming relief pharmacist)&quot;, &quot;C2Dialog3&quot;)]</tw-passagedata><tw-passagedata pid="22" name="C2Dialog3" tags="" position="135,300" size="100,100">&lt;div class=&quot;mb-5 audio-controls&quot;&gt;
-  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 me-3&quot;&gt;Play&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 me-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 me-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -1253,7 +1276,7 @@ During the assessment of the compounding area, the RPhT notices a coffee cup on 
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [{&quot;person&quot;: 1, &quot;text&quot;: &quot;Whose coffee cup is this?&quot;}, {&quot;person&quot;: 4, &quot;text&quot;: &quot;looks confused.&quot;}, {&quot;person&quot;: 4, &quot;text&quot;: &quot;That&#39;s mine. Sorry, I didn&#39;t know where else to put my cup? This is the only clear counter.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;I understand the confusion if this is your first shift with us. We have this area for our non-sterile compounding, and need to keep it clear at all times.&quot;}, {&quot;person&quot;: 4, &quot;text&quot;: &quot;Totally understood   my apologies!&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;
@@ -1503,7 +1526,7 @@ RPh comes and counsels the father accordingly.
   &lt;p&gt;This case will highlight Pharmacy Technicians’ (RPhT) and Pharmacists’ (RPh) scope of practice through their collaboration in helping a patient who is experiencing cough and cold symptoms. &lt;/p&gt;
   
   In advance of engaging with this case, it is recommended that you review the following resources: 
-* OCP Scope of practice: (link-repeat: &quot;Legal Authority for Scope of Practice – April 2020&quot;)[(goto-url: &quot;https://www.ocpinfo.com/wp-content/uploads/2019/05/Legal-Authority-Scopes.pdf&quot;)]
+* OCP Scope of practice: (link-repeat: &quot;Legal Authority for Scope of Practice – April 2020&quot;)[(open-url: &quot;https://www.ocpinfo.com/wp-content/uploads/2019/05/Legal-Authority-Scopes.pdf&quot;)]
 * NAPRA Scope of practice: (link-repeat: &quot;Pharmacy Technicians’ Scope of Practice in Canada Jurisdiction – Effective June 2019&quot;)[(open-url: &quot;https://napra.ca/sites/default/files/2019-09/Technician%20Scope%20of%20Practice%20-%20June%202019.pdf&quot;)]
 * Clinical topics: Compendium of Therapeutic Choices, Acute Cough
 * Clinical topics: Therapeutic Choices for Minor Ailments, Viral Rhinitis, Influenza, Rhinosinusitis and Pharyngitis
@@ -1550,9 +1573,9 @@ D- Describe how this scenario relates to your current studies and/or professiona
 </tw-passagedata><tw-passagedata pid="26" name="C3-1" tags="" position="825,603.3333333333335" size="100,100">&lt;img style=&quot;height:55vh;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+maryam.svg&quot;&gt;
 
 &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
-  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mr-3&quot;&gt;Play Dialog&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mr-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mr-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -1591,15 +1614,15 @@ D- Describe how this scenario relates to your current studies and/or professiona
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [{&quot;person&quot;: 3, &quot;text&quot;: &quot;Hello, I understand that you have a question about whether you should get your first vaccine? Congratulaitons as Anson informed me that you are 16 weeks pregnant?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Yes, that is correct.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Current recommendations are that COVID-19 vaccination is recommended during pregnancy in any trimester and while breastfeeding&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;In fact, pregnant people are at an increased risk of illness from COVID-19 infection, all pregnant persons should be prioritized to receive a COVID-19 vaccination&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Thank you.  I have made my decision and would like to go ahead with the vaccination.&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="27" name="C3-2" tags="" position="946.6666666666665,601.6666666666667" size="100,100">&lt;img style=&quot;height:auto;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+maryam.svg&quot;&gt;
 
 &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
-  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mr-3&quot;&gt;Play Dialog&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mr-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mr-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -1719,15 +1742,15 @@ What are the key components for the administration of the vaccine?
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [{&quot;person&quot;: 1, &quot;text&quot;: &quot;Hello again, I will be administering the COVID-19 vaccine today&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Great I am ready to get vaccinated!&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;I would like to confirm that you are getting the mRNA vaccine today.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;That would be fine.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;I will do my best to ensure that I walk you through each step of the process.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Thanks.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;I would like you to relax your arm as I swab your arm to ensure that I disinfect the area.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Sorry, I&#39;m a bit nervous when I see needles.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;Is there anything I can do to help you be more comfortable? You will experience a small pin prick upon injection&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;You may also experience a  sensation in your arm as I am now administering the vaccine&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Thanks so much. That was quick and didn&#39;t hurt.&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="28" name="C3-3" tags="" position="1338.3333333333335,555.0000000000001" size="100,100">&lt;img style=&quot;height:auto;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+maryam.svg&quot;&gt;
 
 &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
-  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mr-3&quot;&gt;Play Dialog&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mr-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mr-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -1813,15 +1836,15 @@ With respect to post injection patient education, a Pharmacy Technician can say 
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [{&quot;person&quot;: 1, &quot;text&quot;: &quot;After your vaccine, you may experience some common side effects, which include pain, redness, swelling at the injection site, tiredness, headache,muscle pain, chills, joint pain, and low fever.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;There are also some rare serious side effects.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;Call your doctor or nurse practitioner or go to the nearest emergency department if you develop any of the following adverse reactions within three days of receiving the vaccine: hives,&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &#39;swelling of your face or mouth, trouble breathing, very pale colour and serious drowsiness, high fever (over 40°C), convulsions or seizures, or other serious symptoms (e.g. &quot;pins and needles&quot; or numbness)&#39;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Thank you. Can I ask what I should take for the pain?&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;Oh, you can just take some acetaminophen and you will be fine.&quot;}];
 			event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="29" name="C3-0" tags="" position="720,745.0000000000001" size="100,100">&lt;img style=&quot;height:auto;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+maryam.svg&quot;&gt;
 
 &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
-  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mr-3&quot;&gt;Play Dialog&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mr-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mr-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -1861,7 +1884,7 @@ With respect to post injection patient education, a Pharmacy Technician can say 
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [{&quot;person&quot;: 1, &quot;text&quot;: &quot;Do you have any questions or concerns?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Yes, I do have questions about the vaccine. I am 16 weeks pregnant and have some questions related to the vaccine in pregnancy and breastfeeding.&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;First, congratulations! How can I help, what is your question?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Thank you! I would like to know if I should get my first COVID-19 vaccine or should I wait until after I deliver the baby?&quot;}, {&quot;person&quot;: 1, &quot;text&quot;: &quot;That is a very good question. I will get the pharmacist to answer your question as my role here is to gather your information, so the pharmacist can review and answer your questions based on the information you have provided.&quot;}]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="30" name="C3-Q1" tags="" position="856.6666666666665,751.6666666666667" size="100,100">Under the Regulated Health Professions Act (RHPA), effective January 2021, registered pharmacy technicians are eligible to administer the COVID-19 vaccination. With this exemption under the RHPA, regulated pharmacy technicians
@@ -2023,7 +2046,127 @@ Items Needed:
 ]
 }]]
 }
-|continue)[(button:)[[Continue|C3-2]]]</tw-passagedata></tw-storydata>
+|continue)[(button:)[[Continue|C3-2]]]</tw-passagedata><tw-passagedata pid="34" name="C1-S1" tags="" position="1923.3333333333333,200.00000000000003" size="100,100">What was effective in patient-provider interactions in this scenario? Select all that apply.
+{
+(set: _qS1A to false, _qS1B to false, _qS1C to false, _qS1D to false)
+}
+(checkbox: bind _qS1A, &quot;Greeting/introduction to the patient&quot;)
+(checkbox: bind _qS1B, &quot;Use of both closed-ended and open-ended line of questioning&quot;)
+(checkbox: bind _qS1C, &quot;Consulted patient profile to make appropriate recommendations&quot;)
+(checkbox: bind _qS1D, &quot;Both non-pharmacological and follow-up care was offered&quot;)
+{
+(set: $attemptString to (macro: bool-type _a, bool-type _b, bool-type _c, bool-type _d, [
+(set: _oA to &quot;&quot;, _oB to &quot;&quot;, _oC to &quot;&quot;, _oD to &quot;&quot;)
+(set: _selectArr to (a:))
+(if: _a is true)[(set: _selectArr to it + (a: &quot;A&quot;))]
+(if: _b is true)[(set: _selectArr to it + (a: &quot;B&quot;))]
+(if: _c is true)[(set: _selectArr to it + (a: &quot;C&quot;))]
+(if: _d is true)[(set: _selectArr to it + (a: &quot;D&quot;))]
+(output-data: (joined:&quot;, &quot;, ..._selectArr))
+]))
+
+(set: $random to ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D))
+
+[(link-repeat: &quot;Submit&quot;, (button:))[{
+(if: _qS1A is true and _qS1C is true and _qS1D is true and _qS1B is true)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Correct&quot;)))
+(show: ?continue)
+(dialog: &quot;Correct! As Bob was a regular patient of the pharmacy, he was greeted by name, which prompted a positive triaging process. During the interaction, Bob was asked various questions so that RPhT Sayed could obtain detailed information about Bob’s concerns, and these questions were asked in a manner for Bob to elaborate, which provided insight into his concern. RPhT, Sayed, and RPh, Damilola, collaborated and consulted the patient&#39;s profile in order to provide pharmacological and non-pharmacological recommendations. Follow-up care was offered to demonstrate the proper use of the medical device to monitor Bob’s blood pressure interim.&quot;)
+]
+(if: _qS1A is false or _qS1C is false or _qS1D is false or _qS1B is false)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Wrong&quot;)))
+(hide: ?continue)
+(alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)]
+}]]
+}
+{
+|continue)[
+(button:)[[Next|C1-S2]]
+]}</tw-passagedata><tw-passagedata pid="35" name="C1-D" tags="" position="2076.6666666666665,501.66666666666674" size="100,100">&#39;&#39;Debriefing:&#39;&#39;
+
+&#39;&#39;After having reviewed the case, reflect on the following questions: &#39;&#39;
+
+0. What is one thing you learned from this scenario that you can incorporate into your practice? 
+0. Give an example of overlap in pharmacy technician and pharmacist scope of practice demonstrated in this scenario. 
+0. Give an example of distinct scopes of practice for pharmacy technicians and pharmacists. 
+0. Name a benefit of pharmacy technicians and pharmacists practicing to their full scope and collaborating? 
+0. Name a barrier to pharmacy technicians and pharmacists practicing to their full scope of practice and collaborating? How can you address this barrier?
+0. Depending on the age of the patient and the time of year, this may be an opportunity to check if the patient is up to date with recommended vaccines (e.g., influenza, pneumovax, shingles, COVID-19).
+ 
+&#39;&#39;As was asked in the pre-case briefing, reflect on your current community pharmacy practice setting and how, if applicable, you collaborate with your pharmacy technician or pharmacist colleagues. Ask yourself, could you incorporate each other’s skills even more? &#39;&#39;
+</tw-passagedata><tw-passagedata pid="36" name="C1-S2" tags="" position="1923.3333333333333,350" size="100,100">Which of the following tasks fall within the scope of both pharmacy technicians and pharmacists? Select all that apply. 
+{
+(set: _qS2A to false, _qS2B to false, _qS2C to false, _qS2D to false)
+}
+(checkbox: bind _qS2A, &quot;Collecting a history of current symptoms and medications&quot;)
+(checkbox: bind _qS2B, &quot;Perform a technical check of new or refill medications&quot;)
+(checkbox: bind _qS2C, &quot;Provide information on medication dose and administration&quot;)
+(checkbox: bind _qS2D, &quot;Providing instruction on how to use the blood pressure monitoring device&quot;)
+{
+(set: $attemptString to (macro: bool-type _a, bool-type _b, bool-type _c, bool-type _d, [
+(set: _oA to &quot;&quot;, _oB to &quot;&quot;, _oC to &quot;&quot;, _oD to &quot;&quot;)
+(set: _selectArr to (a:))
+(if: _a is true)[(set: _selectArr to it + (a: &quot;A&quot;))]
+(if: _b is true)[(set: _selectArr to it + (a: &quot;B&quot;))]
+(if: _c is true)[(set: _selectArr to it + (a: &quot;C&quot;))]
+(if: _d is true)[(set: _selectArr to it + (a: &quot;D&quot;))]
+(output-data: (joined:&quot;, &quot;, ..._selectArr))
+]))
+
+(set: $random to ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D))
+
+[(link-repeat: &quot;Submit&quot;, (button:))[{
+(if: _qS2A is true and _qS2C is false and _qS2D is true and _qS2B is true)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D), &quot;Correct&quot;)))
+(show: ?continue)
+(dialog: &quot;Correct! Both pharmacists and pharmacy technicians can perform information gathering, completed technical verification of prescriptions, and educate on medical device use. Only pharmacists can make a clinical recommendation or perform clinical counselling. &quot;)
+]
+(if: _qS2A is false or _qS2C is true or _qS2D is false or _qS2B is false)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D), &quot;Wrong&quot;)))
+(hide: ?continue)
+(alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)]
+}]]
+}
+{
+|continue)[
+(button:)[[Next|C1-S3]]
+]}</tw-passagedata><tw-passagedata pid="37" name="C1-S3" tags="" position="1923.3333333333333,500" size="100,100">What was effective in Sayed and Damilola’s interactions? Select all that apply.
+{
+(set: _qS3A to false, _qS3B to false, _qS3C to false, _qS3D to false)
+}
+(checkbox: bind _qS3A, &quot;Complete and concise handoffs between patient interactions&quot;)
+(checkbox: bind _qS3B, &quot;Positive interactions that showed appreciation for each other’s contributions&quot;)
+(checkbox: bind _qS3C, &quot;Demonstrated continuity and collaboration between both roles to the patient&quot;)
+(checkbox: bind _qS3D, &quot;Optimized the scope of practice of each pharmacy professional&quot;)
+{
+(set: $attemptString to (macro: bool-type _a, bool-type _b, bool-type _c, bool-type _d, [
+(set: _oA to &quot;&quot;, _oB to &quot;&quot;, _oC to &quot;&quot;, _oD to &quot;&quot;)
+(set: _selectArr to (a:))
+(if: _a is true)[(set: _selectArr to it + (a: &quot;A&quot;))]
+(if: _b is true)[(set: _selectArr to it + (a: &quot;B&quot;))]
+(if: _c is true)[(set: _selectArr to it + (a: &quot;C&quot;))]
+(if: _d is true)[(set: _selectArr to it + (a: &quot;D&quot;))]
+(output-data: (joined:&quot;, &quot;, ..._selectArr))
+]))
+
+(set: $random to ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D))
+
+[(link-repeat: &quot;Submit&quot;, (button:))[{
+(if: _qS3A is true and _qS3C is true and _qS3D is true and _qS3B is true)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D), &quot;Correct&quot;)))
+(show: ?continue)
+(dialog: &quot;Correct! Sayed provided Damilola with a concise summary of Bob’s presentation. Sayed and Damilola valued and trusted each other and said thank you to demonstrate their appreciation. Between interactions, the pharmacy technician and pharmacist referenced the other to Bob to highlight the partnership and continuity. The pharmacist and pharmacy technician completed different tasks that enabled each of them to practice to their full scope.&quot;)
+]
+(if: _qS3A is false or _qS3C is false or _qS3D is false or _qS3B is false)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D), &quot;Wrong&quot;)))
+(hide: ?continue)
+(alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)]
+}]]
+}
+
+|continue)[
+(button:)[[Debriefing|C1-D]]
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
