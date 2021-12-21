@@ -301,7 +301,7 @@ button.selected{
 	  (link: &quot;Restart&quot;)[(reload:)]
 	]
 ]</tw-passagedata><tw-passagedata pid="4" name="Dialog 1" tags="" position="1153,98" size="100,100">&lt;div&gt;
- &lt;p&gt;Mr. Stonechild  visits the pharmacy and is scanning the over-the-counter product shelves. He is greeted by the Pharmacy Technician on duty as he seemed to be having difficulties finding an appropriate product.&lt;/p&gt;
+ &lt;p&gt;Bob Stonechild visits his local community pharmacy. He is greeted by Sayed, the registered pharmacy technician, who noticed Bob was scanning the over-the-counter products in one of the pharmacy isles. Sayed asks Bob if he can help him find anything as Bob appeared to be having difficulty finding a product.&lt;/p&gt;
   &lt;img style=&quot;height:auto;width:70%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sayed+bob.png&quot;&gt;
 &lt;/div&gt;
 
@@ -815,7 +815,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
-  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: For the cough, I will contact the prescriber and recommend that they change his ACE inhibitor to another class of medications, Angiotensin II receptor blocker (ARB). For the congestion I&#39;d recommend a nasal saline spray since oral decongestants can increase one s blood pressure and topical decongestants can cause rebound congestion. For the mild sinus pain, I&#39;d recommend acetaminophen since it doesn&#39;t increase blood pressure like NSAIDs can.}
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: For the cough, I will contact the prescriber and recommend that they change his ACE inhibitor to another class of medications, Angiotensin II receptor blocker (ARB). For the congestion I&#39;d recommend a nasal saline spray since oral decongestants can increase one&#39;s blood pressure and topical decongestants can cause rebound congestion. For the mild sinus pain, I&#39;d recommend acetaminophen since it doesn&#39;t increase blood pressure like NSAIDs can.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
@@ -943,7 +943,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Will do. For now, I ll pay for these [Nasal Saline Spray 0.9% Sodium Chloride + Acetaminophen 500 mg].}
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Will do. For now, I&#39;ll pay for these [Nasal Saline Spray 0.9% Sodium Chloride + Acetaminophen 500 mg].}
 &lt;/div&gt;
 
 
@@ -976,11 +976,11 @@ button.selected{
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
-   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Hi Bob. I m happy to see Damilola was able to help you find something for your cold. I ll give you a call when we hear back from your nurse practitioner about the blood pressure medication switch.}
+   {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Hi Bob. I m happy to see Damilola was able to help you find something for your cold. I&#39;ll give you a call when we hear back from your nurse practitioner about the blood pressure medication switch.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: That s great. In the meantime, I ll go home and get some rest.}
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: That s great. In the meantime, I&#39;ll go home and get some rest.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
@@ -1093,7 +1093,7 @@ In the scenario, both the pharmacist and the registered pharmacy technician are 
 (if: _q2A is _optionA)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2A), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Suggested pre-reading: NAPRA Model Standards of Practice for Regulated Technicians/ Model Standards of Practice for Pharmacists 
+(dialog: &quot;Correct! Suggested pre-reading: NAPRA Model Standards of Practice for Regulated Technicians/ Model Standards of Practice for Pharmacists 
 Key Learning: Interprofessional collaboration/scopes of practice 
 &quot;)
 ]
@@ -1153,7 +1153,7 @@ Key Learning: Interprofessional collaboration/scopes of practice
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
-			dialog = [{&quot;person&quot;: 3, &quot;text&quot;: &quot;Hi Mr&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Patel&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;I&#39;m Sara Rodriguez(insert a name), the pharmacist&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;I need to ask you a few questions to determine the amount of medicine we need to dispense for Nikhil&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;May I ask for what reason has this medicine been prescribed for Nikhil?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;He has a rash on his stomach.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Ok, can you tell me approximately how large is the rash/ affected area? Also, did the doctor say for how long he&#39;d need to use the cream?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;I&#39;d say the rash covers an area about 8 cm square. I don&#39;t remember the doctor mentioning how long to keep applying it, sorry&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;From what you describe, I believe a quantity of 50 gm is reasonable, as you will be applying it sparingly twice a day, and a 7 to 10 day course should be a sufficient duration to see positive results.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;That sounds reasonable to me.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;With your permission then, I can adapt the prescription with this quantity, and inform the prescriber that I have discussed it with you.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Yes please do! I really don&#39;t want to wait until the doctor&#39;s back in the office.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Mr. Patel, please have a seat. we&#39;ll need to compound the prescription. This may take a bit longer than usual.&quot;}]
+			dialog = [{&quot;person&quot;: 3, &quot;text&quot;: &quot;Hi Mr. Patel&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;I&#39;m Sara Rodriguez, the pharmacist&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;I need to ask you a few questions to determine the amount of medicine we need to dispense for Nikhil&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;May I ask for what reason has this medicine been prescribed for Nikhil?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;He has a rash on his stomach.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Ok, can you tell me approximately how large is the rash/ affected area? Also, did the doctor say for how long he&#39;d need to use the cream?&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;I&#39;d say the rash covers an area about 8 cm square. I don&#39;t remember the doctor mentioning how long to keep applying it, sorry&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;From what you describe, I believe a quantity of 50 gm is reasonable, as you will be applying it sparingly twice a day, and a 7 to 10 day course should be a sufficient duration to see positive results.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;That sounds reasonable to me.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;With your permission then, I can adapt the prescription with this quantity, and inform the prescriber that I have discussed it with you.&quot;}, {&quot;person&quot;: 2, &quot;text&quot;: &quot;Yes please do! I really don&#39;t want to wait until the doctor&#39;s back in the office.&quot;}, {&quot;person&quot;: 3, &quot;text&quot;: &quot;Mr. Patel, please have a seat. we&#39;ll need to compound the prescription. This may take a bit longer than usual.&quot;}]
 
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
@@ -1242,7 +1242,9 @@ The pharmacist may adapt a prescription for all the following EXCEPT:
 (if: _q2B is _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2B), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! According to the scope of practice, RPhT can perform tasks relating to information gathering and triaging, providing non-pharmacological recommendations, and educating patients on proper medical device use. RPhT can only perform technical verifications on prescriptions, while the RPh can perform both the technical and clinical verifications.&quot;)
+(dialog: &quot;Correct! Suggested pre-reading: OCP &#39;Initiating, Adapting, and Renewing Prescriptions&#39; 
+Key Learning: Scope of Practice 
+&quot;)
 ]
 (if: _q2B is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2B), &quot;Wrong&quot;)))
@@ -1339,7 +1341,10 @@ What is the most appropriate course of action regarding the presence of the coff
 (if: _q2C is _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2C), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! RPhT has responsibility to educate team members regarding compounding standards&quot;)
+(dialog: &quot;Correct! RPhT has responsibility to educate team members regarding compounding standardsRPhT has responsibility to educate team members regarding compounding standards  
+Suggested pre-reading: NAPRA Standards for Non-Sterile Compounding 
+Key Learning: Intraprofessional conflict resolution 
+&quot;)
 ]
 (if: _q2C is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2C), &quot;Wrong&quot;)))
@@ -1400,7 +1405,9 @@ The objective of documenting errors and near misses in a medical safety system i
 [(link-repeat: &quot;Submit&quot;, (button:))[{
 (if: _q2D is _optB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2D), &quot;Correct&quot;)))
-(dialog: &quot;Correct! According to the scope of practice, RPhT can perform tasks relating to information gathering and triaging, providing non-pharmacological recommendations, and educating patients on proper medical device use. RPhT can only perform technical verifications on prescriptions, while the RPh can perform both the technical and clinical verifications.&quot;)
+(dialog: &quot;Correct! Suggested pre-reading: OCP AIMS FAQs 
+Key Learning: Safe medication practices and continuous quality improvement
+&quot;)
 ]
 (if: _q2D is not _optB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2D), &quot;Wrong&quot;)))
