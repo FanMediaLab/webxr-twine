@@ -16,7 +16,7 @@
 <tw-storydata name="main" startnode="1" creator="Twine" creator-version="2.3.14" ifid="D92AED9F-40E0-4E08-8F1D-ECF659833DBF" zoom="0.6" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
   display: flex;
   flex-direction: column;
-  font-family: 'Open Sans';
+  font-family: Inter,Helvetica,Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Noto Color Emoji,Segoe UI Symbol,Android Emoji,EmojiSymbols,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,sans-serif;
 }
 
 tw-icon[alt] {
@@ -36,6 +36,7 @@ tw-icon[data-label]::after {
 tw-story {
 	background-color: #fff;
 	color: #000;
+  	font-family: Inter,Helvetica,Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Noto Color Emoji,Segoe UI Symbol,Android Emoji,EmojiSymbols,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,sans-serif;
 }
 
 tw-include[type="header"] {
@@ -156,7 +157,69 @@ button.selected{
   clear: both;
   display: table;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Welcome" tags="" position="797,101" size="100,100">(text-style: &quot;bold&quot;)[Welcome]
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">(function(){
+  if ('speechSynthesis' in window){
+    window.speechSynthesis.onvoiceschanged = function() {
+      window.available_voices = window.available_voices || {};
+      var synthetic_voices = window.speechSynthesis.getVoices();
+      Object.assign(window.available_voices, {
+      'voices': synthetic_voices.filter(voice => voice.lang.startsWith("en"))
+      });
+    }
+  }
+
+  var paused = false;
+  function textToAudio(msg, voice_choice) {
+    let speech = new SpeechSynthesisUtterance(msg);
+
+    if ('available_voices' in window) {
+      speech.voice = window.available_voices.voices[voice_choice]
+    }
+    else {
+      let synthetic_voices = window.speechSynthesis.getVoices();
+      let en_voices = synthetic_voices.filter(voice => voice.lang.startsWith("en"));
+      speech.voice = en_voices[voice_choice];
+    }
+
+    if ('speechSynthesis' in window) {
+      speech.lang = "en-US";
+      window.speechSynthesis.speak(speech);
+    }
+  }
+
+  function play(dialog) {
+    if (paused) {
+      window.speechSynthesis.resume();
+      paused = false;
+    }
+    else {
+      // Set the text property with the value of the textarea
+      let j;
+      for(j = 0; j < dialog.length; j++) {
+      textToAudio(dialog[j]["text"], dialog[j]["person"])
+      }
+    }
+  }
+
+  function pause() {
+    window.speechSynthesis.pause();
+    paused = true;
+  }
+
+  function stop() {
+    window.speechSynthesis.cancel();
+    paused = false;
+  }
+	
+	// export API to global "Harlowe" object
+    window.mySynthesis = Object.assign(window.mySynthesis || {}, {
+				textToAudio: textToAudio,
+        play : play,
+				pause: pause,
+				stop: stop,
+				paused: paused
+    });
+})();</script><tw-passagedata pid="1" name="Welcome" tags="" position="797,101" size="100,100">(text-style: &quot;bold&quot;)[Welcome]
 
 &lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;card-deck&quot;&gt;
@@ -247,8 +310,8 @@ button.selected{
 
 &lt;div class=&quot;mb-5 d-flex justify-content-center&quot;&gt;
   &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -279,7 +342,7 @@ button.selected{
 			  {&quot;person&quot;: 2, &quot;text&quot;: &quot;Hi Sayed. I am looking for something to help with this cold I have. I’ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription?&quot;},
 		  ]
 		  	event.stopImmediatePropagation();
-  			play(dialog);
+  			mySynthesis.play(dialog);
 		});
 	}
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="Case 2" tags="" position="34,172" size="100,100">(text-style: &quot;italic&quot;, &quot;underline&quot;)[Mr. Patel, the father of a 5 year old boy named Nikhil Patel, submits a prescription at the pharmacy counter to the regulated pharmacy technician (RPhT) Anson Wong. It is the child’s first prescription at the pharmacy. ]
@@ -502,62 +565,7 @@ button.selected{
 	  }
 	});
   }
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="Start" tags="startup" position="0,46.66666666666667" size="100,100">(set: $attempts to (a: (a:), (a:), (a:)))
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-  if (&#39;speechSynthesis&#39; in window){
-	  window.speechSynthesis.onvoiceschanged = function() {
-		  window.available_voices = window.available_voices || {};
-		  var synthetic_voices = window.speechSynthesis.getVoices();
-		  Object.assign(window.available_voices, {
-			&#39;voices&#39;: synthetic_voices.filter(voice =&gt; voice.lang.startsWith(&quot;en&quot;))
-		  });
-		}
-  }
-  
-  var paused = false;
-  function textToAudio(msg, voice_choice) {
-	let speech = new SpeechSynthesisUtterance(msg);
-
-	if (&#39;available_voices&#39; in window) {
-	  speech.voice = window.available_voices.voices[voice_choice]
-	}
-	else {
-	  let synthetic_voices = window.speechSynthesis.getVoices();
-	  let en_voices = synthetic_voices.filter(voice =&gt; voice.lang.startsWith(&quot;en&quot;));
-	  speech.voice = en_voices[voice_choice];
-	}
-  
-	if (&#39;speechSynthesis&#39; in window) {
-		speech.lang = &quot;en-US&quot;;
-		window.speechSynthesis.speak(speech);
-	}
-  }
-
-  function play(dialog) {
-	if (paused) {
-	  window.speechSynthesis.resume();
-	  paused = false;
-	}
-	else {
-	  // Set the text property with the value of the textarea
-	  let j;
-	  for(j = 0; j &lt; dialog.length; j++) {
-		textToAudio(dialog[j][&quot;text&quot;], dialog[j][&quot;person&quot;])
-	  }
-	}
-  }
-  
-  function pause() {
-	window.speechSynthesis.pause();
-	paused = true;
-  }
-
-  function stop() {
-	window.speechSynthesis.cancel();
-	paused = false;
-  }
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="12" name="Dialog 2" tags="" position="859.3333333333334,348" size="100,100">&lt;div class=&quot;clearfix&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="Start" tags="startup" position="0,46.66666666666667" size="100,100">(set: $attempts to (a: (a:), (a:), (a:)))</tw-passagedata><tw-passagedata pid="12" name="Dialog 2" tags="" position="859.3333333333334,348" size="100,100">&lt;div class=&quot;clearfix&quot;&gt;
 &lt;div class=&quot;col-md-6 float-md-right mb-3 ml-md-3&quot;&gt;
   &lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sayed-new-pose+bob.png&quot;&gt;
 
@@ -1495,8 +1503,8 @@ RPh comes and counsels the father accordingly.
   &lt;p&gt;This case will highlight Pharmacy Technicians’ (RPhT) and Pharmacists’ (RPh) scope of practice through their collaboration in helping a patient who is experiencing cough and cold symptoms. &lt;/p&gt;
   
   In advance of engaging with this case, it is recommended that you review the following resources: 
-* OCP Scope of practice: (link: &quot;Legal Authority for Scope of Practice – April 2020&quot;)[(gotoURL: &quot;https://www.ocpinfo.com/wp-content/uploads/2019/05/Legal-Authority-Scopes.pdf&quot;)]
-* NAPRA Scope of practice: (link: &quot;Pharmacy Technicians’ Scope of Practice in Canada Jurisdiction – Effective June 2019&quot;)[(gotoURL: &quot;https://napra.ca/sites/default/files/2019-09/Technician%20Scope%20of%20Practice%20-%20June%202019.pdf&quot;)]
+* OCP Scope of practice: (link-repeat: &quot;Legal Authority for Scope of Practice – April 2020&quot;)[(goto-url: &quot;https://www.ocpinfo.com/wp-content/uploads/2019/05/Legal-Authority-Scopes.pdf&quot;)]
+* NAPRA Scope of practice: (link-repeat: &quot;Pharmacy Technicians’ Scope of Practice in Canada Jurisdiction – Effective June 2019&quot;)[(open-url: &quot;https://napra.ca/sites/default/files/2019-09/Technician%20Scope%20of%20Practice%20-%20June%202019.pdf&quot;)]
 * Clinical topics: Compendium of Therapeutic Choices, Acute Cough
 * Clinical topics: Therapeutic Choices for Minor Ailments, Viral Rhinitis, Influenza, Rhinosinusitis and Pharyngitis
 * Patient Interactions: &lt;a&gt;RxTx Chapter &quot;Effective Pharmacist-Patient Interactions&quot;
