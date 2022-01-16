@@ -209,11 +209,11 @@ button.selected{
 			let fIndicators = ["Linda", "Zira", "Susan", "Female", "Moira", "Tessa", "Karen", "Fiona", "Samantha"];
 			
 			if (gender == "m") {
-				let m_voices = english_voices.filter(voice => mIndicators.some(v => voice.name.includes(v)));
+				let m_voices = en_voices.filter(voice => mIndicators.some(v => voice.name.includes(v)));
 				speech.voice = m_voices[choice % m_voices.length]
 			}
 			else {
-				let f_voices = english_voices.filter(voice => fIndicators.some(v => voice.name.includes(v)));
+				let f_voices = en_voices.filter(voice => fIndicators.some(v => voice.name.includes(v)));
 				speech.voice = f_voices[choice % f_voices.length];
 			}
     }
