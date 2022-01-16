@@ -160,25 +160,48 @@ button.selected{
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">(function(){
   if ('speechSynthesis' in window){
     window.speechSynthesis.onvoiceschanged = function() {
+			
+			let mIndicators = ["David", "Richard", "Mark", "Male", "Alex", "Daniel", "Fred"];
+			let fIndicators = ["Linda", "Zira", "Susan", "Female", "Moira", "Tessa", "Karen", "Fiona", "Samantha"];
+			
       window.available_voices = window.available_voices || {};
       var synthetic_voices = window.speechSynthesis.getVoices();
+			var english_voices = synthetic_voices.filter(voice => voice.lang.startsWith("en"))
+			
       Object.assign(window.available_voices, {
-      'voices': synthetic_voices.filter(voice => voice.lang.startsWith("en"))
+        'm_voices': english_voices.filter(voice => mIndicators.some(v => voice.name.includes(v))),
+		'voices': english_voices.filter(voice => fIndicators.some(v => voice.name.includes(v))),
       });
     }
   }
 
   var paused = false;
-  function textToAudio(msg, voice_choice) {
+  function textToAudio(msg, voice_choice, gender = '') {
     let speech = new SpeechSynthesisUtterance(msg);
 
     if ('available_voices' in window) {
-      speech.voice = window.available_voices.voices[voice_choice]
+			if (gender == "m") {
+				speech.voice = window.available_voices.m_voices[voice_choice]
+			}
+			else {
+				speech.voice = window.available_voices.voices[voice_choice]
+			}
     }
     else {
       let synthetic_voices = window.speechSynthesis.getVoices();
       let en_voices = synthetic_voices.filter(voice => voice.lang.startsWith("en"));
-      speech.voice = en_voices[voice_choice];
+			
+			let mIndicators = ["David", "Richard", "Mark", "Male", "Alex", "Daniel", "Fred"];
+			let fIndicators = ["Linda", "Zira", "Susan", "Female", "Moira", "Tessa", "Karen", "Fiona", "Samantha"];
+			
+			if (gender == "m") {
+				let m_voices = english_voices.filter(voice => mIndicators.some(v => voice.name.includes(v)));
+				speech.voice = m_voices[voice_choice]
+			}
+			else {
+				let f_voices = english_voices.filter(voice => fIndicators.some(v => voice.name.includes(v)));
+				speech.voice = f_voices[voice_choice];
+			}
     }
 
     if ('speechSynthesis' in window) {
@@ -196,7 +219,7 @@ button.selected{
       // Set the text property with the value of the textarea
       let j;
       for(j = 0; j < dialog.length; j++) {
-      textToAudio(dialog[j]["text"], dialog[j]["person"])
+      textToAudio(dialog[j]["text"], dialog[j]["person"], dialog[j]["gender"])
       }
     }
   }
@@ -338,8 +361,8 @@ button.selected{
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [
-			  {&quot;person&quot;: 1, &quot;text&quot;: &quot;Hi Bob, good to see you again, how can I help you?&quot;},
-			  {&quot;person&quot;: 2, &quot;text&quot;: &quot;Hi Sayed. I am looking for something to help with this cold I have. I’ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription?&quot;},
+			  {&quot;person&quot;: 1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;: &quot;Hi Bob, good to see you again, how can I help you?&quot;},
+			  {&quot;person&quot;: 2, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;: &quot;Hi Sayed. I am looking for something to help with this cold I have. I’ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription?&quot;},
 		  ]
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
@@ -653,7 +676,7 @@ button.selected{
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
-			dialog = [{&quot;person&quot;:1,&quot;text&quot;:&quot;Hi Damilola&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Mr. Stonechild is here looking for help finding an OTC product for a cough he&#39;s had for 3 weeks, congestion he&#39;s had for 2 days, and sinus pain that started yesterday&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;He checked this morning and he does not have a fever&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;I&#39;ve pulled up his profile here on our pharmacy management software&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Thanks for the gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.&quot;}]
+			dialog = [{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;Hi Damilola&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;Mr. Stonechild is here looking for help finding an OTC product for a cough he&#39;s had for 3 weeks, congestion he&#39;s had for 2 days, and sinus pain that started yesterday&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;He checked this morning and he does not have a fever&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;I&#39;ve pulled up his profile here on our pharmacy management software&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;f&quot;, &quot;text&quot;:&quot;Thanks for the gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.&quot;}]
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
@@ -2173,7 +2196,7 @@ Items Needed:
 
 |continue)[
 (button:)[[Debriefing|C1-D]]
-]</tw-passagedata><tw-passagedata pid="38" name="Scenario 1" tags="" position="647,251" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Scenario 2" tags="" position="797,228" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="40" name="Scenario 3" tags="" position="917,228" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
