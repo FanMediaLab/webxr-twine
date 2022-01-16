@@ -13,7 +13,17 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play main.</tw-noscript></noscript></tw-story>
-<tw-storydata name="main" startnode="1" creator="Twine" creator-version="2.3.15" ifid="D92AED9F-40E0-4E08-8F1D-ECF659833DBF" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
+<tw-storydata name="main" startnode="1" creator="Twine" creator-version="2.3.15" ifid="D92AED9F-40E0-4E08-8F1D-ECF659833DBF" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+tw-passage {
   display: flex;
   flex-direction: column;
   font-family: Inter,Helvetica,Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Noto Color Emoji,Segoe UI Symbol,Android Emoji,EmojiSymbols,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,sans-serif;
@@ -178,13 +188,17 @@ button.selected{
   var paused = false;
   function textToAudio(msg, voice_choice, gender = '') {
     let speech = new SpeechSynthesisUtterance(msg);
-
+		
+		let choice = voice_choice - 1;
+		
     if ('available_voices' in window) {
 			if (gender == "m") {
-				speech.voice = window.available_voices.m_voices[voice_choice]
+				let m_voices = window.available_voices.m_voices
+				speech.voice = m_voices[choice % m_voices.length]
 			}
 			else {
-				speech.voice = window.available_voices.voices[voice_choice]
+				let f_voices = window.available_voices.voices
+				speech.voice = f_voices[choice % f_voices]
 			}
     }
     else {
@@ -196,11 +210,11 @@ button.selected{
 			
 			if (gender == "m") {
 				let m_voices = english_voices.filter(voice => mIndicators.some(v => voice.name.includes(v)));
-				speech.voice = m_voices[voice_choice]
+				speech.voice = m_voices[choice % m_voices.length]
 			}
 			else {
 				let f_voices = english_voices.filter(voice => fIndicators.some(v => voice.name.includes(v)));
-				speech.voice = f_voices[voice_choice];
+				speech.voice = f_voices[choice % f_voices.length];
 			}
     }
 
@@ -242,7 +256,15 @@ button.selected{
 				stop: stop,
 				paused: paused
     });
-})();</script><tw-passagedata pid="1" name="Welcome" tags="" position="797,101" size="100,100">(text-style: &quot;bold&quot;)[Welcome]
+})();</script><tw-passagedata pid="1" name="Welcome" tags="" position="663.6666666666666,161" size="100,100">Welcome to VLS RPh/ RPhT V 1.0. (This is just a sample- let’s add a creative title- any ideas?)
+
+We have developed 3 virtual case based scenarios to provide you with an immersive learning opportunity reflective of three current practice examples based in a community pharmacy setting.
+
+The cases are grounded in common professional competencies for regulated pharmacist and pharmacy technicians and are designed to promote intra-professional role understanding and collaborative practice. The cases focus on authentic practice examples representing different patient demographics.
+
+Begin the first scenario, by clicking on “scenario 1” tab and enjoy the learning activity!
+
+&lt;h2&gt;Scenarios ↓&lt;/h2&gt;
 
 &lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;card-deck&quot;&gt;
@@ -250,7 +272,7 @@ button.selected{
 	  &lt;div class=&quot;card-body d-flex flex-column&quot;&gt;
 		&lt;img style=&quot;height:7em;width:80%&quot; class=&quot;center-img rounded&quot; src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/case1-tile.svg&quot;&gt;
 		&lt;p class=&quot;card-text&quot;&gt;Bob Stonechild goes to his local community pharmacy for help with his cold symptoms&lt;/p&gt;
-		&lt;button type=&quot;button&quot; style=&quot;border:none;color:transparent;&quot; class=&quot;mt-auto btn-primary-outline&quot;&gt;(button:)[[Scenario 1 |Case 1]]&lt;/button&gt;
+		&lt;button type=&quot;button&quot; style=&quot;border:none;color:transparent;&quot; class=&quot;mt-auto btn-primary-outline&quot;&gt;(button:)[[Scenario 1 |Case 1 - Intro]]&lt;/button&gt;
 	  &lt;/div&gt;
 	&lt;/div&gt;
 	&lt;div class=&quot;w-100 d-none d-sm-block d-md-none&quot;&gt;&lt;/div&gt;
@@ -609,7 +631,7 @@ button.selected{
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
-			dialog = [{&quot;person&quot;:1,&quot;text&quot;:&quot;Well Bob, although there are some over-the-counter products that may help you feel better, I will need to gather some information from you about your symptoms to help the pharmacist make a recommendation. Do you have a few minutes?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Sure.&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;How long have you been experiencing these symptoms?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I&#39;ve had the cough for about 3 weeks now&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I didn&#39;t get a chance to come by to the pharmacy or contact the nurse practitioner&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Three days ago, I started getting a sore throat that&#39;s now gone away but turned into congestion&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Yesterday some mild sinus pain started so I decided to come in&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Do you have any other symptoms like a runny nose, nasal discharge, watery eyes, or sneezing?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;No&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Do you have a fever?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;No. I took my temperature this morning and it was 37 degrees Celsius.&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Okay. Thank you for the information. I&#39;ll update the pharmacist with the information you have provided me and then she will come over to assess your symptoms and make a recommendation.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Thanks. Sounds good!&quot;}]
+			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Well Bob, although there are some over-the-counter products that may help you feel better, I will need to gather some information from you about your symptoms to help the pharmacist make a recommendation. Do you have a few minutes?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Sure.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;How long have you been experiencing these symptoms?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I&#39;ve had the cough for about 3 weeks now&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;I didn&#39;t get a chance to come by to the pharmacy or contact the nurse practitioner&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Three days ago, I started getting a sore throat that&#39;s now gone away but turned into congestion&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Yesterday some mild sinus pain started so I decided to come in&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Do you have any other symptoms like a runny nose, nasal discharge, watery eyes, or sneezing?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;No&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Do you have a fever?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;No. I took my temperature this morning and it was 37 degrees Celsius.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Okay. Thank you for the information. I&#39;ll update the pharmacist with the information you have provided me and then she will come over to assess your symptoms and make a recommendation.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Thanks. Sounds good!&quot;}]
 			event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
@@ -676,7 +698,7 @@ button.selected{
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
-			dialog = [{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;Hi Damilola&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;Mr. Stonechild is here looking for help finding an OTC product for a cough he&#39;s had for 3 weeks, congestion he&#39;s had for 2 days, and sinus pain that started yesterday&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;He checked this morning and he does not have a fever&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;I&#39;ve pulled up his profile here on our pharmacy management software&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;f&quot;, &quot;text&quot;:&quot;Thanks for the gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.&quot;}]
+			dialog = [{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;Hi Damilola&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;Mr. Stonechild is here looking for help finding an OTC product for a cough he&#39;s had for 3 weeks, congestion he&#39;s had for 2 days, and sinus pain that started yesterday&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;He checked this morning and he does not have a fever&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;:&quot;I&#39;ve pulled up his profile here on our pharmacy management software&quot;},{&quot;person&quot;:1, &quot;gender&quot;: &quot;f&quot;, &quot;text&quot;:&quot;Thanks for gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.&quot;}]
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
@@ -689,7 +711,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://deploy-preview-5--elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
-   {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Thanks for the gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.}
+   {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Thanks for gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.}
 &lt;/div&gt;
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPh walks over to Bob in the over-the-counter aisle. &quot;, &quot;Dialog 4&quot;)]</tw-passagedata><tw-passagedata pid="14" name="Dialog 4" tags="" position="1198,374" size="100,100">&lt;div class=&quot;clearfix&quot;&gt;  
@@ -714,7 +736,7 @@ button.selected{
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
 			dialog = [
-			{&quot;person&quot;:3,&quot;text&quot;:&quot;Hi Bob. Sayed filled me in on some of your symptoms and your current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit of time now.&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Yes, it&#39;s been about 3 weeks now.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Bob, will you tell me more about the cough. Is it dry or do you cough up phlegm or mucus?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;It&#39;s a dry cough.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Are you experiencing any trouble breathing or any shortness of breath?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Not beyond my congestion.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Any chest pain at all?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;No.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Have you had any medical procedures or accidents in the past 3 weeks?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;None.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Have you noticed anything that makes your symptoms worse or better?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;My congestion and sinus pain seem to be a bit worse at night and improve with rest. I haven&#39;t noticed any patterns with my cough.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Thank you for this information. I have one last question. Do you know what your blood pressure is today or has been in the last few days?&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;I m sorry. I don&#39;t.&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;Not a problem&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;We actually have a blood pressure monitor in the pharmacy&quot;},{&quot;person&quot;:3,&quot;text&quot;:&quot;If you&#39;re comfortable, you can check your own blood pressure or Sayed or I can help you to take a current blood pressure reading to help me with making a recommendation for you to treat the symptoms you describe&quot;},{&quot;person&quot;:2,&quot;text&quot;:&quot;Sounds good!&quot;},{&quot;person&quot;:1,&quot;text&quot;:&quot;Your blood pressure reading is 118/75 mmHg. I&#39;ll update the pharmacist with this information and then she will come over with a recommendation.&quot;}]
+			{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Hi Bob. Sayed filled me in on some of your symptoms and your current medications. It sounds like you&#39;re not feeling too well and that you have been coughing for a bit of time now.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Yes, it&#39;s been about 3 weeks now.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Bob, will you tell me more about the cough. Is it dry or do you cough up phlegm or mucus?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;It&#39;s a dry cough.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Are you experiencing any trouble breathing or any shortness of breath?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Not beyond my congestion.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Any chest pain at all?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;No.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Have you had any medical procedures or accidents in the past 3 weeks?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;None.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Have you noticed anything that makes your symptoms worse or better?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;My congestion and sinus pain seem to be a bit worse at night and improve with rest. I haven&#39;t noticed any patterns with my cough.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Thank you for this information. I have one last question. Do you know what your blood pressure is today or has been in the last few days?&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;I m sorry. I don&#39;t.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Not a problem&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;We actually have a blood pressure monitor in the pharmacy&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;If you&#39;re comfortable, you can check your own blood pressure or Sayed or I can help you to take a current blood pressure reading to help me with making a recommendation for you to treat the symptoms you describe&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Sounds good!&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Your blood pressure reading is 118/75 mmHg. I&#39;ll update the pharmacist with this information and then she will come over with a recommendation.&quot;}]
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
@@ -793,7 +815,7 @@ button.selected{
    {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Your blood pressure reading is 118/75 mmHg. I&#39;ll update the pharmacist with this information and then she will come over with a recommendation.}
 &lt;/div&gt;
 
-(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT - Sayed  walks over to behind the pharmacy counter and starts a conversation with the Registered Pharmacist (RPh).  &quot;, &quot;Dialog 5&quot;)]
+(text-style: &quot;underline&quot;)[(link-goto: &quot;RPhT - Sayed  walks over to behind the pharmacy counter and starts a conversation with the Registered Pharmacist (RPh).  &quot;, &quot;Dialog 5&quot;)]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Dialog 5" tags="" position="1324,374" size="100,100">&lt;div class=&quot;clearfix&quot;&gt; 
  	&lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
 		&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola-sayed-counter.svg&quot;&gt;
@@ -1551,7 +1573,7 @@ The RPhT checks the storage temperature information for clotrimazole cream and t
 The RPhT reaches out to the pharmacist and relays the father&#39;s second question.
 RPh comes and counsels the father accordingly.
 
-(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Summative Questions&quot;, &quot;C2 - Summative Questions&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Case 1" tags="" position="940,103" size="100,100">&lt;button type=&quot;button&quot; class=&quot;accordion&quot;&gt;Case Overview and Suggested Preparatory reading&lt;/button&gt;
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Summative Questions&quot;, &quot;C2 - Summative Questions&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Case 1" tags="" position="998.3333333333333,12.999999999999986" size="100,100">&lt;button type=&quot;button&quot; class=&quot;accordion&quot;&gt;Case Overview and Suggested Preparatory reading&lt;/button&gt;
 &lt;div class=&quot;panel&quot;&gt;
   &lt;p&gt;This case will highlight Pharmacy Technicians’ (RPhT) and Pharmacists’ (RPh) scope of practice through their collaboration in helping a patient who is experiencing cough and cold symptoms. &lt;/p&gt;
   
@@ -2196,7 +2218,23 @@ Items Needed:
 
 |continue)[
 (button:)[[Debriefing|C1-D]]
-]</tw-passagedata></tw-storydata>
+]</tw-passagedata><tw-passagedata pid="38" name="Case 1 - Intro" tags="" position="813,26.666666666666668" size="100,100">In this scenario you meet Damilola (RPh) and Sayed (RPhT) and help them to navigate addressing patient Bob Stonechild’s health care needs around cough and cold like symptoms.
+
+The roles highlighted through this scenario are: care provider, communicator, and collaborator.
+
+The practice assessment domains highlighted are:
+
+&#39;&#39;Pharmacist:&#39;&#39; Patient Assessment, Decision Making, Communication/ Education
+
+&#39;&#39;Pharmacy Technician:&#39;&#39; Patient Care, Collaboration-Decision Making, Communication/Education
+
+By the end of the scenario the learner will:
+
+0. demonstrate an understanding of the roles of a pharmacist and a pharmacy technician to optimize scopes of practice.
+0. apply knowledge of scopes of practice to effectively care for a patient with a minor ailment in a community practice setting, and
+0. recognize elements of effective verbal communication between pharmacists, pharmacy technicians, and patients.
+
+(button:)[[Continue |Case 1]]</tw-passagedata><tw-passagedata pid="39" name="Untitled Passage 1" tags="" position="1724.6666666666667,621.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
