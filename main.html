@@ -332,7 +332,7 @@ button.selected{
 |continue)[(button:)[[Continue|Dialog 2]]]</tw-passagedata><tw-passagedata pid="3" name="Header" tags="header" position="142,20" size="100,100">&lt;div class=&quot;undo-forward&quot;&gt;(icon-undo: &quot;ᐸ&quot;, &quot;Back&quot;)(icon-redo: &quot;ᐳ&quot;, &quot;Forward&quot;)&lt;/div&gt;
 (if: State.pastLength &gt; 0)[
 	(append: ?Sidebar)[
-	  (link: &quot;Back to Home Page&quot;)[(reload:)]
+	  (link-repeat: &quot;Back to Home Page&quot;)[(goto-url: &quot;https://elearning-pharmacy.netlify.app/&quot;)]
 	]
 ]</tw-passagedata><tw-passagedata pid="4" name="Dialog 1" tags="" position="1153,98" size="100,100">&lt;div&gt;
  &lt;p&gt;Bob Stonechild visits his local community pharmacy. He is greeted by Sayed, the registered pharmacy technician, who noticed Bob was scanning the over-the-counter products in one of the pharmacy isles. Sayed asks Bob if he can help him find anything as Bob appeared to be having difficulty finding a product.&lt;/p&gt;
