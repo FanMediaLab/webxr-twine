@@ -255,7 +255,7 @@ button.selected{
 				stop: stop,
 				paused: paused
     });
-})();</script><tw-passagedata pid="1" name="Welcome" tags="" position="663.6666666666666,161" size="100,100">&lt;div class=&quot;container&quot;&gt;
+})();</script><tw-passagedata pid="1" name="Welcome" tags="" position="663,161" size="100,100">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;card-deck&quot;&gt;
 	&lt;div class=&quot;card mb-4 shadow rounded&quot;&gt;
 	  &lt;div class=&quot;card-body d-flex flex-column&quot;&gt;
@@ -287,7 +287,7 @@ button.selected{
 {
 (set: _q1A to &quot;&quot;)
 
-(set: _optionA to &quot;Select an OTC product for Bob's cold symptoms&quot;)
+(set: _optionA to &quot;Select an OTC product for Bob&#39;s cold symptoms&quot;)
 (set: _optionB to &quot;Get the pharmacist to assess Bob and make a recommendation &quot;)
 (set: _optionC to &quot;Collect more information and then ask the pharmacist to assess Bob and make a recommendation&quot;)
 (set: _optionD to &quot;Recommend Sayed see his nurse practitioner for a recommendation &quot;)
@@ -304,7 +304,7 @@ button.selected{
 (if: _q1A is _optionD)[(set: _selected to &quot;D&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
-(set: _optionA to &quot;Select an OTC product for Bob's cold symptoms&quot;)
+(set: _optionA to &quot;Select an OTC product for Bob&#39;s cold symptoms&quot;)
 (set: _optionB to &quot;Get the pharmacist to assess Bob and make a recommendation &quot;)
 (set: _optionC to &quot;Collect more information and then ask the pharmacist to assess Bob and make a recommendation &quot;)
 (set: _optionD to &quot;Recommend Sayed see his nurse practitioner for a recommendation &quot;)
@@ -321,7 +321,7 @@ button.selected{
 (if: _q1A is _optionC)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! It is within the RPhT scope of practice to collect medical and medication history. This history can inform the pharmacist's assessment and clinical recommendations. While the RPhT can highlight OTC product options, they cannot recommend one clinically. Once the pharmacist has completed their patient assessment, they may recommend an OTC product for a patient without &#39;red-flag&#39; symptoms without referring to a prescriber.&quot;)
+(dialog: &quot;Correct! It is within the RPhT scope of practice to collect medical and medication history. This history can inform the pharmacist&#39;s assessment and clinical recommendations. While the RPhT can highlight OTC product options, they cannot recommend one clinically. Once the pharmacist has completed their patient assessment, they may recommend an OTC product for a patient without &#39;red-flag&#39; symptoms without referring to a prescriber.&quot;)
 ]
 (if: _q1A is not _optionC)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q1A), &quot;Wrong&quot;)))
@@ -332,14 +332,14 @@ button.selected{
 |continue)[(button:)[[Continue|Dialog 2]]]</tw-passagedata><tw-passagedata pid="3" name="Header" tags="header" position="142,20" size="100,100">&lt;div class=&quot;undo-forward&quot;&gt;(icon-undo: &quot;ᐸ&quot;, &quot;Back&quot;)(icon-redo: &quot;ᐳ&quot;, &quot;Forward&quot;)&lt;/div&gt;
 (if: State.pastLength &gt; 0)[
 	(append: ?Sidebar)[
-	  (link-repeat: &quot;Back to Home Page&quot;)[(goto-url: &quot;https://elearning-pharmacy.netlify.app/&quot;)]
+	  (link-repeat: &quot;Back to Home Page&quot;)[(restart:)(goto-url: &quot;https://elearning-pharmacy.netlify.app/&quot;)]
 	]
 ]</tw-passagedata><tw-passagedata pid="4" name="Dialog 1" tags="" position="1153,98" size="100,100">&lt;div&gt;
  &lt;p&gt;Bob Stonechild visits his local community pharmacy. He is greeted by Sayed, the registered pharmacy technician, who noticed Bob was scanning the over-the-counter products in one of the pharmacy isles. Sayed asks Bob if he can help him find anything as Bob appeared to be having difficulty finding a product.&lt;/p&gt;
   &lt;img style=&quot;height:auto;width:70%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sayed+bob.png&quot;&gt;
 &lt;/div&gt;
 
-&lt;mark&gt;Before starting, you are encouraged to reflect on your current community pharmacy practice setting and how, if applicable, you collaborate with your pharmacy technician or pharmacist colleagues. Ask yourself, could you incorporate each other's skills even more?&lt;/mark&gt;
+&lt;mark&gt;Before starting, you are encouraged to reflect on your current community pharmacy practice setting and how, if applicable, you collaborate with your pharmacy technician or pharmacist colleagues. Ask yourself, could you incorporate each other&#39;s skills even more?&lt;/mark&gt;
 
 
 &lt;div class=&quot;mb-5 d-flex justify-content-center&quot;&gt;
@@ -356,7 +356,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-   {(text-color: orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Hi Sayed. I am looking for something to help with this cold I have. I've been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription? }
+   {(text-color: orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Hi Sayed. I am looking for something to help with this cold I have. I&#39;ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription? }
 &lt;/div&gt;
 
 (button:)[[Next|Quiz 1]]
@@ -373,13 +373,13 @@ button.selected{
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
 			dialog = [
 			  {&quot;person&quot;: 1, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;: &quot;Hi Bob, good to see you again, how can I help you?&quot;},
-			  {&quot;person&quot;: 2, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;: &quot;Hi Sayed. I am looking for something to help with this cold I have. I've been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription?&quot;},
+			  {&quot;person&quot;: 2, &quot;gender&quot;: &quot;m&quot;, &quot;text&quot;: &quot;Hi Sayed. I am looking for something to help with this cold I have. I&#39;ve been having this cough, sore throat, congestion, and a bit of pain in my sinuses. What can I get without a prescription?&quot;},
 		  ]
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="Case 2" tags="" position="34,172" size="100,100">(text-style: &quot;italic&quot;, &quot;underline&quot;)[Mr. Patel, the father of a 5 year old boy named Nikhil Patel, submits a prescription at the pharmacy counter to the regulated pharmacy technician (RPhT) Anson Wong. It is the child's first prescription at the pharmacy. ]
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="Case 2" tags="" position="34,172" size="100,100">(text-style: &quot;italic&quot;, &quot;underline&quot;)[Mr. Patel, the father of a 5 year old boy named Nikhil Patel, submits a prescription at the pharmacy counter to the regulated pharmacy technician (RPhT) Anson Wong. It is the child&#39;s first prescription at the pharmacy. ]
 
   &lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
 
@@ -429,10 +429,10 @@ button.selected{
 &lt;/div&gt;
 
 &lt;div class=&quot;active-panel&quot;&gt;
-	* patient's name
+	* patient&#39;s name
 	* address
-	* parent's phone number
-	* patient's date of birth
+	* parent&#39;s phone number
+	* patient&#39;s date of birth
 	* allergies/intolerances
 	* Any other medications/Medical conditions? 
 	* Health Card Number/ third party info
@@ -492,8 +492,8 @@ button.selected{
 {
 (set: _q2A to &quot;&quot;)
 
-(set: _optionA to &quot;Ask Bob what symptoms he's experiencing and for how long he's had them&quot;) 
-(set: _optionB to &quot;Ask Bob what prescription medications he's taking from the  pharmacy&quot;) 
+(set: _optionA to &quot;Ask Bob what symptoms he&#39;s experiencing and for how long he&#39;s had them&quot;) 
+(set: _optionB to &quot;Ask Bob what prescription medications he&#39;s taking from the  pharmacy&quot;) 
 (set: _optionC to &quot;Make a recommendation based on information collected from Sayed&quot;)
 (set: _optionD to &quot;  Help Bob pick a product, cash him out, and provide him with blood pressure device training&quot;) 
 }
@@ -503,8 +503,8 @@ button.selected{
 (radio: 2bind _q2A, &quot;q2&quot;, _optionD)
 {
 (set: $getSelected to (macro: str-type _option, [
-(set: _optionA to &quot;Ask Bob what symptoms he's experiencing and for how long he's had them&quot;) 
-(set: _optionB to &quot;Ask Bob what prescription medications he's taking from the  pharmacy&quot;) 
+(set: _optionA to &quot;Ask Bob what symptoms he&#39;s experiencing and for how long he&#39;s had them&quot;) 
+(set: _optionB to &quot;Ask Bob what prescription medications he&#39;s taking from the  pharmacy&quot;) 
 (set: _optionC to &quot;Make a recommendation based on information collected from Sayed&quot;)
 (set: _optionD to &quot;  Help Bob pick a product, cash him out, and provide him with blood pressure device training&quot;) 
 (if: _option is _optionA)[(output-data: &quot;A&quot;)]
@@ -518,12 +518,12 @@ button.selected{
 (if: _q2A is _optionC)[
 (set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q2A), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! The pharmacy technician, Sayed, has already gathered appropriate information on Bob's symptoms and pulled up his prescription medication profile on the dispensing software. The pharmacist has been provided with this information and can now proceed with a clinical recommendation. The pharmacy technician should be optimized by having them provide Bob with medical device training. &quot;)
+(dialog: &quot;Correct! The pharmacy technician, Sayed, has already gathered appropriate information on Bob&#39;s symptoms and pulled up his prescription medication profile on the dispensing software. The pharmacist has been provided with this information and can now proceed with a clinical recommendation. The pharmacy technician should be optimized by having them provide Bob with medical device training. &quot;)
 ]
 (if: _q2A is not _optionC)[(set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q2A), &quot;Wrong&quot;)))(alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)]
 }]]
 }
-|continue)[(button:)[[Go to Next Dialog|Dialog 6]]]</tw-passagedata><tw-passagedata pid="9" name="Quiz 3" tags="" position="1437,101" size="100,100">Which of the following fall(s) within a pharmacy technician's scope of practice? Select all that apply. 
+|continue)[(button:)[[Go to Next Dialog|Dialog 6]]]</tw-passagedata><tw-passagedata pid="9" name="Quiz 3" tags="" position="1437,101" size="100,100">Which of the following fall(s) within a pharmacy technician&#39;s scope of practice? Select all that apply. 
 {
 (set: _q3A to false, _q3B to false, _q3C to false, _q3D to false)
 }
@@ -1032,9 +1032,9 @@ button.selected{
 &lt;/div&gt;
 
 (text-style: &quot;underline&quot;)[(link-goto: &quot;RPhT and RPh wave goodbye to Bob from behind the cash and counter, respectively. Bob leaves the pharmacy.&quot;, &quot;Dialog 10&quot;)]
-</tw-passagedata><tw-passagedata pid="19" name="Dialog 10" tags="" position="1796,201" size="100,100">RPh completed a pharmaceutical opinion to inform the nurse practitioner of the patient's ACE inhibitor induced cough, secondary to Ramipril, and recommend changing the Ramipril to Telmisartan. The RPhT then faxes the pharmaceutical opinion to the nurse practitioner and can bill for it once a response is received. 
+</tw-passagedata><tw-passagedata pid="19" name="Dialog 10" tags="" position="1796,201" size="100,100">RPh completed a pharmaceutical opinion to inform the nurse practitioner of the patient&#39;s ACE inhibitor induced cough, secondary to Ramipril, and recommend changing the Ramipril to Telmisartan. The RPhT then faxes the pharmaceutical opinion to the nurse practitioner and can bill for it once a response is received. 
  
-RPh documents the interaction in the notes section of the patient's profile in the pharmacy dispensing software as below. 
+RPh documents the interaction in the notes section of the patient&#39;s profile in the pharmacy dispensing software as below. 
 
 &lt;div style=&quot;padding: 0 0.5rem;&quot; class=&quot;border border-info&quot;&gt;
 &#39;&#39;Notes:&#39;&#39;
@@ -1045,7 +1045,7 @@ COUGH - (date, RPh - Damilola)
 * No SOB, chest pain, extreme fatigue, confusion, recent trauma/surgery, or fever
 * BP in pharmacy: 118/75 mmHg
 * Bob may be experiencing ACEi-induced cough, secondary to Ramipril 2.5 mg daily, and would benefit from alternative therapy with ARB Telmisartan 40 mg daily
-* Completed pharmaceutical opinion and faxed to Bob's nurse practitioner
+* Completed pharmaceutical opinion and faxed to Bob&#39;s nurse practitioner
 * Recommended Bob measure his BP regularly and bring in home monitor for RPhT to provide training
 
 CONGESTION + SINUS PAIN (date, RPh – Damilola)
@@ -1462,7 +1462,7 @@ The father picks up the product and before he leaves the store he comes back wit
 Scenario: The father comes back and asks the following questions: 
 1) What is the stability of the product as we are planning to travel?
 &lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
-Is it within the regulated technician's scope of practice to respond to this question?
+Is it within the regulated technician&#39;s scope of practice to respond to this question?
 {
 (set: _q2E to &quot;&quot;)
 
@@ -1504,7 +1504,7 @@ Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 &lt;/div&gt;
 2) Should sunscreen be applied to the affected areas before application of the prescription cream or after?
 &lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
-Is it within the regulated technician's scope of practice to respond to this question?
+Is it within the regulated technician&#39;s scope of practice to respond to this question?
 {
 (set: _q2F to &quot;&quot;)
 
@@ -1545,7 +1545,7 @@ Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 }
 &lt;/div&gt;
 
-The RPhT checks the storage temperature information for clotrimazole cream and the medication safety data sheet for hydrocortisone , then accordingly he answers the mfather's questions.
+The RPhT checks the storage temperature information for clotrimazole cream and the medication safety data sheet for hydrocortisone , then accordingly he answers the mfather&#39;s questions.
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
@@ -1560,13 +1560,13 @@ The RPhT checks the storage temperature information for clotrimazole cream and t
 The RPhT reaches out to the pharmacist and relays the father&#39;s second question.
 RPh comes and counsels the father accordingly.
 
-(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Summative Questions&quot;, &quot;C2 - Summative Questions&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Case 1" tags="" position="998.3333333333333,12.999999999999986" size="100,100">&lt;button type=&quot;button&quot; class=&quot;accordion&quot;&gt;Case Overview and Suggested Preparatory reading&lt;/button&gt;
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Summative Questions&quot;, &quot;C2 - Summative Questions&quot;)]</tw-passagedata><tw-passagedata pid="24" name="Case 1" tags="" position="998,12" size="100,100">&lt;button type=&quot;button&quot; class=&quot;accordion&quot;&gt;Case Overview and Suggested Preparatory reading&lt;/button&gt;
 &lt;div class=&quot;panel&quot;&gt;
-  &lt;p&gt;This case will highlight Pharmacy Technicians' (RPhT) and Pharmacists' (RPh) scope of practice through their collaboration in helping a patient who is experiencing cough and cold symptoms. &lt;/p&gt;
+  &lt;p&gt;This case will highlight Pharmacy Technicians&#39; (RPhT) and Pharmacists&#39; (RPh) scope of practice through their collaboration in helping a patient who is experiencing cough and cold symptoms. &lt;/p&gt;
   
   In advance of engaging with this case, it is recommended that you review the following resources: 
 * OCP Scope of practice: (link-repeat: &quot;Legal Authority for Scope of Practice – April 2020&quot;)[(open-url: &quot;https://www.ocpinfo.com/wp-content/uploads/2019/05/Legal-Authority-Scopes.pdf&quot;)]
-* NAPRA Scope of practice: (link-repeat: &quot;Pharmacy Technicians' Scope of Practice in Canada Jurisdiction – Effective June 2019&quot;)[(open-url: &quot;https://napra.ca/sites/default/files/2019-09/Technician%20Scope%20of%20Practice%20-%20June%202019.pdf&quot;)]
+* NAPRA Scope of practice: (link-repeat: &quot;Pharmacy Technicians&#39; Scope of Practice in Canada Jurisdiction – Effective June 2019&quot;)[(open-url: &quot;https://napra.ca/sites/default/files/2019-09/Technician%20Scope%20of%20Practice%20-%20June%202019.pdf&quot;)]
 * Clinical topics: Compendium of Therapeutic Choices, Acute Cough
 * Clinical topics: Therapeutic Choices for Minor Ailments, Viral Rhinitis, Influenza, Rhinosinusitis and Pharyngitis
 * Patient Interactions: &lt;a&gt;RxTx Chapter &quot;Effective Pharmacist-Patient Interactions&quot;
@@ -2110,7 +2110,7 @@ Items Needed:
 (if: _qS1A is true and _qS1C is true and _qS1D is true and _qS1B is true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! As Bob was a regular patient of the pharmacy, he was greeted by name, which prompted a positive triaging process. During the interaction, Bob was asked various questions so that RPhT Sayed could obtain detailed information about Bob's concerns, and these questions were asked in a manner for Bob to elaborate, which provided insight into his concern. RPhT, Sayed, and RPh, Damilola, collaborated and consulted the patient&#39;s profile in order to provide pharmacological and non-pharmacological recommendations. Follow-up care was offered to demonstrate the proper use of the medical device to monitor Bob's blood pressure interim.&quot;)
+(dialog: &quot;Correct! As Bob was a regular patient of the pharmacy, he was greeted by name, which prompted a positive triaging process. During the interaction, Bob was asked various questions so that RPhT Sayed could obtain detailed information about Bob&#39;s concerns, and these questions were asked in a manner for Bob to elaborate, which provided insight into his concern. RPhT, Sayed, and RPh, Damilola, collaborated and consulted the patient&#39;s profile in order to provide pharmacological and non-pharmacological recommendations. Follow-up care was offered to demonstrate the proper use of the medical device to monitor Bob&#39;s blood pressure interim.&quot;)
 ]
 (if: _qS1A is false or _qS1C is false or _qS1D is false or _qS1B is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Wrong&quot;)))
@@ -2132,7 +2132,7 @@ Items Needed:
 0. Name a barrier to pharmacy technicians and pharmacists practicing to their full scope of practice and collaborating? How can you address this barrier?
 0. Depending on the age of the patient and the time of year, this may be an opportunity to check if the patient is up to date with recommended vaccines (e.g., influenza, pneumovax, shingles, COVID-19).
  
-&#39;&#39;As was asked in the pre-case briefing, reflect on your current community pharmacy practice setting and how, if applicable, you collaborate with your pharmacy technician or pharmacist colleagues. Ask yourself, could you incorporate each other's skills even more? &#39;&#39;
+&#39;&#39;As was asked in the pre-case briefing, reflect on your current community pharmacy practice setting and how, if applicable, you collaborate with your pharmacy technician or pharmacist colleagues. Ask yourself, could you incorporate each other&#39;s skills even more? &#39;&#39;
 </tw-passagedata><tw-passagedata pid="36" name="C1-S2" tags="" position="1923,350" size="100,100">Which of the following tasks fall within the scope of both pharmacy technicians and pharmacists? Select all that apply. 
 {
 (set: _qS2A to false, _qS2B to false, _qS2C to false, _qS2D to false)
@@ -2169,12 +2169,12 @@ Items Needed:
 {
 |continue)[
 (button:)[[Next|C1-S3]]
-]}</tw-passagedata><tw-passagedata pid="37" name="C1-S3" tags="" position="1923,500" size="100,100">What was effective in Sayed and Damilola's interactions? Select all that apply.
+]}</tw-passagedata><tw-passagedata pid="37" name="C1-S3" tags="" position="1923,500" size="100,100">What was effective in Sayed and Damilola&#39;s interactions? Select all that apply.
 {
 (set: _qS3A to false, _qS3B to false, _qS3C to false, _qS3D to false)
 }
 (checkbox: bind _qS3A, &quot;Complete and concise handoffs between patient interactions&quot;)
-(checkbox: bind _qS3B, &quot;Positive interactions that showed appreciation for each other's contributions&quot;)
+(checkbox: bind _qS3B, &quot;Positive interactions that showed appreciation for each other&#39;s contributions&quot;)
 (checkbox: bind _qS3C, &quot;Demonstrated continuity and collaboration between both roles to the patient&quot;)
 (checkbox: bind _qS3D, &quot;Optimized the scope of practice of each pharmacy professional&quot;)
 {
@@ -2194,7 +2194,7 @@ Items Needed:
 (if: _qS3A is true and _qS3C is true and _qS3D is true and _qS3B is true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! Sayed provided Damilola with a concise summary of Bob's presentation. Sayed and Damilola valued and trusted each other and said thank you to demonstrate their appreciation. Between interactions, the pharmacy technician and pharmacist referenced the other to Bob to highlight the partnership and continuity. The pharmacist and pharmacy technician completed different tasks that enabled each of them to practice to their full scope.&quot;)
+(dialog: &quot;Correct! Sayed provided Damilola with a concise summary of Bob&#39;s presentation. Sayed and Damilola valued and trusted each other and said thank you to demonstrate their appreciation. Between interactions, the pharmacy technician and pharmacist referenced the other to Bob to highlight the partnership and continuity. The pharmacist and pharmacy technician completed different tasks that enabled each of them to practice to their full scope.&quot;)
 ]
 (if: _qS3A is false or _qS3C is false or _qS3D is false or _qS3B is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D), &quot;Wrong&quot;)))
@@ -2205,7 +2205,7 @@ Items Needed:
 
 |continue)[
 (button:)[[Debriefing|C1-D]]
-]</tw-passagedata><tw-passagedata pid="38" name="Case 1 - Intro" tags="" position="813,26.666666666666668" size="100,100">In this scenario you meet Damilola (RPh) and Sayed (RPhT) and help them to navigate addressing patient Bob Stonechild's health care needs around cough and cold like symptoms.
+]</tw-passagedata><tw-passagedata pid="38" name="Case 1 - Intro" tags="" position="813,26" size="100,100">In this scenario you meet Damilola (RPh) and Sayed (RPhT) and help them to navigate addressing patient Bob Stonechild&#39;s health care needs around cough and cold like symptoms.
 
 The roles highlighted through this scenario are: care provider, communicator, and collaborator.
 
