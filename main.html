@@ -288,14 +288,14 @@ button.selected{
 	  &lt;/div&gt;
 	&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Quiz 1" tags="" position="1016,227" size="100,100">What should Bob do next?
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Quiz 1" tags="" position="1016,227" size="100,100">What should Sayed do next?
 {
 (set: _q1A to &quot;&quot;)
 
 (set: _optionA to &quot;Select an OTC product for Bob&#39;s cold symptoms&quot;)
 (set: _optionB to &quot;Get the pharmacist to assess Bob and make a recommendation &quot;)
 (set: _optionC to &quot;Collect more information and then ask the pharmacist to assess Bob and make a recommendation&quot;)
-(set: _optionD to &quot;Recommend Sayed see his nurse practitioner for a recommendation &quot;)
+(set: _optionD to &quot;Recommend Bob see his nurse practitioner for a recommendation &quot;)
 }
 (radio: 2bind _q1A, &quot;q2&quot;, _optionA)
 (radio: 2bind _q1A, &quot;q2&quot;, _optionB)
@@ -312,7 +312,7 @@ button.selected{
 (set: _optionA to &quot;Select an OTC product for Bob&#39;s cold symptoms&quot;)
 (set: _optionB to &quot;Get the pharmacist to assess Bob and make a recommendation &quot;)
 (set: _optionC to &quot;Collect more information and then ask the pharmacist to assess Bob and make a recommendation &quot;)
-(set: _optionD to &quot;Recommend Sayed see his nurse practitioner for a recommendation &quot;)
+(set: _optionD to &quot;Recommend Bob see his nurse practitioner for a recommendation &quot;)
 (if: _option is _optionA)[(output-data: &quot;A&quot;)]
 (if: _option is _optionB)[(output-data: &quot;B&quot;)]
 (if: _option is _optionC)[(output-data: &quot;C&quot;)]
