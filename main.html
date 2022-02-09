@@ -493,7 +493,7 @@ button.selected{
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="258,19.333333333333332" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Quiz 2" tags="" position="1144,230" size="100,100">What do you think is Damilola’s most appropriate next action to help Bob?
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="258,19.333333333333332" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Quiz 2" tags="" position="1144,230" size="100,100">What do you think is Damilola's most appropriate next action to help Bob?
 {
 (set: _q2A to &quot;&quot;)
 
@@ -527,7 +527,7 @@ button.selected{
 ]
 (if: _q2A is _optionD)[
 (set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q2A), &quot;Incorrect&quot;)))
-(dialog: &quot;It is too early for Damilola to make a recommendation as she has not yet completed her assessment of Bob. It is within Sayed’s scope of practice to provide medical device training. His role should be optimized by having him provide Bob with blood pressure device training.&quot;)
+(dialog: &quot;It is too early for Damilola to make a recommendation as she has not yet completed her assessment of Bob. It is within Sayed's scope of practice to provide medical device training. His role should be optimized by having him provide Bob with blood pressure device training.&quot;)
 ]
 (if: _q2A is not _optionC and _q2A is not _optionD)[(set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q2A), &quot;Incorrect&quot;)))(alert: &quot;Please try again&quot;)]
 }]]
@@ -815,7 +815,7 @@ button.selected{
   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Sounds good!}
 &lt;/div&gt;
 
-(text-style: &quot;italic&quot;)[RPhT – Sayed and Pt – Bob walk to the blood pressure monitor and Bob sits down to take a reading. It shows 118/75 mmHg.]
+(text-style: &quot;italic&quot;)[RPhT - Sayed and Pt - Bob walk to the blood pressure monitor and Bob sits down to take a reading. It shows 118/75 mmHg.]
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
@@ -940,7 +940,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-	{(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I don’t think so. I’ll call the pharmacy if anything comes up.}
+	{(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I don't think so. I'll call the pharmacy if anything comes up.}
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -986,7 +986,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Will do. For now, I’ll pay for the nasal spray and acetaminophen. Thank you.}
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Will do. For now, I'll pay for the nasal spray and acetaminophen. Thank you.}
 &lt;/div&gt;
 
 
@@ -1010,7 +1010,7 @@ button.selected{
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
-			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Hi Bob. I&#39;m happy to see that Damilola was able to help you find something for your cold. I&#39;ll give you a call when we hear back from your nurse practitioner about the recommended change in your blood pressure medication.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;That&#39;s great. In the meantime, I&#39;ll go home and get some rest.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Rest is important. Drinking water is also important to help you stay hydrated.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;If you have a humidifier at home, that may also be helpful and I recommend you clean it regularly.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Also, remember to practice good hand hygiene by washing your hands with soap and water for at least 20 seconds to lower your risk of spreading and getting colds.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Good reminder! Thank you.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;We’ll follow-up with you in 3-4 days to make sure your symptoms are improving and you’re not experiencing any side effects from the products we recommended.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Please don’t hesitate to call us sooner if your symptoms get worse or you have any questions.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Thank you. This is very much appreciated.&quot;}]
+			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Hi Bob. I&#39;m happy to see that Damilola was able to help you find something for your cold. I&#39;ll give you a call when we hear back from your nurse practitioner about the recommended change in your blood pressure medication.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;That&#39;s great. In the meantime, I&#39;ll go home and get some rest.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Rest is important. Drinking water is also important to help you stay hydrated.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;If you have a humidifier at home, that may also be helpful and I recommend you clean it regularly.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Also, remember to practice good hand hygiene by washing your hands with soap and water for at least 20 seconds to lower your risk of spreading and getting colds.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Good reminder! Thank you.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;We'll follow-up with you in 3-4 days to make sure your symptoms are improving and you're not experiencing any side effects from the products we recommended.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Please don't hesitate to call us sooner if your symptoms get worse or you have any questions.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Thank you. This is very much appreciated.&quot;}]
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
@@ -1035,7 +1035,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
-  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: We’ll follow-up with you in 3-4 days to make sure your symptoms are improving and you&#39;re not experiencing any side effects from the products we recommended. Please don’t hesitate to call us sooner if your symptoms get worse or you have any questions}
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: We'll follow-up with you in 3-4 days to make sure your symptoms are improving and you&#39;re not experiencing any side effects from the products we recommended. Please don't hesitate to call us sooner if your symptoms get worse or you have any questions}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
@@ -1059,7 +1059,7 @@ COUGH - (date, RPh - Damilola)
 * Completed pharmaceutical opinion and faxed to Bob&#39;s nurse practitioner
 * Recommended Bob measure his BP regularly and bring in home monitor for RPhT to provide training
 
-CONGESTION + SINUS PAIN (date, RPh – Damilola)
+CONGESTION + SINUS PAIN (date, RPh - Damilola)
 * Bob presented with nasal congestion x 2 days and mild sinus pain x 1 day
 * Previously experienced mild sore throat 3 days ago which has since resolved
 * No drooling, dehydration, severe pain, respiratory comorbidities, or fever
@@ -2103,7 +2103,7 @@ Items Needed:
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Correct&quot;)))
 (show: ?continue)
 (set: _iscorrect to true)
-(dialog: &quot;Correct! As Bob is a regular patient of the pharmacy, he was greeted by name, which prompted a positive triage process. During the initial interaction, Sayed gathered information that facilitated Damilola’s further assessment of Bob&#39;s concerns. In the scenario, the two pharmacy professionals collaborated in order to provide optimal patient care (pharmacological and non-pharmacological recommendations). Follow-up care was also offered such as checking in with the patient to see how he is doing and to teach him the proper use of the blood pressure monitor.&quot;)
+(dialog: &quot;Correct! As Bob is a regular patient of the pharmacy, he was greeted by name, which prompted a positive triage process. During the initial interaction, Sayed gathered information that facilitated Damilola's further assessment of Bob&#39;s concerns. In the scenario, the two pharmacy professionals collaborated in order to provide optimal patient care (pharmacological and non-pharmacological recommendations). Follow-up care was also offered such as checking in with the patient to see how he is doing and to teach him the proper use of the blood pressure monitor.&quot;)
 ]
 (if: _qS1A is true or _qS1B is true or _qS1C is true or _qS1D is true and _iscorrect is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Partially Correct&quot;)))
@@ -2274,14 +2274,14 @@ By the end of the scenario the learner will:
 0. recognize elements of effective written communication between pharmacists, pharmacy technicians, and the prescriber.
  
 
-(button:)[[Continue |Case 2]]</tw-passagedata><tw-passagedata pid="41" name="Quiz 3" tags="" position="1461.6666666666665,328.33333333333337" size="100,100">What do you think is Damilola’s most appropriate next action to help Bob?
+(button:)[[Continue |Case 2]]</tw-passagedata><tw-passagedata pid="41" name="Quiz 3" tags="" position="1461.6666666666665,328.33333333333337" size="100,100">What do you think is Damilola's most appropriate next action to help Bob?
 {
 (set: _q3A to &quot;&quot;)
 
 (set: _optionA to &quot;She asks Bob more about the symptoms he is experiencing.&quot;) 
 (set: _optionB to &quot;She asks Bob more about what prescription medications he is taking.&quot;) 
 (set: _optionC to &quot;She asks Sayed to make a clinical recommendation based on the information collected.&quot;)
-(set: _optionD to &quot;She makes a clinical recommendation based on the information gathered and her assessment of Bob’s signs and symptoms.&quot;) 
+(set: _optionD to &quot;She makes a clinical recommendation based on the information gathered and her assessment of Bob's signs and symptoms.&quot;) 
 }
 (radio: 2bind _q3A, &quot;q3&quot;, _optionA)
 (radio: 2bind _q3A, &quot;q3&quot;, _optionB)
@@ -2292,7 +2292,7 @@ By the end of the scenario the learner will:
 (set: _optionA to &quot;She asks Bob more about the symptoms he is experiencing.&quot;) 
 (set: _optionB to &quot;She asks Bob more about what prescription medications he is taking.&quot;) 
 (set: _optionC to &quot;She asks Sayed to make a clinical recommendation based on the information collected.&quot;)
-(set: _optionD to &quot;She makes a clinical recommendation based on the information gathered and her assessment of Bob’s signs and symptoms.&quot;) 
+(set: _optionD to &quot;She makes a clinical recommendation based on the information gathered and her assessment of Bob's signs and symptoms.&quot;) 
 (if: _option is _optionA)[(output-data: &quot;A&quot;)]
 (if: _option is _optionB)[(output-data: &quot;B&quot;)]
 (if: _option is _optionC)[(output-data: &quot;C&quot;)]
@@ -2308,7 +2308,7 @@ By the end of the scenario the learner will:
 ]
 (if: _q3A is _optionC)[
 (set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q3A), &quot;Incorrect&quot;)))
-(dialog: &quot;Try again. It is not within Sayed’s scope of practice to provide clinical recommendations&quot;)
+(dialog: &quot;Try again. It is not within Sayed's scope of practice to provide clinical recommendations&quot;)
 ]
 (if: _q3A is not _optionC and _q3A is not _optionD)[(set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q3A), &quot;Incorrect&quot;)))(alert: &quot;Please try again&quot;)]
 }]]
