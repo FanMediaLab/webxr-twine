@@ -567,6 +567,10 @@ button.selected{
 ]
 (if: _q3B is true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _q3AA, _q3B, _q3C, _q3D), &quot;Wrong&quot;)))
+(alert: &quot;Please try again&quot;)
+]
+(if: _q3B is false and _q3AA is false and _q3C is false and _q3D is false)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _q3AA, _q3B, _q3C, _q3D), &quot;Wrong&quot;)))
 (alert: &quot;Please try again&quot;)]
 }]]
 }
@@ -2147,17 +2151,28 @@ Items Needed:
 ]))
 
 (set: $random to ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D))
+(set: _iscorrect to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
 (if: _qS2A is true and _qS2C is false and _qS2D is true and _qS2B is true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D), &quot;Correct&quot;)))
 (show: ?continue)
+(set: _iscorrect to true)
 (dialog: &quot;Correct! Both pharmacists and pharmacy technicians can perform information gathering, completed technical verification of prescriptions, and educate on medical device use. Only pharmacists can make a clinical recommendation or perform clinical counselling. &quot;)
 ]
-(if: _qS2A is false or _qS2C is true or _qS2D is false or _qS2B is false)[
+(if: _qS2A is true or _qS2B is true or _qS2D is true and _qS2C is false and _iscorrect is false)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D), &quot;Incorrect&quot;)))
+(dialog: &quot;That is partially correct, but other options also form part of the answer. Please try again and select all that apply.&quot;)
+]
+(if: _qS2C is false and _qS2B is false and _qS2A is false and _qS2D is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D), &quot;Wrong&quot;)))
 (hide: ?continue)
-(alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)]
+(alert: &quot;Please try again&quot;)
+]
+(if: _qS2C is true)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D), &quot;Wrong&quot;)))
+(hide: ?continue)
+(alert: &quot;Please try again&quot;)]
 }]]
 }
 {
@@ -2183,17 +2198,24 @@ Items Needed:
 ]))
 
 (set: $random to ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D))
+(set: _iscorrect to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
 (if: _qS3A is true and _qS3C is true and _qS3D is true and _qS3B is true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D), &quot;Correct&quot;)))
 (show: ?continue)
+(set: _iscorrect to true)
 (dialog: &quot;Correct! Sayed provided Damilola with a concise summary of Bob&#39;s presentation. Sayed and Damilola valued and trusted each other and said thank you to demonstrate their appreciation. Between interactions, the pharmacy technician and pharmacist referenced the other to Bob to highlight the partnership and continuity. The pharmacist and pharmacy technician completed different tasks that enabled each of them to practice to their full scope.&quot;)
 ]
-(if: _qS3A is false or _qS3C is false or _qS3D is false or _qS3B is false)[
+(if: _qS3A is true or _qS3B is true or _qS3C is true or _qS3D is true and _iscorrect is false)[
+(set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D), &quot;Partially Correct&quot;)))
+(hide: ?continue)
+(dialog: &quot;That is partially correct, but other options also form part of the answer. Please try again and select all that apply.&quot;)
+]
+(if: _qS3A is false and _qS3C is false and _qS3D is false and _qS3B is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS3A, _qS3B, _qS3C, _qS3D), &quot;Wrong&quot;)))
 (hide: ?continue)
-(alert: &quot;Wrong!&quot;, &quot;Try Again&quot;)]
+(alert: &quot;Please try again&quot;)]
 }]]
 }
 
