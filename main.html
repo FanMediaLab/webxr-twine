@@ -2098,13 +2098,15 @@ Items Needed:
 (if: _qS1A is true and _qS1C is true and _qS1D is true and _qS1B is true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Correct&quot;)))
 (show: ?continue)
+(set: _iscorrect to true)
 (dialog: &quot;Correct! As Bob is a regular patient of the pharmacy, he was greeted by name, which prompted a positive triage process. During the initial interaction, Sayed gathered information that facilitated Damilola’s further assessment of Bob&#39;s concerns. In the scenario, the two pharmacy professionals collaborated in order to provide optimal patient care (pharmacological and non-pharmacological recommendations). Follow-up care was also offered such as checking in with the patient to see how he is doing and to teach him the proper use of the blood pressure monitor.&quot;)
 ]
 (if: _qS1A is true or _qS1B is true or _qS1C is true or _qS1D is true and _iscorrect is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Partially Correct&quot;)))
+(hide: ?continue)
 (dialog: &quot;That is partially correct, but other options also form part of the answer. Please try again and select all that apply.&quot;)
 ]
-(if: _qS1A is false or _qS1C is false or _qS1D is false or _qS1B is false)[
+(if: _qS1A is false and _qS1C is false and _qS1D is false and _qS1B is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Incorrect&quot;)))
 (hide: ?continue)
 (alert: &quot;Please try again&quot;)]
