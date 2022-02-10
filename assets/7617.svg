@@ -5,9 +5,9 @@
    version="1.1"
    id="svg31002"
    xml:space="preserve"
-   width="3482.333"
-   height="273.46616"
-   viewBox="0 0 3482.333 273.46616"
+   width="3499.6375"
+   height="2697.4541"
+   viewBox="0 0 3499.6374 2697.4541"
    sodipodi:docname="7617.svg"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -2795,8 +2795,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.22071428"
-     inkscape:cx="2349.191"
-     inkscape:cy="-971.84469"
+     inkscape:cx="2362.7832"
+     inkscape:cy="1452.1036"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="0"
@@ -2810,11 +2810,11 @@
      id="g31008"
      inkscape:groupmode="layer"
      inkscape:label="ink_ext_XXXXXX"
-     transform="matrix(1.3333333,0,0,-1.3333333,0,273.46615)"><g
+     transform="matrix(1.3333333,0,0,-1.3333333,11.914221,2697.4541)"><g
        id="g31010"
        transform="scale(0.1)"><g
          id="g31012"
-         transform="matrix(1.5910693,0,0,2.36196,223.49535,230.93897)"><path
+         transform="matrix(1.6102627,0,0,2.36196,-89.356657,230.93897)"><path
            d="M 0,0 H 16300 V 8467.53 H 0 V 0"
            style="fill:#e3eaff;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path31014" /></g><g
