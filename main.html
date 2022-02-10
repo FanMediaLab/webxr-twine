@@ -343,7 +343,7 @@ button.selected{
 	(append: ?Sidebar)[
 	  (link-repeat: &quot;Welcome Page&quot;)[(goto-url: &quot;https://elearning-pharmacy.netlify.app/&quot;)]
 	]
-]}</tw-passagedata><tw-passagedata pid="4" name="Dialog 1" tags="" position="1153,114.66666666666667" size="100,100">&lt;div&gt;
+]}</tw-passagedata><tw-passagedata pid="4" name="Dialog 1" tags="" position="1153,114" size="100,100">&lt;div&gt;
  &lt;p&gt;Bob Stonechild visits his local community pharmacy. He is greeted by Sayed, the registered pharmacy technician, who noticed Bob was scanning the over-the-counter products in one of the pharmacy aisles. Sayed asks Bob if he can help him find anything as Bob appeared to be having difficulty finding a product.&lt;/p&gt;
 &lt;/div&gt;
 {
@@ -449,7 +449,7 @@ button.selected{
     Apply a thin layer to aa bid
 &lt;/div&gt;
 
-(button:)[[Next|Case 2 - Dialog 1]]</tw-passagedata><tw-passagedata pid="6" name="Case 3" tags="" position="603,465.66666666666663" size="100,100">&lt;img style=&quot;height:55vh;width:100%&quot; class=&quot;img-fluid rounded mx-auto d-block&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+maryam.svg&quot;&gt;
+(button:)[[Next|Case 2 - Dialog 1]]</tw-passagedata><tw-passagedata pid="6" name="Case 3" tags="" position="603,465" size="100,100">&lt;img style=&quot;height:55vh;width:100%&quot; class=&quot;img-fluid rounded mx-auto d-block&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+maryam.svg&quot;&gt;
 
 &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
   &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
@@ -493,7 +493,7 @@ button.selected{
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="258,19.333333333333332" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Quiz 2" tags="" position="1144,230" size="100,100">What do you think is Damilola's most appropriate next action to help Bob?
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="7" name="Footer" tags="footer" position="258,19" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Quiz 2" tags="" position="1144,230" size="100,100">What do you think is Damilola&#39;s most appropriate next action to help Bob?
 {
 (set: _q2A to &quot;&quot;)
 
@@ -527,12 +527,12 @@ button.selected{
 ]
 (if: _q2A is _optionD)[
 (set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q2A), &quot;Incorrect&quot;)))
-(dialog: &quot;It is too early for Damilola to make a recommendation as she has not yet completed her assessment of Bob. It is within Sayed's scope of practice to provide medical device training. His role should be optimized by having him provide Bob with blood pressure device training.&quot;)
+(dialog: &quot;It is too early for Damilola to make a recommendation as she has not yet completed her assessment of Bob. It is within Sayed&#39;s scope of practice to provide medical device training. His role should be optimized by having him provide Bob with blood pressure device training.&quot;)
 ]
 (if: _q2A is not _optionC and _q2A is not _optionD)[(set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q2A), &quot;Incorrect&quot;)))(alert: &quot;Please try again&quot;)]
 }]]
 }
-|continue)[(button:)[[Go to Next Dialog|Dialog 4]]]</tw-passagedata><tw-passagedata pid="9" name="Quiz 4" tags="" position="1595.3333333333335,322.6666666666667" size="100,100">Which of the following authorized acts are within the scope of practice of a registered pharmacy technician? Select all that apply.
+|continue)[(button:)[[Go to Next Dialog|Dialog 4]]]</tw-passagedata><tw-passagedata pid="9" name="Quiz 4" tags="" position="1595,322" size="100,100">Which of the following authorized acts are within the scope of practice of a registered pharmacy technician? Select all that apply.
 {
 (set: _q3AA to false, _q3B to false, _q3C to false, _q3D to false)
 }
@@ -687,12 +687,12 @@ button.selected{
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="998.3333333333334,378.6666666666667" size="100,100">  &lt;img style=&quot;height:25em;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+sayed.svg&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="998,378" size="100,100">  &lt;img style=&quot;height:25em;width:100%&quot; class=&quot;center-img&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+sayed.svg&quot;&gt;
 
   &lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
-	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
-  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
-  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
+	&lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-3 mr-2&quot;&gt;Play Dialog&lt;/button&gt;
+  &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-3 mr-2&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-3 mr-2&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
   &lt;/div&gt;
 
 &lt;img src onerror=&quot;return main()&quot;&gt;
@@ -817,6 +817,8 @@ button.selected{
 
 (text-style: &quot;italic&quot;)[RPhT - Sayed and Pt - Bob walk to the blood pressure monitor and Bob sits down to take a reading. It shows 118/75 mmHg.]
 
+&lt;img style=&quot;height:auto;width:50%&quot; class=&quot;center-img&quot; src=&quot;https://elearning-pharmacy.netlify.app/assets/7617.svg&quot;&gt;
+
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/sayed.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
    {(text-color:purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Sayed&lt;/b&gt;]: Your blood pressure reading is 118/75 mmHg. I&#39;ll update the pharmacist with this information and then she will come over with a recommendation.}
@@ -940,7 +942,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-	{(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I don't think so. I'll call the pharmacy if anything comes up.}
+	{(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: I don&#39;t think so. I&#39;ll call the pharmacy if anything comes up.}
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -986,11 +988,11 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Will do. For now, I'll pay for the nasal spray and acetaminophen. Thank you.}
+   {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Will do. For now, I&#39;ll pay for the nasal spray and acetaminophen. Thank you.}
 &lt;/div&gt;
 
 
-(button:)[[Next|Quiz 4]]</tw-passagedata><tw-passagedata pid="18" name="Dialog 8" tags="" position="1800.3333333333335,298.33333333333337" size="100,100">  &lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
+(button:)[[Next|Quiz 4]]</tw-passagedata><tw-passagedata pid="18" name="Dialog 8" tags="" position="1800,298" size="100,100">  &lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
 	&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/damilola+bob+sayed.png&quot;&gt;
 
 	&lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
@@ -1010,7 +1012,7 @@ button.selected{
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, () =&gt; {
-			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Hi Bob. I&#39;m happy to see that Damilola was able to help you find something for your cold. I&#39;ll give you a call when we hear back from your nurse practitioner about the recommended change in your blood pressure medication.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;That&#39;s great. In the meantime, I&#39;ll go home and get some rest.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Rest is important. Drinking water is also important to help you stay hydrated.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;If you have a humidifier at home, that may also be helpful and I recommend you clean it regularly.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Also, remember to practice good hand hygiene by washing your hands with soap and water for at least 20 seconds to lower your risk of spreading and getting colds.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Good reminder! Thank you.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;We'll follow-up with you in 3-4 days to make sure your symptoms are improving and you're not experiencing any side effects from the products we recommended.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Please don't hesitate to call us sooner if your symptoms get worse or you have any questions.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Thank you. This is very much appreciated.&quot;}]
+			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Hi Bob. I&#39;m happy to see that Damilola was able to help you find something for your cold. I&#39;ll give you a call when we hear back from your nurse practitioner about the recommended change in your blood pressure medication.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;That&#39;s great. In the meantime, I&#39;ll go home and get some rest.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Rest is important. Drinking water is also important to help you stay hydrated.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;If you have a humidifier at home, that may also be helpful and I recommend you clean it regularly.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Also, remember to practice good hand hygiene by washing your hands with soap and water for at least 20 seconds to lower your risk of spreading and getting colds.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Good reminder! Thank you.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;We&#39;ll follow-up with you in 3-4 days to make sure your symptoms are improving and you&#39;re not experiencing any side effects from the products we recommended.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Please don&#39;t hesitate to call us sooner if your symptoms get worse or you have any questions.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Thank you. This is very much appreciated.&quot;}]
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
@@ -1035,7 +1037,7 @@ button.selected{
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
-  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: We'll follow-up with you in 3-4 days to make sure your symptoms are improving and you&#39;re not experiencing any side effects from the products we recommended. Please don't hesitate to call us sooner if your symptoms get worse or you have any questions}
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: We&#39;ll follow-up with you in 3-4 days to make sure your symptoms are improving and you&#39;re not experiencing any side effects from the products we recommended. Please don&#39;t hesitate to call us sooner if your symptoms get worse or you have any questions}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;https://elearning-pharmacy.netlify.app/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
@@ -1043,7 +1045,7 @@ button.selected{
 &lt;/div&gt;
 
 (text-style: &quot;underline&quot;)[(link-goto: &quot;Damilola and Sayed wave goodbye to Bob as he exits the pharmacy.&quot;, &quot;Dialog 10&quot;)]
-</tw-passagedata><tw-passagedata pid="19" name="Dialog 10" tags="" position="1789.3333333333333,499.33333333333337" size="100,100">RPh completed a pharmaceutical opinion to inform the nurse practitioner of the patient&#39;s ACE inhibitor induced cough, secondary to Ramipril, and recommend changing the Ramipril to Telmisartan. The RPhT then faxes the pharmaceutical opinion to the nurse practitioner and can bill for it once a response is received. 
+</tw-passagedata><tw-passagedata pid="19" name="Dialog 10" tags="" position="1789,499" size="100,100">RPh completed a pharmaceutical opinion to inform the nurse practitioner of the patient&#39;s ACE inhibitor induced cough, secondary to Ramipril, and recommend changing the Ramipril to Telmisartan. The RPhT then faxes the pharmaceutical opinion to the nurse practitioner and can bill for it once a response is received. 
  
 RPh documents the interaction in the notes section of the patient&#39;s profile in the pharmacy dispensing software as below. 
 
@@ -1068,7 +1070,7 @@ CONGESTION + SINUS PAIN (date, RPh - Damilola)
 * RPh to call patient in 3-4 days to assess symptom response and evaluate any side effects. Patient to call pharmacy if any questions or worsening of symptoms arise.
 &lt;/div&gt;
 
-(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Summative Questions&quot;, &quot;C1-S1&quot;)]</tw-passagedata><tw-passagedata pid="20" name="Case 2 - Dialog 1" tags="" position="388,92.66666666666664" size="100,100">&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;Summative Questions&quot;, &quot;C1-S1&quot;)]</tw-passagedata><tw-passagedata pid="20" name="Case 2 - Dialog 1" tags="" position="388,92" size="100,100">&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+dad.png&quot;&gt;
 &lt;div class=&quot;mb-5 audio-controls&quot;&gt;
   &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
   &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
@@ -1166,7 +1168,7 @@ Key Learning: Interprofessional collaboration/scopes of practice
 
 &lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara+dad.png&quot;&gt;
 
-(button:)[[Move to Conversation|C2Dialog2]]</tw-passagedata><tw-passagedata pid="21" name="C2Dialog2" tags="" position="409.3333333333333,343.6666666666667" size="100,100">&lt;div class=&quot;clearfix&quot;&gt;
+(button:)[[Move to Conversation|C2Dialog2]]</tw-passagedata><tw-passagedata pid="21" name="C2Dialog2" tags="" position="409,343" size="100,100">&lt;div class=&quot;clearfix&quot;&gt;
 &lt;div class=&quot;col-md-6 float-md-end mb-3 ms-md-3&quot;&gt;
   &lt;img style=&quot;height:auto;width:100%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/sara+dad.png&quot;&gt;
 
@@ -1294,7 +1296,7 @@ The RPhT documents all the calculations &amp; necessary info in the Master formu
 During the assessment of the compounding area, the RPhT notices a coffee cup on the counter. 
 &lt;/div&gt;
 
-(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT interacts with RPh (incoming relief pharmacist)&quot;, &quot;C2Dialog3&quot;)]</tw-passagedata><tw-passagedata pid="22" name="C2Dialog3" tags="" position="116.66666666666667,573.3333333333333" size="100,100">&lt;div class=&quot;mb-5 audio-controls&quot;&gt;
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT interacts with RPh (incoming relief pharmacist)&quot;, &quot;C2Dialog3&quot;)]</tw-passagedata><tw-passagedata pid="22" name="C2Dialog3" tags="" position="116,573" size="100,100">&lt;div class=&quot;mb-5 audio-controls&quot;&gt;
   &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-5 mr-3&quot;&gt;Play Dialog&lt;/button&gt;
   &lt;button id=&quot;pause&quot; class=&quot;btn btn-info mt-5 mr-3&quot; onclick=&quot;mySynthesis.pause()&quot;&gt;Pause&lt;/button&gt;
   &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger mt-5 mr-3&quot; onclick=&quot;mySynthesis.stop()&quot;&gt;Stop&lt;/button&gt;
@@ -1391,7 +1393,7 @@ Key Learning: Intraprofessional conflict resolution
 
 (text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPhT interacts with Pharmacy Assistant&quot;, &quot;C2Dialog4&quot;)]
 
-</tw-passagedata><tw-passagedata pid="23" name="C2Dialog4" tags="" position="54.66666666666667,406.66666666666674" size="100,100">&lt;div class=active-panel&gt;
+</tw-passagedata><tw-passagedata pid="23" name="C2Dialog4" tags="" position="54,406" size="100,100">&lt;div class=active-panel&gt;
 	&lt;img style=&quot;height:auto;width:50%&quot; src=&quot;https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine@develop/assets/anson+assistant.png&quot;&gt;
   RPhT assigns an assistant to prepare the product while supervising her/him closely.
   All ingredient weights, as well as the compounding procedure, are checked by the RPhT and documented on the compounding log sheet, along with the storage and stability requirements.
@@ -1589,7 +1591,7 @@ RPh comes and counsels the father accordingly.
 &lt;/script&gt;
 
 
-(button:)[[Move to Conversation|Dialog 1]]</tw-passagedata><tw-passagedata pid="25" name="C2 - Summative Questions" tags="" position="214.00000000000003,425" size="100,100">&#39;&#39; Summative Questions&#39;&#39;
+(button:)[[Move to Conversation|Dialog 1]]</tw-passagedata><tw-passagedata pid="25" name="C2 - Summative Questions" tags="" position="214,425" size="100,100">&#39;&#39; Summative Questions&#39;&#39;
 
 You may submit your answers to the following questions in any format e.g., video or audio format, word document, PowerPoint, PDF, etc. 
  
@@ -2103,7 +2105,7 @@ Items Needed:
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Correct&quot;)))
 (show: ?continue)
 (set: _iscorrect to true)
-(dialog: &quot;Correct! As Bob is a regular patient of the pharmacy, he was greeted by name, which prompted a positive triage process. During the initial interaction, Sayed gathered information that facilitated Damilola's further assessment of Bob&#39;s concerns. In the scenario, the two pharmacy professionals collaborated in order to provide optimal patient care (pharmacological and non-pharmacological recommendations). Follow-up care was also offered such as checking in with the patient to see how he is doing and to teach him the proper use of the blood pressure monitor.&quot;)
+(dialog: &quot;Correct! As Bob is a regular patient of the pharmacy, he was greeted by name, which prompted a positive triage process. During the initial interaction, Sayed gathered information that facilitated Damilola&#39;s further assessment of Bob&#39;s concerns. In the scenario, the two pharmacy professionals collaborated in order to provide optimal patient care (pharmacological and non-pharmacological recommendations). Follow-up care was also offered such as checking in with the patient to see how he is doing and to teach him the proper use of the blood pressure monitor.&quot;)
 ]
 (if: _qS1A is true or _qS1B is true or _qS1C is true or _qS1D is true and _iscorrect is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS1A, _qS1B, _qS1C, _qS1D), &quot;Partially Correct&quot;)))
@@ -2239,7 +2241,7 @@ By the end of the scenario the learner will:
 0. apply knowledge of scopes of practice to effectively care for a patient with a minor ailment in a community practice setting, and
 0. recognize elements of effective verbal communication between pharmacists, pharmacy technicians, and patients.
 
-(button:)[[Continue |Dialog 1]]</tw-passagedata><tw-passagedata pid="39" name="Case 3 - Intro" tags="" position="701.6666666666666,601.6666666666667" size="100,100">In this scenario you meet Damilola (RPh) and Anson (RPhT) and help them to navigate addressing patient Maryam&#39;s vaccination health care needs.
+(button:)[[Continue |Dialog 1]]</tw-passagedata><tw-passagedata pid="39" name="Case 3 - Intro" tags="" position="701,601" size="100,100">In this scenario you meet Damilola (RPh) and Anson (RPhT) and help them to navigate addressing patient Maryam&#39;s vaccination health care needs.
 
 The roles highlighted through this scenario are: care provider, communicator, collaborator, and health advocate.
 
@@ -2256,7 +2258,7 @@ By the end of the scenario the learner will:
 0. apply knowledge of scopes of practice to effectively care for a patient who is eligible for a COVID-19 vaccine in a community setting, and
 0. recognize elements of effective verbal communication between pharmacists, pharmacy technicians, and patients.
 
-(button:)[[Continue |Case 3]]</tw-passagedata><tw-passagedata pid="40" name="Case 2 - Intro" tags="" position="194.99999999999986,286.6666666666667" size="100,100">In this scenario you meet Sara (RPh) and Anson (RPhT) and help them to navigate addressing Mr. Patel&#39;s questions about his son Nikhil&#39;s new prescription.
+(button:)[[Continue |Case 3]]</tw-passagedata><tw-passagedata pid="40" name="Case 2 - Intro" tags="" position="194,286" size="100,100">In this scenario you meet Sara (RPh) and Anson (RPhT) and help them to navigate addressing Mr. Patel&#39;s questions about his son Nikhil&#39;s new prescription.
  
 The roles highlighted through this scenario are: care provider, communicator, and collaborator.
 
@@ -2274,14 +2276,14 @@ By the end of the scenario the learner will:
 0. recognize elements of effective written communication between pharmacists, pharmacy technicians, and the prescriber.
  
 
-(button:)[[Continue |Case 2]]</tw-passagedata><tw-passagedata pid="41" name="Quiz 3" tags="" position="1461.6666666666665,328.33333333333337" size="100,100">What do you think is Damilola's most appropriate next action to help Bob?
+(button:)[[Continue |Case 2]]</tw-passagedata><tw-passagedata pid="41" name="Quiz 3" tags="" position="1461,328" size="100,100">What do you think is Damilola&#39;s most appropriate next action to help Bob?
 {
 (set: _q3A to &quot;&quot;)
 
 (set: _optionA to &quot;She asks Bob more about the symptoms he is experiencing.&quot;) 
 (set: _optionB to &quot;She asks Bob more about what prescription medications he is taking.&quot;) 
 (set: _optionC to &quot;She asks Sayed to make a clinical recommendation based on the information collected.&quot;)
-(set: _optionD to &quot;She makes a clinical recommendation based on the information gathered and her assessment of Bob's signs and symptoms.&quot;) 
+(set: _optionD to &quot;She makes a clinical recommendation based on the information gathered and her assessment of Bob&#39;s signs and symptoms.&quot;) 
 }
 (radio: 2bind _q3A, &quot;q3&quot;, _optionA)
 (radio: 2bind _q3A, &quot;q3&quot;, _optionB)
@@ -2292,7 +2294,7 @@ By the end of the scenario the learner will:
 (set: _optionA to &quot;She asks Bob more about the symptoms he is experiencing.&quot;) 
 (set: _optionB to &quot;She asks Bob more about what prescription medications he is taking.&quot;) 
 (set: _optionC to &quot;She asks Sayed to make a clinical recommendation based on the information collected.&quot;)
-(set: _optionD to &quot;She makes a clinical recommendation based on the information gathered and her assessment of Bob's signs and symptoms.&quot;) 
+(set: _optionD to &quot;She makes a clinical recommendation based on the information gathered and her assessment of Bob&#39;s signs and symptoms.&quot;) 
 (if: _option is _optionA)[(output-data: &quot;A&quot;)]
 (if: _option is _optionB)[(output-data: &quot;B&quot;)]
 (if: _option is _optionC)[(output-data: &quot;C&quot;)]
@@ -2308,7 +2310,7 @@ By the end of the scenario the learner will:
 ]
 (if: _q3A is _optionC)[
 (set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q3A), &quot;Incorrect&quot;)))
-(dialog: &quot;Try again. It is not within Sayed's scope of practice to provide clinical recommendations&quot;)
+(dialog: &quot;Try again. It is not within Sayed&#39;s scope of practice to provide clinical recommendations&quot;)
 ]
 (if: _q3A is not _optionC and _q3A is not _optionD)[(set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q3A), &quot;Incorrect&quot;)))(alert: &quot;Please try again&quot;)]
 }]]
