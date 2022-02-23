@@ -1909,9 +1909,9 @@ With respect to post injection patient education, a pharmacy technician may educ
 {
 (set: _q3A to &quot;&quot;)
 
-(set: _optionA to &quot;Complete an approved injection training course&quot;)
-(set: _optionB to &quot;Discuss vaccine benefits with the patient&quot;)
-(set: _optionC to &quot;Obtain informed consent from the patient&quot;)
+(set: _optionA to &quot;complete an approved injection training course.&quot;)
+(set: _optionB to &quot;discuss vaccine benefits with the patient.&quot;)
+(set: _optionC to &quot;obtain informed consent from the patient.&quot;)
 }
 (radio: 2bind _q3A, &quot;c3q1&quot;, _optionA)
 (radio: 2bind _q3A, &quot;c3q1&quot;, _optionB)
@@ -1923,9 +1923,9 @@ With respect to post injection patient education, a pharmacy technician may educ
 (if: _q3A is _optionC)[(set: _selected to &quot;C&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
-(set: _optionA to &quot;Complete an approved injection training course&quot;)
-(set: _optionB to &quot;Discuss vaccine benefits with the patient&quot;)
-(set: _optionC to &quot;Obtain informed consent from the patient&quot;)
+(set: _optionA to &quot;complete an approved injection training course.&quot;)
+(set: _optionB to &quot;discuss vaccine benefits with the patient.&quot;)
+(set: _optionC to &quot;obtain informed consent from the patient.&quot;)
 (if: _option is _optionA)[(output-data: &quot;A&quot;)]
 (if: _option is _optionB)[(output-data: &quot;B&quot;)]
 (if: _option is _optionC)[(output-data: &quot;C&quot;)]
