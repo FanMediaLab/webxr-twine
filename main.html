@@ -1905,12 +1905,12 @@ With respect to post injection patient education, a pharmacy technician may educ
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="30" name="C3-Q1" tags="" position="856,751" size="100,100">Under the Regulated Health Professions Act (RHPA), effective January 2021, registered pharmacy technicians are eligible to administer COVID-19 vaccines. With this exemption under the RHPA, to administer the vaccine, regulated pharmacy technicians must do the following except:
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="30" name="C3-Q1" tags="" position="856,751" size="100,100">Under the Regulated Health Professions Act (RHPA), effective January 2021, registered pharmacy technicians are eligible to administer COVID-19 vaccines. With this exemption under the RHPA, to administer the vaccine, regulated pharmacy technicians must do all of the following except:
 {
 (set: _q3A to &quot;&quot;)
 
 (set: _optionA to &quot;complete an approved injection training course.&quot;)
-(set: _optionB to &quot;discuss vaccine benefits with the patient.&quot;)
+(set: _optionB to &quot;discuss vaccine benefits and risks with the patient.&quot;)
 (set: _optionC to &quot;obtain informed consent from the patient.&quot;)
 }
 (radio: 2bind _q3A, &quot;c3q1&quot;, _optionA)
@@ -1972,14 +1972,14 @@ Items Needed:
   &lt;/ol&gt;
 &lt;/div&gt;
 
-(button:)[[Next|C3-Q2]]</tw-passagedata><tw-passagedata pid="32" name="C3-Q2" tags="" position="1138,865" size="100,100">Prior to withdrawing a COVID-19 vaccine dose, the registered pharmacist or pharmacy technician must do all the following except:
+(button:)[[Next|C3-Q2]]</tw-passagedata><tw-passagedata pid="32" name="C3-Q2" tags="" position="1138,865" size="100,100">Prior to withdrawing the COVID-19 vaccine doses, the registered pharmacist or pharmacy technician must do all of the following, except:
 {
 (set: _q3C to &quot;&quot;)
 
-(set: _optionA to &quot;inspect vials for cracks, leaks and particulate matter.
+(set: _optionA to &quot;inspect the vial for cracks, leaks and particulate matter.
 &quot;)
-(set: _optionB to &quot;shake the vial prior to withdraw.&quot;)
-(set: _optionC to &quot;disinfect entry points of the vial and allow to dry.&quot;)
+(set: _optionB to &quot;shake the vial prior to withdrawing the dose.&quot;)
+(set: _optionC to &quot;disinfect the entry point/rubber stopper and allow it to dry.&quot;)
 }
 (radio: 2bind _q3C, &quot;c3q3&quot;, _optionA)
 (radio: 2bind _q3C, &quot;c3q3&quot;, _optionB)
@@ -1991,10 +1991,10 @@ Items Needed:
 (if: _q3C is _optionC)[(set: _selected to &quot;C&quot;)]
 
 (set: _getSelected to (macro: str-type _option, [
-(set: _optionA to &quot;inspect vials for cracks, leaks and particulate matter.
+(set: _optionA to &quot;inspect the vial for cracks, leaks and particulate matter.
 &quot;)
-(set: _optionB to &quot;shake the vial prior to withdraw.&quot;)
-(set: _optionC to &quot;disinfect entry points of the vial and allow to dry.&quot;)
+(set: _optionB to &quot;shake the vial prior to withdrawing the dose.&quot;)
+(set: _optionC to &quot;disinfect the entry point/rubber stopper and allow it to dry.&quot;)
 (if: _option is _optionA)[(output-data: &quot;A&quot;)]
 (if: _option is _optionB)[(output-data: &quot;B&quot;)]
 (if: _option is _optionC)[(output-data: &quot;C&quot;)]
