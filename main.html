@@ -1625,7 +1625,7 @@ Anson, RPhT refers Mr. Patel&#39;s second question to Sara, RPh who then comes t
    {(text-color: orange)[&lt;b&gt;Patient - Maryam&lt;/b&gt;]: Thank you. I have made my decision and would like to go ahead with the vaccination.}
 &lt;/div&gt;
 
-(text-style: &quot;italic&quot;, &quot;underline&quot;)[The pharmacist proceeds to ask the remaining screening questions and obtains consent from the patient.]
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[The pharmacist reviews all of Maryam’s responses to the screening questions and obtains consent from her to receive the vaccine.]
 
 (button:)[[Next|C3-Q1]]
 
@@ -1656,11 +1656,11 @@ Anson, RPhT refers Mr. Patel&#39;s second question to Sara, RPh who then comes t
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
-  {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson&lt;/b&gt;]: Hello again, I will be administering the COVID-19 vaccine today}
+  {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson&lt;/b&gt;]: Hello again, I will be administering the COVID-19 vaccine today.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/maryam.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-   {(text-color: orange)[&lt;b&gt;Patient - Maryam&lt;/b&gt;]: Great I am ready to get vaccinated!}
+   {(text-color: orange)[&lt;b&gt;Patient - Maryam&lt;/b&gt;]: Great, I am ready to get vaccinated!}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
@@ -1668,7 +1668,7 @@ Anson, RPhT refers Mr. Patel&#39;s second question to Sara, RPh who then comes t
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/maryam.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-   {(text-color: orange)[&lt;b&gt;Patient - Maryam&lt;/b&gt;]: That would be fine.}
+   {(text-color: orange)[&lt;b&gt;Patient - Maryam&lt;/b&gt;]: That will be fine.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
@@ -1692,7 +1692,7 @@ Anson, RPhT refers Mr. Patel&#39;s second question to Sara, RPh who then comes t
   {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson&lt;/b&gt;]: Is there anything I can do to help you be more comfortable? You will experience a small pin prick upon injection.}
 &lt;/div&gt;
 
-(text-style: &quot;italic&quot;)[Maryam is comfortable so the pharmacy technician injects the vaccine.]
+(text-style: &quot;italic&quot;)[Maryam is now comfortable so the pharmacy technician begins to inject the vaccine.]
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
@@ -1709,8 +1709,8 @@ What are the key components for the administration of the vaccine?
 (set: _q3E to &quot;&quot;)
 
 (set: _optionA to &quot;Swabbing with alcohol&quot;)
-(set: _optionB to &quot;Land Marking of injection site &quot;)
-(set: _optionC to &quot;Intramuscular Injection &quot;)
+(set: _optionB to &quot;Landmarking of injection site &quot;)
+(set: _optionC to &quot;Intramuscular injection &quot;)
 (set: _optionD to &quot;All the above &quot;)
 
 }
@@ -1727,8 +1727,8 @@ What are the key components for the administration of the vaccine?
 
 (set: _getSelected to (macro: str-type _option, [
 (set: _optionA to &quot;Swabbing with alcohol&quot;)
-(set: _optionB to &quot;Land Marking of injection site &quot;)
-(set: _optionC to &quot;Intramuscular Injection &quot;)
+(set: _optionB to &quot;Landmarking of injection site &quot;)
+(set: _optionC to &quot;Intramuscular injection &quot;)
 (set: _optionD to &quot;All the above &quot;)
 
 (if: _option is _optionA)[(output-data: &quot;A&quot;)]
@@ -1767,7 +1767,7 @@ What are the key components for the administration of the vaccine?
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
-			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Hello again, I will be administering the COVID-19 vaccine today&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Great I am ready to get vaccinated!&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;I would like to confirm that you are getting the mRNA vaccine today.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;That would be fine.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;I will do my best to ensure that I walk you through each step of the process.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Thanks.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;I would like you to relax your arm as I swab your arm to ensure that I disinfect the area.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Sorry, I&#39;m a bit nervous when I see needles.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Is there anything I can do to help you be more comfortable? You will experience a small pin prick upon injection&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;You may also experience a  sensation in your arm as I am now administering the vaccine&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Thanks so much. That was quick and didn&#39;t hurt.&quot;}]
+			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Hello again, I will be administering the COVID-19 vaccine today.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Great, I am ready to get vaccinated!&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;I would like to confirm that you are getting the mRNA vaccine today.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;That will be fine.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;I will do my best to ensure that I walk you through each step of the process.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Thanks.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;I would like you to relax your arm as I swab your arm to ensure that I disinfect the area.&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Sorry, I&#39;m a bit nervous when I see needles.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Is there anything I can do to help you be more comfortable? You will experience a small pin prick upon injection&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;You may also experience a  sensation in your arm as I am now administering the vaccine&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Thanks so much. That was quick and didn&#39;t hurt.&quot;}]
 		  	event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
@@ -1784,11 +1784,11 @@ What are the key components for the administration of the vaccine?
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
-  {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson&lt;/b&gt;]: After your vaccine, you may experience some common side effects, which include pain, redness, swelling at the injection site, tiredness, headache,muscle pain, chills, joint pain, and low fever.}
+  {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson&lt;/b&gt;]: After your vaccine, you may experience some common side effects, which include pain, redness, swelling at the injection site, tiredness, headache, muscle pain, chills, joint pain, and low fever.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
-  {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson&lt;/b&gt;]: There are also some rare serious side effects. Call your doctor or nurse practitioner or go to the nearest emergency department if you develop any of the following adverse reactions within three days of receiving the vaccine: hives, swelling of your face or mouth, trouble breathing, very pale colour and serious drowsiness, high fever (over 40°C), convulsions or seizures, or other serious symptoms (e.g. &quot;pins and needles&quot; or numbness)}
+  {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson&lt;/b&gt;]: There are also some rare serious side effects. Call your doctor or nurse practitioner or go to the nearest emergency department if you develop any of the following adverse reactions within three days of receiving the vaccine: hives, swelling of your face or mouth, trouble breathing, very pale colour and serious drowsiness, high fever (over 40°C), convulsions or seizures, or other serious symptoms (e.g., &quot;pins and needles&quot; or numbness).}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/maryam.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
@@ -1861,7 +1861,7 @@ With respect to post injection patient education, a Pharmacy Technician can say 
 		});
 		window.speechSynthesis.cancel();
 		document.querySelector(&quot;#play&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
-			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;After your vaccine, you may experience some common side effects, which include pain, redness, swelling at the injection site, tiredness, headache,muscle pain, chills, joint pain, and low fever.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;There are also some rare serious side effects.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Call your doctor or nurse practitioner or go to the nearest emergency department if you develop any of the following adverse reactions within three days of receiving the vaccine: hives,&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;swelling of your face or mouth, trouble breathing, very pale colour and serious drowsiness, high fever (over 40°C), convulsions or seizures, or other serious symptoms (e.g. &#39;pins and needles&#39; or numbness)&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Thank you. Can I ask what I should take for the pain?&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Oh, you can just take some acetaminophen and you will be fine.&quot;}];
+			dialog = [{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;After your vaccine, you may experience some common side effects, which include pain, redness, swelling at the injection site, tiredness, headache, muscle pain, chills, joint pain, and low fever.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;There are also some rare serious side effects.&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Call your doctor or nurse practitioner or go to the nearest emergency department if you develop any of the following adverse reactions within three days of receiving the vaccine: hives,&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;swelling of your face or mouth, trouble breathing, very pale colour and serious drowsiness, high fever (over 40°C), convulsions or seizures, or other serious symptoms (e.g., &#39;pins and needles&#39; or numbness).&quot;},{&quot;person&quot;:2,&quot;gender&quot;:&quot;f&quot;,&quot;text&quot;:&quot;Thank you. Can I ask what I should take for the pain?&quot;},{&quot;person&quot;:1,&quot;gender&quot;:&quot;m&quot;,&quot;text&quot;:&quot;Oh, you can just take some acetaminophen and you will be fine.&quot;}];
 			event.stopImmediatePropagation();
   			mySynthesis.play(dialog);
 		});
