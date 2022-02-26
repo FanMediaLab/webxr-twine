@@ -1739,12 +1739,12 @@ What are the key components for the administration of the vaccine?
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q3E is _optionB)[
+(if: _q3E is _optionD)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3E), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Correct!&quot;)
 ]
-(if: _q3E is not _optionB)[
+(if: _q3E is not _optionD)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3E), &quot;Wrong&quot;)))
 (alert: &quot;Please try again&quot;)
 ]
