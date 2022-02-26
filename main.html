@@ -2151,7 +2151,7 @@ Items needed:
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D), &quot;Correct&quot;)))
 (show: ?continue)
 (set: _iscorrect to true)
-(dialog: &quot;Correct! Both pharmacists and pharmacy technicians can perform information gathering, completed technical verification of prescriptions, and educate on medical device use. Only pharmacists can make a clinical recommendation or perform clinical counselling. &quot;)
+(dialog: &quot;Correct! Both pharmacists and pharmacy technicians can perform information gathering, complete technical verification of prescriptions, and educate on medical device use. Only pharmacists can make a clinical recommendation or perform clinical counselling. &quot;)
 ]
 (if: _qS2A is true or _qS2B is true or _qS2D is true and _qS2C is false and _iscorrect is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _qS2A, _qS2B, _qS2C, _qS2D), &quot;Incorrect&quot;)))
