@@ -560,7 +560,7 @@ Anson proceeds to confirm the information written on the prescription and asks M
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _q3AA, _q3B, _q3C, _q3D), &quot;Correct&quot;)))
 (show: ?continue)
 (set: _iscorrect to true)
-(dialog: &quot;Correct! According to the scope of practice, a RPhT can perform tasks related to information gathering and triage, perform a technical (but NOT clinical) check of a prescription, and educate a patient on the proper use of a medical device use (such as a blood pressure monitor). It is within a pharmacist&#39;s scope of practice to perform both a clinical verification and a technical check for product release to the patient.&quot;)
+(dialog: &quot;Correct! According to the scope of practice, a RPhT can perform tasks related to information gathering and triage, perform a technical (but NOT clinical) check of a prescription, and educate a patient on the proper use of a medical device (such as a blood pressure monitor). It is within a pharmacist&#39;s scope of practice to perform both a clinical verification and a technical check for product release to the patient.&quot;)
 ]
 (if: _q3AA is true or _q3C is true or _q3D is true and _q3B is false and _iscorrect is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _q3AA, _q3B, _q3C, _q3D), &quot;Incorrect&quot;)))
@@ -1015,7 +1015,7 @@ Anson proceeds to confirm the information written on the prescription and asks M
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/damilola.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
-  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: We&#39;ll follow-up with you in 3-4 days to make sure your symptoms are improving and you&#39;re not experiencing any side effects from the products we recommended. Please don&#39;t hesitate to call us sooner if your symptoms get worse or you have any questions}
+  {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: We&#39;ll follow-up with you in 3-4 days to make sure your symptoms are improving and you&#39;re not experiencing any side effects from the products we recommended. Please don&#39;t hesitate to call us sooner if your symptoms get worse or you have any questions.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/bob.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
