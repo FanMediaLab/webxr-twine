@@ -1111,7 +1111,7 @@ In the scenario, both the pharmacist and the registered pharmacy technician are 
 (if: _q2A is _optionA)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2A), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! Suggested pre-reading: NAPRA Model Standards of Practice for Regulated Technicians/ Model Standards of Practice for Pharmacists 
+(dialog: &quot;Correct! Suggested pre-reading: NAPRA Model Standards of Practice for Pharmacy Technicians/ Model Standards of Practice for Pharmacists 
 Key Learning: Interprofessional collaboration/scopes of practice 
 &quot;)
 ]
@@ -1129,7 +1129,7 @@ Key Learning: Interprofessional collaboration/scopes of practice
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
-    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Unfortunately, the doctor&#39;s office is now closed. Excuse me for a moment while I consult with the pharmacist about what we can do to ensure your prescription is filled as soon as possible}
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: Unfortunately, the doctor&#39;s office is now closed. Excuse me for a moment while I consult with the pharmacist about what we can do to ensure your prescription is filled as soon as possible.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
@@ -1140,7 +1140,7 @@ Key Learning: Interprofessional collaboration/scopes of practice
 
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/anson.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid purple;&quot;&gt;
-    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: I&#39;m just entering this prescription into the computer, and I see that no quantity has been provided. I tried the doctor&#39;s office, but they&#39;re already closed. As it&#39;s a compound that we need to prepare, we will need an accurate quantity}
+    {(text-color: purple)[&lt;b&gt;Registered Pharmacy Technician (RPhT) - Anson Wong&lt;/b&gt;]: I&#39;m just entering this prescription into the computer, and I see that no quantity has been provided. I tried the doctor&#39;s office, but they&#39;re already closed. As it&#39;s a compound that we need to prepare, we will need an accurate quantity.}
 &lt;/div&gt;
 &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	&lt;img src=&quot;/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
@@ -1209,11 +1209,11 @@ Key Learning: Interprofessional collaboration/scopes of practice
   &lt;/div&gt;
   &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	  &lt;img src=&quot;/assets/patel.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid orange;&quot;&gt;
-	 {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Yes, please do. I really don&#39;t want to wait until the doctor&#39;s office re-opens next week}
+	 {(text-color: orange)[&lt;b&gt;Patient&#39;s Father - Mr. Patel&lt;/b&gt;]: Yes, please do. I really don&#39;t want to wait until the doctor&#39;s office re-opens next week.}
   &lt;/div&gt;
   &lt;div style=&quot;display:flex;align-items:center&quot;&gt;
 	  &lt;img src=&quot;/assets/sara.svg&quot; class=&quot;avatar&quot; style=&quot;border: 2px solid green;&quot;&gt;
-	  {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Mr. Patel, please have a seat. we&#39;ll need to compound the prescription. This may take a bit longer than usual.}
+	  {(text-color: green)[&lt;b&gt;Registered Pharmacist (RPh) - Sara Rodriguez&lt;/b&gt;]: Mr. Patel, please feel free to take a seat as we&#39;ll need to compound the prescription. This may take a bit longer than usual.}
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1495,13 +1495,13 @@ It is within the regulated pharmacy technician's scope of practice to respond to
 (if: _q2E is _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2E), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Therapeutic information is part of pharmacist&#39;s scope of practice. Technical information, as in the question regarding product stability, is part of the registered pharmacy technician&#39;s scope of practice.
-Suggested pre-reading: NAPRA Professional Competencies for Canadian Pharmacy Technicians at Entry to Practice; NAPRA Professional Competencies for Canadian Pharmacists at Entry to Practice 
-Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
+(dialog: &quot;Please try again&quot;)
 ]
 (if: _q2E is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2E), &quot;Wrong&quot;)))
-(alert: &quot;Please try again&quot;)
+(alert: &quot;Therapeutic information is part of pharmacist&#39;s scope of practice. Technical information, as in the question regarding product stability, is part of the registered pharmacy technician&#39;s scope of practice.
+Suggested pre-reading: NAPRA Professional Competencies for Canadian Pharmacy Technicians at Entry to Practice; NAPRA Professional Competencies for Canadian Pharmacists at Entry to Practice 
+Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 ]
 }]]
 }
