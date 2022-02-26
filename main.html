@@ -288,7 +288,7 @@ button.selected{
 	&lt;/div&gt;
   &lt;/div&gt;
   &lt;small class=&quot;text-muted&quot; style=&quot;display: flex;justify-content: center;align-content: center;&quot;&gt;All images licensed for use with this project are from iStock.com. Images may not be utilized or modified for any other purposes&lt;/small&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Quiz 1" tags="" position="1016,227" size="100,100">What do you think is Sayed&#39;s most appropriate next action to help Bob?
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Quiz 1" tags="" position="951,168.66666666666666" size="100,100">What do you think is Sayed&#39;s most appropriate next action to help Bob?
 {
 (set: _q1A to &quot;&quot;)
 
@@ -533,7 +533,7 @@ Anson proceeds to confirm the information written on the prescription and asks M
 (if: _q2A is not _optionC and _q2A is not _optionD)[(set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q2A), &quot;Incorrect&quot;)))(alert: &quot;Please try again&quot;)]
 }]]
 }
-|continue)[(button:)[[Go to Next Dialog|Dialog 4]]]</tw-passagedata><tw-passagedata pid="9" name="Quiz 4" tags="" position="1595,322" size="100,100">Which of the following authorized acts are within the scope of practice of a registered pharmacy technician? Select all that apply.
+|continue)[(button:)[[Go to Next Dialog|Dialog 3]]]</tw-passagedata><tw-passagedata pid="9" name="Quiz 4" tags="" position="1595,322" size="100,100">Which of the following authorized acts are within the scope of practice of a registered pharmacy technician? Select all that apply.
 {
 (set: _q3AA to false, _q3B to false, _q3C to false, _q3D to false)
 }
@@ -672,7 +672,10 @@ Anson proceeds to confirm the information written on the prescription and asks M
    {(text-color:orange)[&lt;b&gt;Patient (Pt) - Bob&lt;/b&gt;]: Thanks. Sounds good!}
 &lt;/div&gt;
 
-(text-style: &quot;underline&quot;)[(link-goto: &quot;RPhT - Sayed walks over to behind the pharmacy counter and starts a conversation with the RPh. &quot;, &quot;Dialog 3&quot;)]
+(text-style: &quot;underline&quot;)[RPhT - Sayed walks over to behind the pharmacy counter and starts a conversation with the RPh.]
+
+(button:)[[Next|Quiz 2]]
+
 &lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var paused = false;
@@ -706,7 +709,7 @@ Anson proceeds to confirm the information written on the prescription and asks M
    {(text-color:green)[&lt;b&gt;Registered Pharmacist (RPh) - Damilola&lt;/b&gt;]: Thanks for gathering this information, Sayed. Let&#39;s take a look at Bob&#39;s medical history and current medications.}
 &lt;/div&gt;
 
-(button:)[[Next|Quiz 2]]
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[(link-goto: &quot;RPh walks over to Bob in the over-the-counter aisle. &quot;, &quot;Dialog 4&quot;)]
 
 &lt;script type=&quot;text/javascript&quot;&gt;
 	var paused = false;
@@ -1505,7 +1508,7 @@ Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 &lt;/div&gt;
 2) Mr. Patel's second question is about sunscreen application in relation to Nikhil's newly prescribed cream.
 &lt;div style=&quot;padding:0 0.5em;&quot; class=&quot;card border-primary rounded h-100 shadow&quot;&gt;
-It is within the regulated pharmacy technician's scope of practice to respond to this question
+It is within the regulated pharmacy technician&#39;s scope of practice to respond to this question
 {
 (set: _q2F to &quot;&quot;)
 
@@ -1595,7 +1598,7 @@ Anson, RPhT refers Mr. Patel&#39;s second question to Sara, RPh who then comes t
 0. In what area do you feel you will need to improve? (e.g., interprofessional and/or intraprofessional communication, scopes of practice, compounding technique, conflict management.)  
 0. Describe how this scenario relates to your current studies and/or professional practice/status.
 	
-	Reflect on your current community pharmacy practice setting and how, if applicable, you collaborate with your pharmacy technician or pharmacist colleagues. Ask yourself, how might you incorporate each other's knowledge and skills even more?
+	Reflect on your current community pharmacy practice setting and how, if applicable, you collaborate with your pharmacy technician or pharmacist colleagues. Ask yourself, how might you incorporate each other&#39;s knowledge and skills even more?
 </tw-passagedata><tw-passagedata pid="26" name="C3-1" tags="" position="825,603" size="100,100">{&lt;img style=&quot;height:55vh;width:100%&quot; class=&quot;center-img&quot; src=&quot;/assets/damilola+maryam.svg&quot;&gt;
 &lt;div class=&quot;mb-3 d-flex justify-content-center&quot;&gt;
   &lt;button id=&quot;play&quot; class=&quot;btn btn-success mt-3 mr-2&quot;&gt;Play Dialog&lt;/button&gt;
@@ -1621,7 +1624,7 @@ Anson, RPhT refers Mr. Patel&#39;s second question to Sara, RPh who then comes t
    {(text-color: orange)[&lt;b&gt;Patient - Maryam&lt;/b&gt;]: Thank you. I have made my decision and would like to go ahead with the vaccination.}
 &lt;/div&gt;
 
-(text-style: &quot;italic&quot;, &quot;underline&quot;)[The pharmacist reviews all of Maryam's responses to the screening questions and obtains consent from her to receive the vaccine.]
+(text-style: &quot;italic&quot;, &quot;underline&quot;)[The pharmacist reviews all of Maryam&#39;s responses to the screening questions and obtains consent from her to receive the vaccine.]
 
 (button:)[[Next|C3-Q1]]
 
@@ -1739,12 +1742,12 @@ What are the key components for the administration of the vaccine?
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q3E is _optionB)[
+(if: _q3E is _optionD)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3E), &quot;Correct&quot;)))
 (show: ?continue)
 (dialog: &quot;Correct!&quot;)
 ]
-(if: _q3E is not _optionB)[
+(if: _q3E is not _optionD)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3E), &quot;Wrong&quot;)))
 (alert: &quot;Please try again&quot;)
 ]
@@ -1943,7 +1946,7 @@ With respect to post injection patient education, a pharmacy technician may educ
 (if: _q3A is _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3A), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! Discussing the clinical benefits and risks of vaccines with patients is not within the scope of practice for pharmacy technicians. This is within a pharmacist's scope of practice.&quot;)
+(dialog: &quot;Correct! Discussing the clinical benefits and risks of vaccines with patients is not within the scope of practice for pharmacy technicians. This is within a pharmacist&#39;s scope of practice.&quot;)
 ]
 (if: _q3A is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3A), &quot;Wrong&quot;)))
@@ -1978,7 +1981,7 @@ Items needed:
   &lt;/ol&gt;
 &lt;/div&gt;
 
-(button:)[[Next|C3-Q2]]</tw-passagedata><tw-passagedata pid="32" name="C3-Q2" tags="" position="1201.3333333333333,901.6666666666666" size="100,100">Prior to withdrawing the COVID-19 vaccine doses, the registered pharmacist or pharmacy technician must do all of the following, except:
+(button:)[[Next|C3-Q2]]</tw-passagedata><tw-passagedata pid="32" name="C3-Q2" tags="" position="1201,901" size="100,100">Prior to withdrawing the COVID-19 vaccine doses, the registered pharmacist or pharmacy technician must do all of the following, except:
 {
 (set: _q3C to &quot;&quot;)
 
@@ -2022,7 +2025,7 @@ Items needed:
 ]
 }]]
 }
-|continue)[(button:)[[Continue|C3-Q02]]]</tw-passagedata><tw-passagedata pid="33" name="C3-Q02" tags="" position="1193,698.6666666666666" size="100,100">While withdrawing the dose, the registered pharmacist or pharmacy technician must:
+|continue)[(button:)[[Continue|C3-Q02]]]</tw-passagedata><tw-passagedata pid="33" name="C3-Q02" tags="" position="1193,698" size="100,100">While withdrawing the dose, the registered pharmacist or pharmacy technician must:
 {
 (set: _q3D to &quot;&quot;)
 
@@ -2232,6 +2235,12 @@ By the end of the scenario the learner will:
 0. apply knowledge of scopes of practice to effectively care for a patient with a minor ailment in a community practice setting, and
 0. recognize elements of effective verbal communication between pharmacists, pharmacy technicians, and patients.
 	
+&#39;&#39;Before you start the scenario, helpful pre-readings include:&#39;&#39;
+
+0. (link-repeat: &#39;Pharmacists' Scope of Practice In Canadian Jurisdictions&#39;)[(open-url: &#39;https://napra.ca/sites/default/files/2020-01/SCOPE%20OF%20PRACTICE%20-%20January%202020_0.pdf&#39;)]
+0. (link-repeat: &#39;Pharmacy Technicians' Scope of Practice in Canadian Jurisdictions&#39;)[(open-url: &#39;https://napra.ca/sites/default/files/2019-09/Technician%20Scope%20of%20Practice%20-%20June%202019.pdf&#39;)]
+0. (link-repeat: &#39;Legal Authority Scope of Practice/ Authorized Acts- Ontario College of Pharmacists&#39;)[(open-url: &#39;https://www.ocpinfo.com/document/legal-authority-scopes-pdf/&#39;)]
+
 
 (button:)[[Continue |Dialog 1]]</tw-passagedata><tw-passagedata pid="39" name="Case 3 - Intro" tags="" position="701,601" size="100,100">&lt;img style=&quot;height:25em;width:100%&quot; class=&quot;center-img&quot; src=&quot;/assets/damilola_anson.svg&quot;&gt;
 
@@ -2252,6 +2261,13 @@ By the end of the scenario the learner will:
 0. apply knowledge of scopes of practice to effectively care for a patient who is eligible for a COVID-19 vaccine in a community setting, and
 0. recognize elements of effective verbal communication between pharmacists, pharmacy technicians, and patients.
 
+&#39;&#39;Before you start the scenario, helpful pre-readings include:&#39;&#39;
+
+0. (link-repeat: &#39;Pharmacists' Scope of Practice In Canadian Jurisdictions&#39;)[(open-url: &#39;https://napra.ca/sites/default/files/2020-01/SCOPE%20OF%20PRACTICE%20-%20January%202020_0.pdf&#39;)]
+0. (link-repeat: &#39;Pharmacy Technicians; Scope of Practice in Canadian Jurisdictions&#39;)[(open-url: &#39;https://napra.ca/sites/default/files/2019-09/Technician%20Scope%20of%20Practice%20-%20June%202019.pdf&#39;)]
+0. (link-repeat: &#39;Legal Authority Scope of Practice/ Authorized Acts- Ontario College of Pharmacists&#39;)[(open-url: &#39;https://www.ocpinfo.com/document/legal-authority-scopes-pdf/&#39;)]
+0. (link-repeat: &#39;Review of the COVID-19 Vaccine Curriculum (Open Course) 2022, University of Toronto&#39;)[(open-url: &#39;https://q.utoronto.ca/courses/264349&#39;)]
+
 (button:)[[Continue |Case 3]]</tw-passagedata><tw-passagedata pid="40" name="Case 2 - Intro" tags="" position="194,286" size="100,100">&lt;img style=&quot;height:25em;width:100%&quot; class=&quot;center-img&quot; src=&quot;/assets/sara_anson.svg&quot;&gt;
   
 In this scenario you meet Sara (RPh) and Anson (RPhT) and help them to navigate addressing Mr. Patel&#39;s questions about his son Nikhil&#39;s new prescription.
@@ -2270,6 +2286,16 @@ By the end of the scenario the learner will:
 0. demonstrate an understanding of the roles of a pharmacist and a pharmacy technician to optimize scopes of practice;
 0. apply knowledge of scopes of practice to effectively care for a patient who has been prescribed a compounded prescription product in a community practice setting, and
 0. recognize elements of effective written communication between pharmacists, pharmacy technicians, and the prescriber.
+
+&#39;&#39;Before you start the scenario, helpful pre-readings include:&#39;&#39;
+
+0. (link-repeat: &#39;Model Standards of Practice for Canadian Pharmacists&#39;)[(open-url: &#39;https://napra.ca/pharmacists/model-standards-practice-canadian-pharmacists&#39;)] 
+0. (link-repeat: &#39;Model Standards of Practice for Canadian Pharmacy Technicians&#39;)[(open-url: &#39;https://napra.ca/pharmacy-technicians/model-standards-practice-canadian-pharmacy-technicians&#39;)]
+0. (link-repeat: &#39;Initiating, Adapting and Renewing Prescriptions- Ontario College of Pharmacists&#39;)[(open-url: &#39;https://www.ocpinfo.com/regulations-standards/practice-policies-guidelines/adapting-renewing-prescriptions/&#39;)]
+0. (link-repeat: &#39;Assurance and Improvement in Medication Safety (AIMS)- Ontario College of Pharmacists&#39;)[(open-url: &#39;https://www.ocpinfo.com/regulations-standards/aims-assurance-and-improvement-in-medication-safety/&#39;)]
+0. (link-repeat: &#39;AIMS FAQ- Ontario College of Pharmacists&#39;)[(open-url: &#39;https://www.ocpinfo.com/regulations-standards/aims-assurance-and-improvement-in-medication-safety/medicationsafetyfaq/&#39;)]
+0. (link-repeat: &#39;Legal Authority Scope of Practice/Authorized Acts- Ontario College of Pharmacists&#39;)[(open-url: &#39;https://www.ocpinfo.com/document/legal-authority-scopes-pdf/&#39;)]
+0. (link-repeat: &#39;NAPRA Guidance Document for Pharmacy Compounding of Non-Sterile Products&#39;)[(open-url: &#39;https://napra.ca/general-practice-resources/guidance-document-pharmacy-compounding-non-sterile-preparations&#39;)]
  
 
 (button:)[[Continue |Case 2]]</tw-passagedata><tw-passagedata pid="41" name="Quiz 3" tags="" position="1461,328" size="100,100">What do you think is Damilola&#39;s most appropriate next action to help Bob?
@@ -2311,7 +2337,7 @@ By the end of the scenario the learner will:
 (if: _q3A is not _optionC and _q3A is not _optionD)[(set: $attempts&#39;s (2) to it + (a: (a: ($getSelected: _q3A), &quot;Incorrect&quot;)))(alert: &quot;Please try again&quot;)]
 }]]
 }
-|continue)[(button:)[[Go to Next Dialog|Dialog 7]]]</tw-passagedata><tw-passagedata pid="42" name="C3 - Reflection Questions" tags="" position="1341.6666666666667,698.3333333333334" size="100,100">&#39;&#39;Scenario Reflection Exercise &#39;&#39;
+|continue)[(button:)[[Go to Next Dialog|Dialog 7]]]</tw-passagedata><tw-passagedata pid="42" name="C3 - Reflection Questions" tags="" position="1341,698" size="100,100">&#39;&#39;Scenario Reflection Exercise &#39;&#39;
 
 Reflecting on the scenario you just completed, think about the following questions:
 
