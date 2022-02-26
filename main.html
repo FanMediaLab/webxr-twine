@@ -1492,13 +1492,13 @@ It is within the regulated pharmacy technician's scope of practice to respond to
 (if: _q2E is _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2E), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Therapeutic information is part of pharmacist&#39;s scope of practice. Technical information, as in the question regarding product stability, is part of the registered pharmacy technician&#39;s scope of practice.
-Suggested pre-reading: NAPRA Professional Competencies for Canadian Pharmacy Technicians at Entry to Practice; NAPRA Professional Competencies for Canadian Pharmacists at Entry to Practice 
-Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
+(dialog: &quot;Please try again&quot;)
 ]
 (if: _q2E is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q2E), &quot;Wrong&quot;)))
-(alert: &quot;Please try again&quot;)
+(alert: &quot;Therapeutic information is part of pharmacist&#39;s scope of practice. Technical information, as in the question regarding product stability, is part of the registered pharmacy technician&#39;s scope of practice.
+Suggested pre-reading: NAPRA Professional Competencies for Canadian Pharmacy Technicians at Entry to Practice; NAPRA Professional Competencies for Canadian Pharmacists at Entry to Practice 
+Key Learning: Scope of Practice for Pharmacists and Technicians&quot;)
 ]
 }]]
 }
