@@ -26,7 +26,6 @@ To use the modified harlowe format as the story format for your Twine story you 
 Homepage Template source: https://startbootstrap.com/theme/creative
 
 Image sources
-    * Scenario 1 homepage background: <a href='https://www.freepik.com/photos/drugstore'>Drugstore photo created by mrsiraphol - www.freepik.com</a>
-    * Scenario 2 homepage background: <a href='https://www.freepik.com/photos/pharmacist'>Pharmacist photo created by gpointstudio - www.freepik.com</a>
-    * Scenario 3 homepage background: <a href='https://www.freepik.com/photos/pharmacist'>Pharmacist photo created by aleksandarlittlewolf - www.freepik.com</a>
-    
+* Scenario 1 homepage background: <a href='https://www.freepik.com/photos/drugstore'>Drugstore photo created by mrsiraphol - www.freepik.com</a>
+* Scenario 2 homepage background: <a href='https://www.freepik.com/photos/pharmacist'>Pharmacist photo created by gpointstudio - www.freepik.com</a>
+* Scenario 3 homepage background: <a href='https://www.freepik.com/photos/pharmacist'>Pharmacist photo created by aleksandarlittlewolf - www.freepik.com</a>
