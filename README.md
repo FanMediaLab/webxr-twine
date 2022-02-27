@@ -17,7 +17,7 @@ To use the modified harlowe format as the story format for your Twine story you 
 
 4. Enter the following URL to get the latest version of reach, and click Add.
 
-    https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine/modified-harlowe-format.js
+    https://cdn.jsdelivr.net/gh/FanMediaLab/webxr-twine/format.js
 
 
 ## Resources Used
