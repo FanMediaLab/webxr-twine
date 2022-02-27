@@ -1942,7 +1942,7 @@ With respect to post injection patient education, a pharmacy technician may educ
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="30" name="C3-Q1" tags="" position="856,751" size="100,100">Under the Regulated Health Professions Act (RHPA), effective January 2021, registered pharmacy technicians are eligible to administer COVID-19 vaccines. With this exemption under the RHPA, to administer the vaccine, regulated pharmacy technicians must do all of the following except:
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="30" name="C3-Q1" tags="" position="856,751" size="100,100">Under the Regulated Health Professions Act (RHPA), effective January 2021, registered pharmacy technicians are eligible to administer COVID-19 vaccines. With this exemption under the RHPA, to administer the vaccine, regulated pharmacy technicians must:
 {
 (set: _q3A to &quot;&quot;)
 
@@ -1972,14 +1972,19 @@ With respect to post injection patient education, a pharmacy technician may educ
 (set: _canContinue to false)
 
 [(link-repeat: &quot;Submit&quot;, (button:))[{
-(if: _q3A is _optionB)[
+(if: _q3A is _optionA)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3A), &quot;Correct&quot;)))
 (show: ?continue)
-(dialog: &quot;Correct! Discussing the clinical benefits and risks of vaccines with patients is not within the scope of practice for pharmacy technicians. This is within a pharmacist&#39;s scope of practice.&quot;)
+(dialog: &quot;Correct!&quot;)
 ]
 (if: _q3A is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3A), &quot;Wrong&quot;)))
-(alert: &quot;Please try again&quot;)
+(alert: &quot;Please try again. Discussing the clinical benefits and risks of vaccines with patients is not within the scope of practice for pharmacy technicians. This is within a pharmacist’s scope of practice. &quot;)
+]
+(if: _q3A is _optionC)[
+(set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3A), &quot;Wrong&quot;)))
+(show: ?continue)
+(dialog: &quot;Please try again.&quot;)
 ]
 }]]
 }
