@@ -27,6 +27,8 @@ Image sources
 * Scenario 1 homepage background: <a href='https://www.freepik.com/photos/drugstore'>Drugstore photo created by mrsiraphol - www.freepik.com</a>
 * Scenario 2 homepage background: <a href='https://www.freepik.com/photos/pharmacist'>Pharmacist photo created by gpointstudio - www.freepik.com</a>
 * Scenario 3 homepage background: <a href='https://www.freepik.com/photos/pharmacist'>Pharmacist photo created by aleksandarlittlewolf - www.freepik.com</a>
+* Pharmacy Background and Nurse: <a href='https://www.freepik.com/vectors/shop-counter'>Shop counter vector created by pch.vector - www.freepik.com</a>
+* Scenario 1 Waiting Area: <a href='https://www.freepik.com/vectors/hospital-patient'>Hospital patient vector created by pch.vector - www.freepik.com</a>
 
 
 ## Hosting
