@@ -567,11 +567,11 @@ Anson proceeds to confirm the information written on the prescription and asks M
 ]
 (if: _q3B is true)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _q3AA, _q3B, _q3C, _q3D), &quot;Wrong&quot;)))
-(alert: &quot;Please try again&quot;)
+(dialog: &quot;Please try again&quot;)
 ]
 (if: _q3B is false and _q3AA is false and _q3C is false and _q3D is false)[
 (set: $attempts&#39;s (3) to it + (a: (a: ($attemptString: _q3AA, _q3B, _q3C, _q3D), &quot;Wrong&quot;)))
-(alert: &quot;Please try again&quot;)]
+(dialog: &quot;Please try again&quot;)]
 }]]
 }
 |continue)[
@@ -689,7 +689,7 @@ Anson proceeds to confirm the information written on the prescription and asks M
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="983,349.6666666666667" size="100,100">&lt;img src onerror=&quot;return main()&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="13" name="Dialog 3" tags="" position="983,349" size="100,100">&lt;img src onerror=&quot;return main()&quot;&gt;
 &lt;img style=&quot;height:25em;width:100%&quot; class=&quot;center-img&quot; src=&quot;/assets/damilola+sayed.svg&quot;&gt;
 {
   &lt;div class=&quot;d-flex justify-content-center audio-controls&quot;&gt;
@@ -725,7 +725,7 @@ Anson proceeds to confirm the information written on the prescription and asks M
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="Dialog 4" tags="" position="1104.6666666666667,352.3333333333333" size="100,100">&lt;img src onerror=&quot;return main()&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="14" name="Dialog 4" tags="" position="1104,352" size="100,100">&lt;img src onerror=&quot;return main()&quot;&gt;
 &lt;div class=&quot;clearfix&quot;&gt;  
   &lt;div class=&quot;col-md-6 float-md-right mb-3 ml-md-3&quot;&gt;
 	&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;/assets/damilola-bob.png&quot;&gt;
@@ -829,7 +829,7 @@ Anson proceeds to confirm the information written on the prescription and asks M
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="15" name="Dialog 5" tags="" position="1229,350.6666666666667" size="100,100">&lt;img src onerror=&quot;return main()&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="15" name="Dialog 5" tags="" position="1229,350" size="100,100">&lt;img src onerror=&quot;return main()&quot;&gt;
 &lt;div class=&quot;clearfix&quot;&gt; 
  	&lt;div class=&quot;col-md-6 float-md-right mb-3 ml-md-3&quot;&gt;
 		&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;/assets/damilola-sayed-counter.svg&quot;&gt;
@@ -882,7 +882,7 @@ Anson proceeds to confirm the information written on the prescription and asks M
   			mySynthesis.play(dialog);
 		});
 	}
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="Dialog 6" tags="" position="1383,251.66666666666669" size="100,100">&lt;img src onerror=&quot;return main()&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="Dialog 6" tags="" position="1383,251" size="100,100">&lt;img src onerror=&quot;return main()&quot;&gt;
 &lt;div class=&quot;clearfix&quot;&gt;  
   &lt;div class=&quot;col-md-6 float-md-right mb-3 ml-md-3&quot;&gt;
 	&lt;img style=&quot;height:auto;width:100%&quot; src=&quot;/assets/damilola-bob.png&quot;&gt;
@@ -1977,13 +1977,14 @@ With respect to post injection patient education, a pharmacy technician may educ
 (show: ?continue)
 (dialog: &quot;Correct!&quot;)
 ]
-(if: _q3A is not _optionB)[
+(if: _q3A is _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3A), &quot;Wrong&quot;)))
-(alert: &quot;Please try again. Discussing the clinical benefits and risks of vaccines with patients is not within the scope of practice for pharmacy technicians. This is within a pharmacist’s scope of practice. &quot;)
+(hide: ?continue)
+(dialog: &quot;Please try again. Discussing the clinical benefits and risks of vaccines with patients is not within the scope of practice for pharmacy technicians. This is within a pharmacist’s scope of practice.&quot;)
 ]
 (if: _q3A is _optionC)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3A), &quot;Wrong&quot;)))
-(show: ?continue)
+(hide: ?continue)
 (dialog: &quot;Please try again.&quot;)
 ]
 }]]
@@ -2055,7 +2056,7 @@ Items needed:
 (if: _q3C is not _optionB)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3C), &quot;Wrong&quot;)))
 (hide: ?continue)
-(alert: &quot;Please try again&quot;)
+(dialog: &quot;Please try again&quot;)
 ]
 }]]
 }
@@ -2102,7 +2103,7 @@ Items needed:
 (if: _q3D is not _optionD)[
 (set: $attempts&#39;s (1) to it + (a: (a: (_getSelected: _q3D), &quot;Wrong&quot;)))
 (hide: ?continue)
-(alert: &quot;Please try again&quot;)
+(dialog: &quot;Please try again&quot;)
 ]
 }]]
 }
@@ -2333,7 +2334,7 @@ By the end of the scenario the learner will:
 0. (link-repeat: &quot;NAPRA Guidance Document for Pharmacy Compounding of Non-Sterile Products&quot;)[(open-url: &#39;https://napra.ca/general-practice-resources/guidance-document-pharmacy-compounding-non-sterile-preparations&#39;)]
  
 
-(button:)[[Continue |Case 2]]</tw-passagedata><tw-passagedata pid="41" name="Quiz 3" tags="" position="1304.3333333333333,113" size="100,100">What do you think is Damilola&#39;s most appropriate next action to help Bob?
+(button:)[[Continue |Case 2]]</tw-passagedata><tw-passagedata pid="41" name="Quiz 3" tags="" position="1304,113" size="100,100">What do you think is Damilola&#39;s most appropriate next action to help Bob?
 {
 (set: _q3A to &quot;&quot;)
 
