@@ -30,4 +30,4 @@ Image sources
 
 
 ## Hosting
-This project is hosted on Netlify. You can view the live version of the project on: https://elearning-pharmacy.netlify.app/
+This project is hosted on Netlify. You can view the live version of the project on: https://elearning-pharmacy.netlify.app/. Netlify can easily be linked to your repo and deploy automatically when new changes are made.
