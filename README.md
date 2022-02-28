@@ -1,7 +1,7 @@
 # Project
 
 
-This project was built using a modified version of the Harlowe Story format from [Twine](https://twinery.org/). The modified version of in [modified-harlowe-format.js](format.js).
+This project was built using a modified version of the Harlowe Story format from [Twine](https://twinery.org/). The modified version is in [modified-harlowe-format.js](format.js).
 
 This modified version of Harlowe adds supports for radio buttons, Bootstrap v4 and A-Frame.
 
